@@ -31,6 +31,6 @@ public class BookingDTO {
     private Customer customer;
     private Payment payment;
 
-    private List<BookingDetailsDTO> bookingDetailsDTO;
-    private List<DriverScheduleDTO> driverScheduleDTO;
+    private List<BookingDetailsDTO> bookingDetails;
+    private List<DriverScheduleDTO> driverSchedule;
 }

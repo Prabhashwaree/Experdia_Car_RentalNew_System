@@ -39,14 +39,13 @@ public class PurchaseBookingDriverServiceImpl implements PurchaseBookingDriverSe
         Booking booking = modelMapper.map(bookingDTO, Booking.class);
         if (!bookingRepo.existsById(bookingDTO.getBooking_Id())) {
             bookingRepo.save(booking);
-            if(bookingDTO.getDriverScheduleDTO().size()<1)throw new RuntimeException("No Driver added for the Booking..!");
+            if(bookingDTO.getBookingDetails().size()<1)throw new RuntimeException("No Driver added for the Booking..!");
 
-
-            //Update the driver-----
-            for(DriverSchedule driverSchedule:booking.getDriverSchedule()){
-                Driver driver = driverRepo.findById(driverSchedule.getDriver_NIC()).get();
-                driverRepo.save(driver);
-            }
+//            //Update the driver-----
+//            for(DriverSchedule driverSchedule:booking.getDriverSchedule()){
+//                Driver driver = driverRepo.findById(driverSchedule.getDriver_NIC()).get();
+//                driverRepo.save(driver);
+//            }
 
         }else {
             throw new RuntimeException("Purchase Booking Failed..!, Booking ID " + bookingDTO.getBooking_Id() + " Already Exist.!");
@@ -72,7 +71,7 @@ public class PurchaseBookingDriverServiceImpl implements PurchaseBookingDriverSe
         if(bookingRepo.existsById(bookingDTO.getBooking_Id())){
             Booking booking = modelMapper.map(bookingDTO, Booking.class);
 
-            if(bookingDTO.getDriverScheduleDTO().size()<1)throw new RuntimeException("No driver added for the Booking..!");{
+            if(bookingDTO.getDriverSchedule().size()<1)throw new RuntimeException("No driver added for the Booking..!");{
                 for(DriverSchedule driverSchedule:booking.getDriverSchedule()){
                     Driver driver = driverRepo.findById(driverSchedule.getDriver_NIC()).get();
                     //DriverSchedule driverSchedule1 = driverScheduleRepo.findById(String.valueOf(new BookingDriver_PK(driverSchedule.getBooking_Id(),driverSchedule.getDriver_NIC()))).get();
