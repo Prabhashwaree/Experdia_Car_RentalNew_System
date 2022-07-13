@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 
 public class CustomerDTO {
-    private String nIC_No;
+    private String nic_Number;
     private String license_Id;
     private String cus_Name;
     private String address;

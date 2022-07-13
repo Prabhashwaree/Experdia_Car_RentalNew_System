@@ -29,7 +29,7 @@ public class Booking {
     private String car_Count;
 
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name = "nIC",referencedColumnName = "nIC_No",nullable = false)
+    @JoinColumn(name = "nic_Number",referencedColumnName = "nic_Number",nullable = false)
     private Customer customer;
 
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})

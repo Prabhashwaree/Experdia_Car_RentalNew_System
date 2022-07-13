@@ -15,7 +15,7 @@ import javax.persistence.*;
 
 public class Customer {
     @Id
-    private String nIC_No;
+    private String nic_Number;
     private String license_Id;
     private String cus_Name;
     private String address;
@@ -25,7 +25,7 @@ public class Customer {
     private String time;
 
     @OneToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name = "userdID",referencedColumnName = "user_Id",nullable = false)
+//    @JoinColumn(name = "userdID",referencedColumnName = "user_Id",nullable = false)
     private UserLogin userLogin;
 }
 

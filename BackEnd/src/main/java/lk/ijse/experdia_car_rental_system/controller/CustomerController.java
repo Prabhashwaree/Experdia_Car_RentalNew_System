@@ -21,6 +21,7 @@ public class CustomerController {
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponceUtil saveCustomer(@RequestBody CustomerDTO customerDTO){
         System.out.println(customerDTO.toString());
+        System.out.println(customerDTO.getNic_Number());
         customerService.saveCustomer(customerDTO);
         return new ResponceUtil(200,"save",null);
 
@@ -31,8 +32,8 @@ public class CustomerController {
         return  new ResponceUtil(200,"getAll",customerService.getAllCustomer());
     }
 
-    @DeleteMapping(params = {"nIC_No"},produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponceUtil deleteCustomer(@RequestParam("nIC_No") String id){
+    @DeleteMapping(params = {"nic_Number"},produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponceUtil deleteCustomer(@RequestParam("nic_Number") String id){
         customerService.deleteCustomer(id);
         return new ResponceUtil(200,"deleted",null);
     }

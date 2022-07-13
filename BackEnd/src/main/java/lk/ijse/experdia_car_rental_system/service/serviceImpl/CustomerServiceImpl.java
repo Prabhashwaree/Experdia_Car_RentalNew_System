@@ -25,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {
-        if(!customerRepo.existsById(customerDTO.getNIC_No())){
+        if(!customerRepo.existsById(customerDTO.getNic_Number())){
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
         }else {
             throw new RuntimeException("Customer Already Exist..!");
@@ -48,7 +48,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
-        if(customerRepo.existsById(customerDTO.getNIC_No())){
+        if(customerRepo.existsById(customerDTO.getNic_Number())){
             customerRepo.save(modelMapper.map(customerDTO,Customer.class));
         }else {
             throw new RuntimeException("No Such Customer To Update..! Please Check the ID..!");
