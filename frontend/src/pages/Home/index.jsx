@@ -262,7 +262,7 @@ export default function HomePage(){
 
 
                     <Item id="slideRectangles2">
-
+                    <div>
                     <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%",zIndex:"1"}} />
                     {/* <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
                     <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
@@ -276,7 +276,7 @@ export default function HomePage(){
                     <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
                     <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
                     <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography> */}
-
+</div>
                     </Item>
 
 
