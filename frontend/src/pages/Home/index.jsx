@@ -2,6 +2,8 @@ import {styleSheet} from  "./style";
 import { Component } from "react";
 import {withStyles} from "@mui/styles";
 import './home.css';
+import Item from './Item';
+import Carousel from "react-elastic-carousel";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +12,9 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import carLogo from '../../assets/img/carLogo.png';
+import carSlide from '../../assets/img/carSlide.png';
+import petrol from '../../assets/img/petrol.png';
+import user from '../../assets/img/user.png';
 import mainCarSet from '../../assets/img/mainCarSet.png';
 import * as React from 'react';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -25,6 +30,11 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
+
+const breakPoints=[{ width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },];
+    // { width: 1200, itemsToShow: 4 },
 
 export default function HomePage(){
 
@@ -133,6 +143,8 @@ export default function HomePage(){
     
 
     return (
+
+        <>
         
         <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" id="appBar">
@@ -224,10 +236,40 @@ export default function HomePage(){
             <section>
 
             <div id="mainseperator"></div>
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"770px",left:"578px",zIndex:"1",color:"Black"}}>
-                <b>Car Rental Rate</b></Typography>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"Black"}}>
+                Car Rental Rate</Typography>
 
             
+            <div className="rentalSlider">
+                <Carousel breakPoints={breakPoints}>
+                    <Item id="slideRectangles1">
+                    <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
+                    <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
+                    <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
+                    <img src={user} style={{position: "absolute",left:"1%"}} />
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"46%",left:"1.8%",zIndex:"1"}}>5 Peoples</Typography>
+                    {/* <Typography variant="subtitle1" gutterBottom component="div">Daily Rate Rs.2,500.00</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div">Monthly Rate Rs.64,350.00</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div">Free Km Day 100</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div">Free Km Month 2400</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div">Price per Extre Km Rs.30.00</Typography> */}
+                        
+                        </Item>
+
+
+
+                    <Item id="slideRectangles2">Two</Item>
+                    <Item id="slideRectangles3">Three</Item>
+                    <Item id="slideRectangles4">Four</Item>
+                    <Item id="slideRectangles5">Five</Item>
+                    <Item id="slideRectangles6">Six</Item>
+                    <Item id="slideRectangles7">Seven</Item>
+                    <Item id="slideRectangles8">Eight</Item>
+                    <Item id="slideRectangles9">Eight</Item>
+                    <Item id="slideRectangles10">Eight</Item>
+                </Carousel>
+            </div>
             
             </section>
 
@@ -253,8 +295,12 @@ export default function HomePage(){
         {renderMenu}
         </Box>   
 
+        <section>
+            <h1 id="neth">nethmini</h1>
+        </section>
 
 
+</>
 
     );
 
