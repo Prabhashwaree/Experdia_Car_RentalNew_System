@@ -9,3 +9,110 @@
     background-color: #051E34;
 }
 
+#carRentalTopic{
+    position:absolute;
+    top:100px;
+    left:80px;
+    z-index: 1;
+    color:white;
+    /* box-shadow:-1px 1px 10px -1px black; */
+    text-shadow: 10px 10px 10px #000000;
+    animation-name: main_Word_move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes main_Word_move{
+    0%{
+
+        filter: drop-shadow(10px 10px 10px rgb(255, 255, 255));
+    }
+    100%{
+        left: 15%;
+        color: rgb(72, 100, 104);
+        filter: drop-shadow(#051E34);  
+    }
+} 
+
+
+/* ---------------- */
+
+#mainCar{
+    animation-name: main_car_move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 2s; 
+}
+
+@keyframes main_car_move{
+    0%{
+
+        /* filter: drop-shadow(10px 10px 10px rgb(235, 235, 235)); */
+    }
+    100%{
+        width:1400px;
+        height:680px;
+        top: -10%;
+        /* color: rgb(72, 100, 104);*/
+        filter: drop-shadow(10px 10px 10px rgb(235, 235, 235)); 
+    }
+} 
+
+
+
+
+/* --------------------------Car Rates------------------------------- */
+
+
+#mainseperator{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 104%;
+    background-color: rgb(175, 173, 173);
+}
+
+
+
+/* --------------------------footer------------------------------- */
+
+#footerSeperator{
+    position: absolute;
+    top: 210%;
+    width: 85%;
+    height: 1px;
+    background-color: gray;
+    left: 8%;
+    bottom: 20%;
+}
+
+#footerFirstLineWord{
+    position: absolute;
+    top: 217.8%;
+    left: 38%;
+    bottom: 50%;
+    color: gray;
+}
+
+#footerSecondLineWord{
+    position: absolute;
+    top: 222%;
+    left: 16%;
+    bottom: 50%;
+    color: gray;
+}
+
+#endFooterSeperator{
+    position: absolute;
+    top: 230%;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    bottom: 20%;
+}
+

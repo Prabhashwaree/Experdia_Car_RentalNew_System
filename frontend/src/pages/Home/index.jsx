@@ -205,12 +205,12 @@ export default function HomePage(){
 
             <section>
                 <div style={{position: "absolute",top:"65px",backgroundColor:"#22394E",width:"100%",height:"58vh"}}></div>
-                <img src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1400px",height:"680px"}} />
+                <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
                 {/* <h1 style={{position: "absolute",top:"80px",left:"10px",zIndex:"1",color:"#5585D0"}}>CAR RENTAL DEALS IN SRI LANKA</h1> */}
-                <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"100px",left:"80px",zIndex:"1",color:"wight",boxshadow: "-1px 1px 10px -1px black"}}>
+                <Typography id="carRentalTopic" variant="h3" gutterBottom component="div">
                 <b><i>CAR RENTAL DEALS <br/>IN SRI LANKA</i></b></Typography>
 
-                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"610px",left:"140px",zIndex:"1",color:"black"}}>
+                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"610px",left:"140px",zIndex:"1",color:"gray"}}>
                 <b>EXPERDIA</b> is delighted to help you continue your journey in Sri Lanka with our premium fleet of up-to-date vehicles. We offer affordable rates on a diverse variety <br/>of different models to suit your budget and travel plans. Choose from our convertibles
                  and sports cars, sedans and compact cars, SUVs and vans.
                 Use <br/> the quick-and-easy booking form above in order to instantly compare all vehicles and offers and make your car rental resevation today!
@@ -222,12 +222,30 @@ export default function HomePage(){
 
         {/* --------------------Car Rental Rate----------------------- */}
             <section>
-            <div style={{position: "absolute",backgroundColor:"#22394E",width:"100%",height:"2vh",top:"800px"}}></div>
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"800px",left:"80px",zIndex:"1",color:"Black"}}>
+
+            <div id="mainseperator"></div>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"770px",left:"578px",zIndex:"1",color:"Black"}}>
                 <b>Car Rental Rate</b></Typography>
 
             
             
+            </section>
+
+
+
+            {/* --------------------footer----------------------- */}
+            <section>
+                <div id="footerSeperator"></div>
+                <Typography id="footerFirstLineWord"  variant="caption" display="block" gutterBottom>
+                    Experdia, Inc. is not responsible for content on external Web sites.
+                </Typography>
+                <Typography id="footerSecondLineWord" variant="caption" display="block" gutterBottom>
+                    © 2022 Experdia, Inc., an Expedia Group company. All rights reserved. 
+                    Experdia and the internatinal Logo are trademarks or registered trademarks of Expedia,
+                     Inc. CST# 2029030-50.
+                </Typography>
+
+                <div id="endFooterSeperator"></div>
             </section>
 
         </AppBar>
