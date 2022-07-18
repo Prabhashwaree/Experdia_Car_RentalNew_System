@@ -222,7 +222,7 @@ export default function HomePage(){
                 <Typography id="carRentalTopic" variant="h3" gutterBottom component="div">
                 <b><i>CAR RENTAL DEALS <br/>IN SRI LANKA</i></b></Typography>
 
-                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"610px",left:"140px",zIndex:"1",color:"gray"}}>
+                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"630px",left:"145px",zIndex:"1",color:"gray"}}>
                 <b>EXPERDIA</b> is delighted to help you continue your journey in Sri Lanka with our premium fleet of up-to-date vehicles. We offer affordable rates on a diverse variety <br/>of different models to suit your budget and travel plans. Choose from our convertibles
                  and sports cars, sedans and compact cars, SUVs and vans.
                 Use <br/> the quick-and-easy booking form above in order to instantly compare all vehicles and offers and make your car rental resevation today!
@@ -235,31 +235,51 @@ export default function HomePage(){
         {/* --------------------Car Rental Rate----------------------- */}
             <section>
 
-            <div id="mainseperator"></div>
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"Black"}}>
+            {/* <div id="mainseperator"></div> */}
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"black"}}>
                 Car Rental Rate</Typography>
 
             
             <div className="rentalSlider">
                 <Carousel breakPoints={breakPoints}>
                     <Item id="slideRectangles1">
-                    <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
-                    <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
+
+                        <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
+                        <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
+                        <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
+                        <img src={user} style={{position: "absolute",left:"1%"}} />
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"46%",left:"1.8%",zIndex:"1"}}>5 Peoples</Typography>
+                        <img src={petrol} style={{position: "absolute",left:"1%",width:"",height:"8%",top:"60%"}} />
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"60%",left:"1.8%",zIndex:"1"}}>Petrol</Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"72%",left:"1%",zIndex:"1"}}>Daily Rate <b>Rs.2,500.00</b></Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"1%",zIndex:"1"}}>Monthly Rate <b>Rs.64,350.00</b></Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
+                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography>
+                        
+                    </Item>
+
+
+                    <Item id="slideRectangles2">
+
+                    <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%",zIndex:"1"}} />
+                    {/* <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
                     <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
                     <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
                     <img src={user} style={{position: "absolute",left:"1%"}} />
                     <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"46%",left:"1.8%",zIndex:"1"}}>5 Peoples</Typography>
-                    {/* <Typography variant="subtitle1" gutterBottom component="div">Daily Rate Rs.2,500.00</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div">Monthly Rate Rs.64,350.00</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div">Free Km Day 100</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div">Free Km Month 2400</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div">Price per Extre Km Rs.30.00</Typography> */}
-                        
-                        </Item>
+                    <img src={petrol} style={{position: "absolute",left:"1%",width:"",height:"8%",top:"60%"}} />
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"60%",left:"1.8%",zIndex:"1"}}>Petrol</Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"72%",left:"1%",zIndex:"1"}}>Daily Rate <b>Rs.2,500.00</b></Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"1%",zIndex:"1"}}>Monthly Rate <b>Rs.64,350.00</b></Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
+                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography> */}
+
+                    </Item>
 
 
-
-                    <Item id="slideRectangles2">Two</Item>
                     <Item id="slideRectangles3">Three</Item>
                     <Item id="slideRectangles4">Four</Item>
                     <Item id="slideRectangles5">Five</Item>
