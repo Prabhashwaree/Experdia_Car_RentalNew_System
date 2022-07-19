@@ -148,7 +148,7 @@ export default function HomePage(){
         <>
         
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" id="appBar">
+        <AppBar position="fixed" id="appBar">
             <Toolbar>
             <IconButton
                 size="large"
@@ -221,13 +221,13 @@ export default function HomePage(){
             {/* --------------------container----------------------- */}
 
             <section>
-                <div style={{position: "absolute",top:"65px",backgroundColor:"#22394E",width:"100%",height:"58vh"}}></div>
+                <div style={{position: "absolute",top:"65px",backgroundColor:"#ff5f00",width:"100%",height:"58vh"}}></div>
                 <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
                 {/* <h1 style={{position: "absolute",top:"80px",left:"10px",zIndex:"1",color:"#5585D0"}}>CAR RENTAL DEALS IN SRI LANKA</h1> */}
                 <Typography id="carRentalTopic" variant="h3" gutterBottom component="div">
                 <b><i>CAR RENTAL DEALS <br/>IN SRI LANKA</i></b></Typography>
 
-                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"630px",left:"145px",zIndex:"1",color:"gray"}}>
+                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"630px",left:"145px",textAlign:"justify",zIndex:"1",color:"gray"}}>
                 <b>EXPERDIA</b> is delighted to help you continue your journey in Sri Lanka with our premium fleet of up-to-date vehicles. We offer affordable rates on a diverse variety <br/>of different models to suit your budget and travel plans. Choose from our convertibles
                  and sports cars, sedans and compact cars, SUVs and vans.
                 Use <br/> the quick-and-easy booking form above in order to instantly compare all vehicles and offers and make your car rental resevation today!
@@ -241,7 +241,7 @@ export default function HomePage(){
             <section>
 
             {/* <div id="mainseperator"></div> */}
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"black"}}>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
                 Car Rental Rate</Typography>
 
             
@@ -647,7 +647,7 @@ export default function HomePage(){
             {/* --------------------select  car discription----------------------- */}
 
             <section id="selectDiscription">
-            <Typography id="carRentalTopic" variant="h5" gutterBottom component="div" style={{position: "relative",top:"10px",left:"20px",zIndex:"1",color:"rgb(7, 96, 102)"}}>
+            <Typography id="carRentalTopic" variant="h5" gutterBottom component="div" style={{position: "relative",top:"10px",left:"20px",zIndex:"1",color:"rgb(146, 145, 145)"}}>
                     <b>Choose the vehicle of your choice from the above vehicles,<br/> fill in your relevant details and book now.</b>
                 </Typography>
             
@@ -662,7 +662,7 @@ export default function HomePage(){
             <section id="carDiscription">
 
                 
-                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"black"}}>
+                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
                     <b>ENJOY A ROAD TRIP THROUGH<br/> PARADISE WITH CAR RENTAL IN<br/> SRI LANKA</b>
                 </Typography>
 

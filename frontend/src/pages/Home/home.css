@@ -6,7 +6,7 @@
 }
 
 #appBar{
-    background-color: #051E34;
+    background-color: gray;
 }
 
 
@@ -91,7 +91,7 @@
     top: 105%;
     position: absolute;
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     
 }
 .sliderDiv{
@@ -213,6 +213,7 @@
     font-size: 14px;
     font-weight: 100;
     z-index: 1;
+    
 }
 
 
@@ -224,7 +225,9 @@
 } */
 
 
-
+#carRentalTopic{
+    text-shadow: none;
+}
 
 
 /* --------------------------select discription------------------------------- */
@@ -233,7 +236,7 @@
     width: 80%;
     height: 80px;
     position: relative;
-    top: 1220px;
+    top: 1260px;
     background-color: rgb(243, 243, 243);
     text-align: center;
     margin: auto;
@@ -244,12 +247,6 @@
 
 
 /* --------------------------car discription------------------------------- */
-
-/* #carDiscription h3{
-    position: relative;
-    top: 300px;
-
-} */
 
 
 
