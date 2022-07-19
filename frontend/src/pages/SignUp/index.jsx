@@ -10,7 +10,14 @@ import facebook from '../../assets/img/facebook.png';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Autocomplete from '@mui/material/Autocomplete';
 
+
+const top100Films = [ 
+    {label: 'Administor'},
+    { label: 'Driver'},
+    { label: 'Customer'},
+];
 
 
 export default function SignUpPage(){
@@ -34,7 +41,7 @@ export default function SignUpPage(){
             <div id="loginSection">
                 <h1>Create Account</h1>
 
-                <p>Use a minimum of 10 characters, including uppercase letters, lowercase<br/> letters and numbers.</p>
+                <p style={{textAlign:"left",margin:"auto",left:"570px",position: "relative"}}>Use a minimum of 10 characters, including uppercase letters,<br/> lowercase letters and numbers.</p>
 
                 <TextField id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",top:"95px",zIndex:"1",width:"380px"}}/><br/>
                 <TextField
@@ -43,7 +50,18 @@ export default function SignUpPage(){
                     type="password"
                     autoComplete="current-password"
                     style={{position: "relative",top:"110px",zIndex:"1",width:"380px"}}/><br/>
-                <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Contained</Button><br/>
+                
+                <Autocomplete
+                    disablePortal
+                    id="combo-box-demo"
+                    options={top100Films}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label="Movie" />}
+                    style={{position: "relative",top:"128px",zIndex:"1",width:"380px",textAlign:"center",margin:"auto"}}/>
+                
+                
+                
+                <Button variant="Continue with account" style={{position: "relative",top:"145px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Contained</Button><br/>
                 
             
                 <div style={{position: "relative",top:"162px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
