@@ -1,0 +1,31 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+} */
+
+#navivar{
+    height: 65px;
+    width: 100%;
+    background-color: gray;
+}
+
+#loginSection{
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+#loginSection h1{
+    top: 40px;
+    position: relative;
+}
+
+#loginSection p{
+    top: 103px;
+    position: relative;
+    font-weight: 100;
+    color: rgb(73, 73, 73);
+
+}
