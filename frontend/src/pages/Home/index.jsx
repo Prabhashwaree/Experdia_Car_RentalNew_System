@@ -242,10 +242,46 @@ export default function HomePage(){
             
             <div className="rentalSlider">
                 <Carousel breakPoints={breakPoints}>
-                    <Item id="slideRectangles1">
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
 
-                        <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
-                        <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+
+                        </div>
+
+                        
+                        
+                    </Item>
+
+
+                    
+                    {/* <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
+                        <Typography variant="h5" gutterBottom component="div" style={{position: "relative",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
                         <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
                         <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
                         <img src={user} style={{position: "absolute",left:"1%"}} />
@@ -257,37 +293,326 @@ export default function HomePage(){
                         <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
                         <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
                         <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography>
-                        
+                         */}
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+                    
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+        
                     </Item>
 
 
-                    <Item id="slideRectangles2">
-                    <div>
-                    <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%",zIndex:"1"}} />
-                    {/* <Typography variant="h5" gutterBottom component="div" style={{position: "absolute",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
-                    <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
-                    <img src={user} style={{position: "absolute",left:"1%"}} />
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"46%",left:"1.8%",zIndex:"1"}}>5 Peoples</Typography>
-                    <img src={petrol} style={{position: "absolute",left:"1%",width:"",height:"8%",top:"60%"}} />
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"60%",left:"1.8%",zIndex:"1"}}>Petrol</Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"72%",left:"1%",zIndex:"1"}}>Daily Rate <b>Rs.2,500.00</b></Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"1%",zIndex:"1"}}>Monthly Rate <b>Rs.64,350.00</b></Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
-                    <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography> */}
-</div>
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+ 
                     </Item>
 
 
-                    <Item id="slideRectangles3">Three</Item>
-                    <Item id="slideRectangles4">Four</Item>
-                    <Item id="slideRectangles5">Five</Item>
-                    <Item id="slideRectangles6">Six</Item>
-                    <Item id="slideRectangles7">Seven</Item>
-                    <Item id="slideRectangles8">Eight</Item>
-                    <Item id="slideRectangles9">Eight</Item>
-                    <Item id="slideRectangles10">Eight</Item>
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Genaral Car</b></p>  
+                        <h6>Suzuki Alto - Premium</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.30.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+                    
                 </Carousel>
             </div>
             

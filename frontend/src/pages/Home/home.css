@@ -80,17 +80,141 @@
     z-index: 1;
 }
 
+
+
 .rentalSlider{
     font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    top: 101%;
+    top: 105%;
     position: absolute;
     width: 100%;
     background-color: white;
+    
 }
+.sliderDiv{
+    color: #000000;
+    /* border: 1px solid red; */
+    height: 70%;
+    top: -44px;
+    position: relative;
+
+}
+.sliderDiv p{
+    position: relative;
+    top: -115px;
+    left: 25px;
+    font-size: 25px;
+    
+    /* border: 1px solid black; */
+   
+
+}
+
+.sliderDiv h6{
+    position: relative;
+    top: -111px;
+    left: 25px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+.sliderDiv  h4{
+    position: relative;
+    top: -106px;
+    left: 25px;
+    font-size: 17px;
+    font-weight: 100;
+ }
+
+ .imgcar{
+    position: relative;
+    width: 40%;
+    left: 225px;
+    top:48px;   
+ }
+
+ .pepoleImg{
+    position: relative;
+    left: 23px;
+    top:-125px; 
+}
+
+.pepoleImg p{
+    position: relative;
+    left: 34px;
+    top:-32px; 
+    font-size: 14px;
+}
+
+
+
+.filingStationImg{
+    position: relative;
+    left: 24px;
+    top:-188px;   
+  
+}
+
+.filingStationImg p{
+    position: relative;
+    left: 34px;
+    top:-28px; 
+    font-size: 14px;  
+  
+}
+
+
+.sliderDiv h5{
+    position: relative;
+    top:-198px; 
+    left: 25px;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 1;
+    
+}
+
+.monthlyRate h5{
+    position: relative;
+    top:-192px; 
+    left: 25px;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 1;
+}
+
+.monthlyRate p{
+    position: relative;
+    top:-210px; 
+    left: 250px;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 1;
+}
+
+
+.freeDay h5{
+    position: relative;
+    top:-202px; 
+    left: 25px;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 1;
+}
+
+.freeDay p{
+    position: relative;
+    top:-218px; 
+    left: 250px;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 1;
+}
+
 
 /* #slideRectangles1{
     background-color: white;
