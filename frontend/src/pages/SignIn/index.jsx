@@ -39,7 +39,7 @@ export default function SignInPage(){
                     type="password"
                     autoComplete="current-password"
                     style={{position: "relative",top:"70px",zIndex:"1",width:"380px"}}/><br/>
-                <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Contained</Button><br/>
+                <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
                 <div style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p>or use one of these options</p>
                 <div style={{position: "relative",top:"96.1px",zIndex:"1",width:"98.5px",height:"1px",left:"850px",backgroundColor:"rgb(212, 212, 212)"}}></div>
@@ -49,7 +49,7 @@ export default function SignInPage(){
                 <img src={linkPhone} style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"9px",zIndex:"1",width:"50px",height:"48px",cursor:"pointer"}}/>
                 <p style={{color:"rgb(25, 60, 173)",top:"130px",cursor:"pointer"}}><b>More ways to sign in</b></p>
                 <div style={{position: "relative",top:"162px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{position: "relative",fontSize:"14px",top:"180px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)"}}>Terms &<br/> conditions and Privacy statement</b></p>
+                <p style={{position: "relative",fontSize:"14px",top:"180px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
                 <div style={{position: "relative",top:"198px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{position: "relative",fontSize:"14px",top:"227px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
             </div>

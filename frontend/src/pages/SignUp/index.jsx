@@ -56,16 +56,16 @@ export default function SignUpPage(){
                     id="combo-box-demo"
                     options={top100Films}
                     sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Movie" />}
+                    renderInput={(params) => <TextField {...params} label="Type Select" />}
                     style={{position: "relative",top:"128px",zIndex:"1",width:"380px",textAlign:"center",margin:"auto"}}/>
                 
                 
                 
-                <Button variant="Continue with account" style={{position: "relative",top:"145px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Contained</Button><br/>
+                <Button variant="Create account" style={{position: "relative",top:"145px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Create  Account</Button><br/>
                 
             
                 <div style={{position: "relative",top:"162px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{position: "relative",fontSize:"14px",top:"180px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)"}}>Terms &<br/> conditions and Privacy statement</b></p>
+                <p style={{position: "relative",fontSize:"14px",top:"180px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
                 <div style={{position: "relative",top:"198px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{position: "relative",fontSize:"14px",top:"227px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
             </div>
