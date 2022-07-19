@@ -275,35 +275,19 @@ export default function HomePage(){
                         </div>
 
                         
-                        
                     </Item>
 
 
-                    
-                    {/* <img src={carSlide} style={{position: "absolute",width:"4%",height:"58%",left:"5%"}} />
-                        <Typography variant="h5" gutterBottom component="div" style={{position: "relative",top:"7%",left:"1%",zIndex:"1"}}><b>Genaral Car</b></Typography>
-                        <Typography variant="h6" gutterBottom component="div" style={{position: "absolute",top:"18%",left:"1%",zIndex:"1"}}>Suzuki Alto - Premium</Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"28%",left:"1%",zIndex:"1"}}>Manual</Typography>
-                        <img src={user} style={{position: "absolute",left:"1%"}} />
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"46%",left:"1.8%",zIndex:"1"}}>5 Peoples</Typography>
-                        <img src={petrol} style={{position: "absolute",left:"1%",width:"",height:"8%",top:"60%"}} />
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"60%",left:"1.8%",zIndex:"1"}}>Petrol</Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"72%",left:"1%",zIndex:"1"}}>Daily Rate <b>Rs.2,500.00</b></Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"1%",zIndex:"1"}}>Monthly Rate <b>Rs.64,350.00</b></Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"1%",zIndex:"1"}}>Free Km Day <b>100</b></Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"80%",left:"6%",zIndex:"1"}}>Free Km Month <b>2400</b></Typography>
-                        <Typography variant="subtitle1" gutterBottom component="div" style={{position: "absolute",top:"89%",left:"6%",zIndex:"1"}}>Extre Km <b>Rs.30.00</b></Typography>
-                         */}
 
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
                         <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                        <h6>Suzuki Alto K10</h6>
+                         <h4>Auto</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
-                            <p>5 Peoples</p>
+                            <p>4 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
@@ -311,17 +295,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.3,000.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.71,390.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.35.00</b></p>
                          </span>
 
                         </div>
@@ -334,11 +318,11 @@ export default function HomePage(){
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
                         <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                        <h6>Suzuki Celerio - Premium</h6>
+                         <h4>Auto</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
-                            <p>5 Peoples</p>
+                            <p>4 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
@@ -346,17 +330,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.3,300.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.77,220.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.35.00</b></p>
                          </span>
 
                         </div>
@@ -370,8 +354,8 @@ export default function HomePage(){
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
                         <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                        <h6>Perodua (Daihatsu) Axia</h6>
+                         <h4>Auto</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -382,17 +366,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.3,800.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.90,200.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.35.00</b></p>
                          </span>
 
                         </div>
@@ -405,8 +389,8 @@ export default function HomePage(){
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
                         <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                        <h6>Toyota Prius Aqua</h6>
+                         <h4>Auto</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -417,17 +401,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.5,000.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.110,330.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.49.50</b></p>
                          </span>
 
                         </div>
@@ -439,8 +423,8 @@ export default function HomePage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
+                        <p><b>Premium Car</b></p>  
+                        <h6>Toyota Corolla Axio</h6>
                          <h4>Manual</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
@@ -452,17 +436,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.49.50</b></p>
                          </span>
 
                         </div>
@@ -474,9 +458,9 @@ export default function HomePage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                        <p><b>Premium Car</b></p>  
+                        <h6>Perodua Bezza Prime</h6>
+                         <h4>Auto</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -487,53 +471,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
-                         </span>
-
-                        </div>
-
-                    </Item>
-
-
-
-
-                    <Item>
-                        <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
-                         <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
-                         </span>
-
-                         <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
-                            <p>Petrol</p>
-                         </span>  
-
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
-
-
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.49.50</b></p>
                          </span>
 
                         </div>
@@ -546,8 +494,8 @@ export default function HomePage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
+                        <p><b>Premium Car</b></p>  
+                        <h6>Toyota Allion NZT</h6>
                          <h4>Manual</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
@@ -559,17 +507,17 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.5,800.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.155,760.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.60.00</b></p>
                          </span>
 
                         </div>
@@ -582,8 +530,8 @@ export default function HomePage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
-                        <h6>Suzuki Alto - Premium</h6>
+                        <p><b>Premium Car</b></p>  
+                        <h6>Toyota Axio NKR</h6>
                          <h4>Manual</h4>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
@@ -595,24 +543,94 @@ export default function HomePage(){
                             <p>Petrol</p>
                          </span>  
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
+                         <h5>Daily Rate <b>Rs.6,000.00</b></h5> 
 
                          <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                            <h5>Monthly Rate <b>Rs.175,230.00</b></h5>
                             <p>Free Km Month <b>2400</b></p>
                          </span>
 
 
                          <span class="freeDay">  
                             <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
+                            <p>Extre Km <b>Rs.65.00</b></p>
                          </span>
 
                         </div>
 
                     </Item>
 
-                    
+
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Luxury Car</b></p>  
+                        <h6>Toyota Premio</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.10,000.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.227,150.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.85.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
+                    <Item>
+                        <div class="sliderDiv">
+                        <img class='imgcar' src={carSlide}/>
+                        <p><b>Luxury Car</b></p>  
+                        <h6>Mercedes BMW i8</h6>
+                         <h4>Manual</h4>  
+                         <span  class="pepoleImg"> 
+                            <img src={user}/>
+                            <p>5 Peoples</p>
+                         </span>
+
+                         <span class="filingStationImg">
+                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <p>Petrol</p>
+                         </span>  
+
+                         <h5>Daily Rate <b>Rs.18,000.00</b></h5> 
+
+                         <span class="monthlyRate">  
+                            <h5>Monthly Rate <b>Rs.300,000.00</b></h5>
+                            <p>Free Km Month <b>2400</b></p>
+                         </span>
+
+
+                         <span class="freeDay">  
+                            <h5>Free Km Day <b>100</b></h5>
+                            <p>Extre Km <b>Rs.100.00</b></p>
+                         </span>
+
+                        </div>
+
+                    </Item>
+
+
                 </Carousel>
             </div>
             
