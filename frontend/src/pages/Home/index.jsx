@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import carLogo from '../../assets/img/carLogo.png';
+import carDiscrip from '../../assets/img/carDiscrip.png';
 import carSlide from '../../assets/img/carSlide.png';
 import petrol from '../../assets/img/petrol.png';
 import user from '../../assets/img/user.png';
@@ -211,6 +212,10 @@ export default function HomePage(){
             </Toolbar>
 
             
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+        </Box>  
 
 
             {/* --------------------container----------------------- */}
@@ -638,6 +643,44 @@ export default function HomePage(){
 
 
 
+
+            {/* --------------------select  car discription----------------------- */}
+
+            <section id="selectDiscription">
+            <Typography id="carRentalTopic" variant="h5" gutterBottom component="div" style={{position: "relative",top:"10px",left:"20px",zIndex:"1",color:"rgb(7, 96, 102)"}}>
+                    <b>Choose the vehicle of your choice from the above vehicles,<br/> fill in your relevant details and book now.</b>
+                </Typography>
+            
+            </section>
+
+
+
+
+
+            {/* --------------------Experdiya  car discription----------------------- */}
+
+            <section id="carDiscription">
+
+                
+                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1350px",left:"75px",zIndex:"1",color:"black"}}>
+                    <b>ENJOY A ROAD TRIP THROUGH<br/> PARADISE WITH CAR RENTAL IN<br/> SRI LANKA</b>
+                </Typography>
+
+                <Typography variant="body1" gutterBottom style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"black"}}>
+                    Whichever model you choose for your Sri Lanka car rental you can enhance your experience with<br/> our useful extras. Great deals on numerous upgrades are available to help you have an optimal<br/>
+                     drive. Prearrange your rental online or over the phone and include optional features as you book.<br/>
+                     You can tack on a child seat, GPS, additional driver coverage and more. Please note Experdia cannot<br/> guarantee you to receive an exact car model, but you will receive an equivalent vehicle in your<br/>
+                      chosen car category.
+                </Typography>
+
+                <img src={carDiscrip} style={{position: "relative",top:"1000px",left:"750px",zIndex:"1",width:"50%",height:"60%"}}/>
+                
+            </section>
+
+
+
+
+
             {/* --------------------footer----------------------- */}
             <section>
                 <div id="footerSeperator"></div>
@@ -652,15 +695,8 @@ export default function HomePage(){
 
                 <div id="endFooterSeperator"></div>
             </section>
+ 
 
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-        </Box>   
-
-        <section>
-            <h1 id="neth">nethmini</h1>
-        </section>
 
 
 </>

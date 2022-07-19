@@ -225,6 +225,36 @@
 
 
 
+
+
+/* --------------------------select discription------------------------------- */
+
+#selectDiscription{
+    width: 80%;
+    height: 80px;
+    position: relative;
+    top: 1220px;
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    margin: auto;
+}
+
+
+
+
+
+/* --------------------------car discription------------------------------- */
+
+/* #carDiscription h3{
+    position: relative;
+    top: 300px;
+
+} */
+
+
+
+
+
 /* --------------------------footer------------------------------- */
 
 #footerSeperator{
