@@ -662,18 +662,18 @@ export default function HomePage(){
             <section id="carDiscription">
 
                 
-                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1350px",left:"75px",zIndex:"1",color:"black"}}>
+                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"black"}}>
                     <b>ENJOY A ROAD TRIP THROUGH<br/> PARADISE WITH CAR RENTAL IN<br/> SRI LANKA</b>
                 </Typography>
 
-                <Typography variant="body1" gutterBottom style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"black"}}>
-                    Whichever model you choose for your Sri Lanka car rental you can enhance your experience with<br/> our useful extras. Great deals on numerous upgrades are available to help you have an optimal<br/>
-                     drive. Prearrange your rental online or over the phone and include optional features as you book.<br/>
-                     You can tack on a child seat, GPS, additional driver coverage and more. Please note Experdia cannot<br/> guarantee you to receive an exact car model, but you will receive an equivalent vehicle in your<br/>
+                <Typography variant="body1" gutterBottom style={{position: "relative",top:"1420px",left:"75px",zIndex:"1",color:"black"}}>
+                    Whichever model you choose for your Sri Lanka car rental you<br/> can enhance your experience with our useful extras. Great deals <br/>on numerous upgrades are available to help you have an optimal<br/>
+                     drive. Prearrange your rental online or over the phone and include<br/> optional features as you book.
+                     You can tack on a child seat, GPS,<br/> additional driver coverage and more. Please note Experdia cannot<br/> guarantee you to receive an exact car model, but you will receive an <br/>equivalent vehicle in your
                       chosen car category.
                 </Typography>
 
-                <img src={carDiscrip} style={{position: "relative",top:"1000px",left:"750px",zIndex:"1",width:"50%",height:"60%"}}/>
+                <img src={carDiscrip} style={{position: "relative",top:"1000px",left:"610px",zIndex:"1",width:"50%",height:"60%"}}/>
                 
             </section>
 
