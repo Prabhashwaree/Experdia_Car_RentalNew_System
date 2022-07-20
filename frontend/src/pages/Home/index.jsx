@@ -30,6 +30,11 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+import TextField from '@mui/material/TextField';
+import Input from '@mui/material/Input';
+
+
+const ariaLabel = { 'aria-label': 'description' };
 
 
 const breakPoints=[{ width: 1, itemsToShow: 1 },
@@ -223,6 +228,20 @@ export default function HomePage(){
                 {/* <h1 style={{position: "absolute",top:"80px",left:"10px",zIndex:"1",color:"#5585D0"}}>CAR RENTAL DEALS IN SRI LANKA</h1> */}
                 <Typography id="carRentalTopic" variant="h3" gutterBottom component="div">
                 <b><i>CAR RENTAL DEALS <br/>IN SRI LANKA</i></b></Typography>
+
+                {/* <div style={{position: "relative",left:"700px",width:"750px",height:"60px",backgroundColor:"white",zIndex:"1",top:"102px"}}></div>
+
+                <Input placeholder="Pick-up Location" inputProps={ariaLabel} style={{position:"relative",left:"720px",top:"55px",zIndex:"1",width:"288px"}}/>
+                
+                 */}
+                
+                {/* <div style={{position: "relative",left:"700px",width:"2px",height:"60px",backgroundColor:"black",zIndex:"1",top:"97px",border:"black"}}></div> */}
+                {/* <div style={{position: "relative",left:"700px",width:"2px",height:"60px",backgroundColor:"white",zIndex:"1",top:"102px",border:"black"}}></div>
+                <div style={{position: "relative",left:"700px",width:"2px",height:"60px",backgroundColor:"white",zIndex:"1",top:"102px",border:"black"}}></div>
+                <div style={{position: "relative",left:"700px",width:"2px",height:"60px",backgroundColor:"white",zIndex:"1",top:"102px",border:"black"}}></div>
+                <div style={{position: "relative",left:"700px",width:"2px",height:"60px",backgroundColor:"white",zIndex:"1",top:"102px",border:"black"}}></div> */}
+
+
 
                 <Typography variant="body1" gutterBottom style={{position: "absolute",top:"630px",left:"145px",textAlign:"justify",zIndex:"1",color:"gray"}}>
                 <b>EXPERDIA</b> is delighted to help you continue your journey in Sri Lanka with our premium fleet of up-to-date vehicles. We offer affordable rates on a diverse variety <br/>of different models to suit your budget and travel plans. Choose from our convertibles

@@ -41,7 +41,7 @@ export default function SignInPage(){
                     style={{position: "relative",top:"70px",zIndex:"1",width:"380px"}}/><br/>
                 <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
                 <div style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p>or use one of these options</p>
+                <p style={{}}>or use one of these options</p>
                 <div style={{position: "relative",top:"96.1px",zIndex:"1",width:"98.5px",height:"1px",left:"850px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 
                 <img src={facebook} style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"-10px",zIndex:"1",width:"50px",height:"50px",cursor:"pointer"}}/>
