@@ -2,7 +2,7 @@ import {styleSheet} from  "./style";
 import { Component } from "react";
 import {withStyles} from "@mui/styles";
 import './booking.css';
-import Item from '../Home/Item';
+import Item from '../Booking/Item';
 import Carousel from "react-elastic-carousel";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -248,7 +248,7 @@ export default function BookingPage(){
             <section>
                 
                 <div style={{position: "absolute",top:"65px",backgroundColor:"#ff5f00",width:"100%",height:"58vh"}}></div>
-                <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
+                <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
                 
                 <TextField id="filled-basic" label="Date" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1000px",zIndex:"1",width:"11%"}}/>
                 <TextField id="filled-basic" label="Time" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1020px",zIndex:"1",width:"11%"}}/>
@@ -300,30 +300,28 @@ export default function BookingPage(){
                 <Typography id="carRentalTopic" variant="h3" gutterBottom component="div">
                 <b><i>CAR RENTAL DEALS <br/>IN SRI LANKA</i></b></Typography>
 
-                
-                
-
-
-                <Typography variant="body1" gutterBottom style={{position: "absolute",top:"630px",left:"145px",textAlign:"justify",zIndex:"1",color:"gray"}}>
-                <b>EXPERDIA</b> is delighted to help you continue your journey in Sri Lanka with our premium fleet of up-to-date vehicles. We offer affordable rates on a diverse variety <br/>of different models to suit your budget and travel plans. Choose from our convertibles
-                 and sports cars, sedans and compact cars, SUVs and vans.
-                Use <br/> the quick-and-easy booking form above in order to instantly compare all vehicles and offers and make your car rental resevation today!
-                </Typography>
+            
             </section>
 
+ {/* --------------------select  car discription----------------------- */}
 
+            <section id="selectDiscription">
+                        <Typography id="carRentalTopic" variant="h5" gutterBottom component="div" style={{position: "relative",top:"10px",left:"20px",zIndex:"1",color:"rgb(146, 145, 145)"}}>
+                                <b>Choose the vehicle of your choice from the above vehicles,<br/> fill in your relevant details and book now.</b>
+                            </Typography>
+                        
+                        </section>
 
 
         {/* --------------------Car Rental Rate----------------------- */}
             <section>
 
             {/* <div id="mainseperator"></div> */}
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"785px",left:"578px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"850px",left:"578px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
                 Car Rental Rate</Typography>
 
             
-            <div className="rentalSlider">
-                <Carousel breakPoints={breakPoints}>
+            <div>
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
@@ -711,50 +709,11 @@ export default function BookingPage(){
                         </div>
 
                     </Item>
+                
+                </div>
 
-
-                </Carousel>
-            </div>
             
             </section>
-
-
-
-
-            {/* --------------------select  car discription----------------------- */}
-
-            <section id="selectDiscription">
-            <Typography id="carRentalTopic" variant="h5" gutterBottom component="div" style={{position: "relative",top:"10px",left:"20px",zIndex:"1",color:"rgb(146, 145, 145)"}}>
-                    <b>Choose the vehicle of your choice from the above vehicles,<br/> fill in your relevant details and book now.</b>
-                </Typography>
-            
-            </section>
-
-
-
-
-
-            {/* --------------------Experdiya  car discription----------------------- */}
-
-            <section id="carDiscription">
-
-                
-                <Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"1390px",left:"75px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
-                    <b>ENJOY A ROAD TRIP THROUGH<br/> PARADISE WITH CAR RENTAL IN<br/> SRI LANKA</b>
-                </Typography>
-
-                <Typography variant="body1" gutterBottom style={{position: "relative",top:"1420px",left:"75px",zIndex:"1",color:"black"}}>
-                    Whichever model you choose for your Sri Lanka car rental you<br/> can enhance your experience with our useful extras. Great deals <br/>on numerous upgrades are available to help you have an optimal<br/>
-                     drive. Prearrange your rental online or over the phone and include<br/> optional features as you book.
-                     You can tack on a child seat, GPS,<br/> additional driver coverage and more. Please note Experdia cannot<br/> guarantee you to receive an exact car model, but you will receive an <br/>equivalent vehicle in your
-                      chosen car category.
-                </Typography>
-
-                <img src={carDiscrip} style={{position: "relative",top:"1000px",left:"610px",zIndex:"1",width:"50%",height:"60%"}}/>
-                
-            </section>
-
-
 
 
 
