@@ -38,6 +38,7 @@ import Stack from '@mui/material/Stack';
 
 
 
+
 const top100Films = [ 
     {label: 'Yes'},
     { label: 'No'},
@@ -248,16 +249,34 @@ export default function BookingPage(){
                 
                 <div style={{position: "absolute",top:"65px",backgroundColor:"#ff5f00",width:"100%",height:"58vh"}}></div>
                 <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
-                <div style={{position: "absolute",top:"65px",backgroundColor:"white",width:"80%",border:"1px solid black" ,height:"48vh",zIndex:"1",top:"210px",left:"150px"}}></div>
-                    <img src={orderBackGround} style={{position: "absolute",top:"65px",width:"80%",border:"5px solid black" ,height:"48vh",zIndex:"1",top:"210px",left:"150px"}}/>
+                
+                <TextField id="filled-basic" label="Date" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1000px",zIndex:"1",width:"11%"}}/>
+                <TextField id="filled-basic" label="Time" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1020px",zIndex:"1",width:"11%"}}/>
+                <div style={{position: "absolute",top:"65px",backgroundColor:"white",width:"80%",border:"1px solid black" ,height:"55vh",zIndex:"1",top:"210px",left:"150px"}}></div>
+                    <img src={orderBackGround} style={{position: "absolute",top:"65px",width:"80%",border:"5px solid black" ,height:"55vh",zIndex:"1",top:"210px",left:"150px"}}/>
                 
                     
-                    <TextField id="outlined-multiline-flexible" label="Order ID" multiline maxRows={4} value={value} onChange={handleChange} style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"230px",width:"6%",backgroundColor:"white",left:"210px",zIndex:"1"}}/>
-                    <TextField id="outlined-basic" label="PicUp Location" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"150px",zIndex:"1"}}/>
-                    <TextField id="outlined-basic" label="PicUp Date" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"180px",zIndex:"1"}}/>
-
-                    <Autocomplete disablePortal id="combo-box-demo" options={top100Films} sx={{ width: 300 }} renderInput={(params) => <TextField {...params} label="Do you need a driver?" />} style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"705px",zIndex:"1"}}/>
+                    <TextField id="outlined-multiline-flexible" label="Order ID" multiline maxRows={4} value={value} onChange={handleChange} style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"230px",width:"6%",backgroundColor:"white",left:"-120px",zIndex:"1"}}/>
                     
+                    <Button variant="contained" style={{position: "relative",top:"250px",backgroundColor:"green",width:"8%",left:"730px",zIndex:"1"}}>Conform</Button>
+                    <Button variant="contained" style={{position: "relative",top:"250px",width:"8%",left:"480px",zIndex:"1"}}>Book</Button>
+                    
+                    <TextField id="outlined-basic" label="PicUp Location" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"-450px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="PicUp Date" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"-418px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="PicUp Time" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"-388px",zIndex:"1"}}/>
+                    <Autocomplete disablePortal id="combo-box-demo" options={top100Films} sx={{ width: 300 }} renderInput={(params) => <TextField {...params} label="Do you need a driver?" />} style={{position: "relative",border:"5px solid white",width:"16%",borderRadius:"5px",top:"254px",backgroundColor:"white",left:"995px",zIndex:"1"}}/>
+                 
+                    <TextField id="outlined-basic" label="Drop Date" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"268px",backgroundColor:"white",left:"210px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Drop Time" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"268px",backgroundColor:"white",left:"239px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Rent Duration" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"268px",backgroundColor:"white",left:"269px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Car Count" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"268px",backgroundColor:"white",left:"299px",zIndex:"1"}}/><br/>
+
+
+                    <TextField id="outlined-basic" label="LossDamagePrice" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"280px",backgroundColor:"white",left:"210px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Customer NIC" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"280px",backgroundColor:"white",left:"239px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Payment ID" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"280px",backgroundColor:"white",left:"269px",zIndex:"1"}}/>
+                    <TextField id="outlined-basic" label="Booking Status" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"280px",backgroundColor:"white",left:"299px",zIndex:"1"}}/>
+
                     
                     {/* <TextField id="outlined-basic" label="PicUp Date" variant="outlined"  style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"320px",backgroundColor:"white",left:"705px",zIndex:"1"}}/> */}
                     
