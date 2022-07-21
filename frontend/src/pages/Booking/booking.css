@@ -102,11 +102,12 @@
     position: relative;
 
 }
-.sliderDiv p{
+.sliderDiv h1{
     position: relative;
     top: -150px;
     left: -470px;
     font-size: 25px;
+    color:#b2c505;
     
     /* border: 1px solid black; */
    
@@ -116,7 +117,7 @@
 .sliderDiv h6{
     position: relative;
     top: -130px;
-    left: -470px;
+    left: -460px;
     font-size: 20px;
     font-weight: 100;
 }
@@ -124,8 +125,8 @@
 
 .sliderDiv  h4{
     position: relative;
-    top: -106px;
-    left: 25px;
+    top: -130px;
+    left: -470px;
     font-size: 17px;
     font-weight: 100;
  }
@@ -133,85 +134,88 @@
  .imgcar{
     position: relative;
     width: 30%;
-    left: 355px;
+    left: 380px;
     top:48px;   
     
  }
 
  .pepoleImg{
     position: relative;
-    left: 23px;
-    top:-125px; 
+    left: -270px;
+    top: -220px; 
 }
 
 .pepoleImg p{
     position: relative;
-    left: 34px;
-    top:-32px; 
-    font-size: 14px;
+    left: 100px;
+    top: -34px; 
+    font-size: 16px;
 }
 
 
 
 .filingStationImg{
     position: relative;
-    left: 24px;
-    top:-188px;   
+    left: -230px;
+    top: -288px;   
   
 }
 
 .filingStationImg p{
     position: relative;
-    left: 34px;
-    top:-28px; 
-    font-size: 14px;  
+    left: 48px;
+    top: -32px;
+    font-size: 16px;  
   
 }
 
 
 .sliderDiv h5{
     position: relative;
-    top:-198px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -410px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    
     
 }
 
 .monthlyRate h5{
     position: relative;
-    top:-192px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -400px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
 }
 
 .monthlyRate p{
     position: relative;
-    top:-210px; 
-    left: 250px;
-    font-size: 14px;
+    left: 48px;
+    top: -350px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    color:#e20d06;
 }
 
 
 .freeDay h5{
     position: relative;
-    top:-202px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -340px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    color:#e20d06;
 }
 
 .freeDay p{
     position: relative;
-    top:-218px; 
-    left: 250px;
-    font-size: 14px;
+    left: 48px;
+    top: -430px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
     

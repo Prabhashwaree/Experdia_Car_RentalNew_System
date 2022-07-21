@@ -64,7 +64,7 @@ export default function BookingPage(){
 
     // const [value, setValue] = React.useState(new Date());
 
-    const [value, setValue] = React.useState('O-');
+    const [value, setValue] = React.useState('B-');
     const handleChange = (event) => {
         setValue(event.target.value);
       };
@@ -256,7 +256,7 @@ export default function BookingPage(){
                     <img src={orderBackGround} style={{position: "absolute",top:"65px",width:"80%",border:"5px solid black" ,height:"55vh",zIndex:"1",top:"210px",left:"150px"}}/>
                 
                     
-                    <TextField id="outlined-multiline-flexible" label="Order ID" multiline maxRows={4} value={value} onChange={handleChange} style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"230px",width:"6%",backgroundColor:"white",left:"-120px",zIndex:"1"}}/>
+                    <TextField id="outlined-multiline-flexible" label="Booking ID" multiline maxRows={4} value={value} onChange={handleChange} style={{position: "relative",border:"5px solid white",borderRadius:"5px",top:"230px",width:"6%",backgroundColor:"white",left:"-120px",zIndex:"1"}}/>
                     
                     <Button variant="contained" style={{position: "relative",top:"250px",backgroundColor:"green",width:"8%",left:"730px",zIndex:"1"}}>Conform</Button>
                     <Button variant="contained" style={{position: "relative",top:"250px",width:"8%",left:"480px",zIndex:"1"}}>Book</Button>
@@ -317,7 +317,7 @@ export default function BookingPage(){
             <section>
 
             {/* <div id="mainseperator"></div> */}
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"850px",left:"578px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"850px",left:"578px",zIndex:"1",color:"#025502"}}>
                 Car Rental Rate</Typography>
 
             
@@ -325,16 +325,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
+                        <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Alto - Premium</h6>
-                         <h4>Manual</h4>  
+                         <h4>Manual</h4> 
+                         <Button variant="contained" style={{position: "relative",top:"-150px",width:"8%",left:"-460px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -362,16 +363,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
+                        <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Alto K10</h6>
-                         <h4>Auto</h4>  
+                         <h4>Auto</h4> 
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>4 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -397,16 +399,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
+                        <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Celerio - Premium</h6>
                          <h4>Auto</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>4 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -433,16 +436,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
+                        <h1><b>Genaral Car</b></h1>  
                         <h6>Perodua (Daihatsu) Axia</h6>
                          <h4>Auto</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -468,16 +472,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Genaral Car</b></p>  
+                        <h1><b>Genaral Car</b></h1>  
                         <h6>Toyota Prius Aqua</h6>
-                         <h4>Auto</h4>  
+                         <h4>Auto</h4>
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>   
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -503,16 +508,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Premium Car</b></p>  
+                        <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Corolla Axio</h6>
                          <h4>Manual</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Book</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -538,16 +544,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Premium Car</b></p>  
+                        <h1><b>Premium Car</b></h1>  
                         <h6>Perodua Bezza Prime</h6>
                          <h4>Auto</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -574,16 +581,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Premium Car</b></p>  
+                        <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Allion NZT</h6>
                          <h4>Manual</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -610,16 +618,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Premium Car</b></p>  
+                        <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Axio NKR</h6>
-                         <h4>Manual</h4>  
+                         <h4>Manual</h4> 
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -646,16 +655,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Luxury Car</b></p>  
+                        <h1><b>Luxury Car</b></h1>  
                         <h6>Toyota Premio</h6>
-                         <h4>Manual</h4>  
+                         <h4>Manual</h4> 
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
@@ -680,16 +690,17 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
-                        <p><b>Luxury Car</b></p>  
+                        <h1><b>Luxury Car</b></h1>  
                         <h6>Mercedes BMW i8</h6>
                          <h4>Manual</h4>  
+                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%"}}/>
+                            <img src={petrol} style={{width:"",height:"10%"}}/>
                             <p>Petrol</p>
                          </span>  
 
