@@ -42,10 +42,16 @@ const breakPoints=[{ width: 1, itemsToShow: 1 },
     { width: 768, itemsToShow: 3 },];
     // { width: 1200, itemsToShow: 4 },
 
+
+
+
+
 export default function HomePage(){
 
     // ---------------------------(Main Section)------------------------
+    
         //App bar section 
+
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -217,7 +223,12 @@ export default function HomePage(){
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
-        </Box>  
+        </Box> 
+
+
+
+        
+
 
 
             {/* --------------------container----------------------- */}
@@ -261,8 +272,16 @@ export default function HomePage(){
                 Car Rental Rate</Typography>
 
             
+                
+
+
             <div className="rentalSlider">
                 <Carousel breakPoints={breakPoints}>
+
+
+                    
+
+
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>
@@ -650,7 +669,7 @@ export default function HomePage(){
                         </div>
 
                     </Item>
-
+                    
 
                 </Carousel>
             </div>
