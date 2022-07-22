@@ -314,119 +314,6 @@ export default function BookingPage(){
                         </section>
 
             
-
-                <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item>Three</Item>
-                            <Item>Four</Item>
-                        </Carousel>
-                    </div>
             
 
 
@@ -442,12 +329,12 @@ export default function BookingPage(){
                     <Item>
                         <div class="sliderDiv">
 
-                            <img class='imgcar' src={carSlide}/>
+                            <div class="imgcar"></div>
                        
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Alto - Premium</h6>
                          <h4>Manual</h4> 
-                         <Button variant="contained" style={{position: "relative",top:"-150px",width:"8%",left:"-460px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"-150px",width:"50px",fontSize:"9px",left:"-460px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -481,11 +368,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Alto K10</h6>
                          <h4>Auto</h4> 
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>4 Peoples</p>
@@ -517,11 +404,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Celerio - Premium</h6>
                          <h4>Auto</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>4 Peoples</p>
@@ -554,11 +441,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Perodua (Daihatsu) Axia</h6>
                          <h4>Auto</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -590,11 +477,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Toyota Prius Aqua</h6>
                          <h4>Auto</h4>
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>   
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>   
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -626,11 +513,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Corolla Axio</h6>
                          <h4>Manual</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Book</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Book</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -662,11 +549,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Premium Car</b></h1>  
                         <h6>Perodua Bezza Prime</h6>
                          <h4>Auto</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -699,11 +586,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Allion NZT</h6>
                          <h4>Manual</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -736,11 +623,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Premium Car</b></h1>  
                         <h6>Toyota Axio NKR</h6>
                          <h4>Manual</h4> 
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -773,11 +660,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Luxury Car</b></h1>  
                         <h6>Toyota Premio</h6>
                          <h4>Manual</h4> 
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button>  
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -808,11 +695,11 @@ export default function BookingPage(){
 
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+                        <div class="imgcar"></div>
                         <h1><b>Luxury Car</b></h1>  
                         <h6>Mercedes BMW i8</h6>
                          <h4>Manual</h4>  
-                         <Button variant="contained" style={{position: "relative",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",fontSize:"9px",backgroundColor:"#08a042",top:"-150px",width:"8%",left:"-460px",zIndex:"1"}}>Booking</Button> 
                          <span  class="pepoleImg"> 
                             <img src={user}/>
                             <p>5 Peoples</p>
@@ -842,8 +729,139 @@ export default function BookingPage(){
                 
                 </div>
 
+
+
+                
+
+                {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                             <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    {/* <div id="footerSeperator1"></div> */}
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        </Carousel>
+                    </div>
+
             
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
