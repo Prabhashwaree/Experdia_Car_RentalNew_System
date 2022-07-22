@@ -90,6 +90,10 @@
 
 
 
+
+
+
+
 /* .rentalSlider{
     font-family: sans-serif;
     display: flex;
@@ -106,14 +110,14 @@
     color: #000000;
     /* border: 1px solid red; */
     height:68%;
-    top: 190px; 
+    top: 205px; 
     position: relative;
 
 }
 .sliderDiv h1{
     position: relative;
-    top: -150px;
-    left: -470px;
+    /* top: 500px;
+    left: 220px; */
     font-size: 25px;
     color:#b2c505;
     
@@ -124,17 +128,95 @@
 
 .sliderDiv h6{
     position: relative;
-    top: -130px;
-    left: -460px;
+    /* top: 520px;
+    left: -480px; */
     font-size: 20px;
     font-weight: 100;
+}
+.mainTopic1{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 680px;
+}
+
+.mainTopic2{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 680px;
+}
+.mainTopic3{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 660px;
+}
+.mainTopic4{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 650px;
+}
+.mainTopic5{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 640px;
+}
+.mainTopic6{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 630px;
+}
+.mainTopic7{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 630px;
+}
+.mainTopic8{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 618px;
+}
+.mainTopic9{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 601px;
+}
+.mainTopic10{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 590px;
+}
+.mainTopic11{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -489px;
+    top: 580px;
 }
 
 
 .sliderDiv  h4{
     position: relative;
-    top: -130px;
-    left: -470px;
+    /* top: 528px;
+    left: 160px; */
     font-size: 17px;
     font-weight: 100;
  }
@@ -253,7 +335,7 @@
     position: relative;
     z-index:32;
     left:64%;
-    top:666px;
+    top:-2300px;
     /* background-color: white; */
     display: flex;
     align-items: center;
@@ -271,7 +353,7 @@
 
 #footerSeperator1{
     position: relative;
-    top: 640px;
+    top: -2326px;
     width: 85%;
     height: 2px;
     background-color: gray;

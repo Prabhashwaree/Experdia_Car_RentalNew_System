@@ -8,12 +8,12 @@ export default styled.div`
   width: 80%;
   background-color: white;
   border-top: 5px solid gray;
-  border-left: 1px solid #ff5f00;
-  border-right: 1px solid #ff5f00;
+  // border-left: 1px solid #ff5f00;
+  // border-right: 1px solid #ff5f00;
   border-bottom: 5px solid gray;
   color: #fff;
-  position: relative;
-  top:620px;
+  // position: relative;
+  top:500px;
   margin: 0 15px;
   font-size: 4em;
   text-align: center;
