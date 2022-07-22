@@ -12,6 +12,26 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import SuzukiAltoPremium1 from '../../assets/img/SuzukiAltoPremium1.jpg';
+import SuzukiAltoPremium2 from '../../assets/img/SuzukiAltoPremium2.jpg';
+import SuzukiAltoPremium3 from '../../assets/img/SuzukiAltoPremium3.jpg';
+import SuzukiAltoPremium4 from '../../assets/img/SuzukiAltoPremium4.jpg';
+
+import SuzukiAltoK1 from '../../assets/img/SuzukiAltoK1.jpg';
+import SuzukiAltoK2 from '../../assets/img/SuzukiAltoK2.jpg';
+import SuzukiAltoK3 from '../../assets/img/SuzukiAltoK3.jpg';
+import SuzukiAltoK4 from '../../assets/img/SuzukiAltoK4.jpg';
+
+import SuzukiCelerioPremium1 from '../../assets/img/SuzukiCelerioPremium1.jpg';
+import SuzukiCelerioPremium2 from '../../assets/img/SuzukiCelerioPremium2.jpg';
+import SuzukiCelerioPremium3 from '../../assets/img/SuzukiCelerioPremium3.jpg';
+import SuzukiCelerioPremium4 from '../../assets/img/SuzukiCelerioPremium4.jpg';
+
+import PeroduaAxia1 from '../../assets/img/PeroduaAxia1.jpg';
+import PeroduaAxia2 from '../../assets/img/PeroduaAxia2.jpg';
+import PeroduaAxia3 from '../../assets/img/PeroduaAxia3.jpg';
+import PeroduaAxia4 from '../../assets/img/PeroduaAxia4.jpg';
+
 import carLogo from '../../assets/img/carLogo.png';
 import orderBackGround from '../../assets/img/orderBackGround.jpeg';
 import carDiscrip from '../../assets/img/carDiscrip.png';
@@ -337,28 +357,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"580px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"617px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"585px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-28px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-48px",left:"65px"}}>Petrol</p>
                          </span>  
+                        <div class="paymentRs">
+                            <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.2,500.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.64,350.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.30.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.30.00</b></p>
+                            </span>
+                         </div>
 
                         </div>
 
@@ -380,28 +400,28 @@ export default function BookingPage(){
                          
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>4 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"617px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"585px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-28px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-48px",left:"65px"}}>Petrol</p>
+                         </span>    
+                         <div class="paymentRs">
+                            <h5>Daily Rate <b>Rs.3,000.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.3,000.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.71,390.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.71,390.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.35.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.35.00</b></p>
+                            </span>
+                            </div>
                         </div>
 
                    
@@ -421,28 +441,28 @@ export default function BookingPage(){
                          
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>4 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"617px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"585px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
-
-                         <h5>Daily Rate <b>Rs.3,300.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.77,220.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-28px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-48px",left:"65px"}}>Petrol</p>
                          </span>
+                         <div class="paymentRs">
+                            <h5>Daily Rate <b>Rs.3,300.00</b></h5> 
+
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.77,220.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.35.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.35.00</b></p>
+                            </span>
+                            </div>
                         </div>
         
                     
@@ -462,28 +482,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"550px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"617px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"585px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-28px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-48px",left:"65px"}}>Petrol</p>
+                         </span>   
+                         <div class="paymentRs">
+                            <h5>Daily Rate <b>Rs.3,800.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.3,800.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.90,200.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.90,200.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.35.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.35.00</b></p>
+                            </span>
+                        </div>
                         </div>
  
                     
@@ -502,28 +522,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"540px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"600px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"570px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-45px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-65px",left:"65px"}}>Petrol</p>
+                         </span>   
+                         <div class="paymentRs1">
+                            <h5>Daily Rate <b>Rs.5,000.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.5,000.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.110,330.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.110,330.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.49.50</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.49.50</b></p>
+                            </span>
+                        </div>
                         </div>
 
                     
@@ -542,28 +562,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"600px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"570px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-45px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-65px",left:"65px"}}>Petrol</p>
+                         </span>    
+                         <div class="paymentRs1">
+                            <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.49.50</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.49.50</b></p>
+                            </span>
+                        </div>
                         </div>
 
                     
@@ -582,28 +602,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"600px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"570px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-45px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-65px",left:"65px"}}>Petrol</p>
                          </span>  
+                         <div class="paymentRs1">
+                            <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.5,500.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.120,330.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.49.50</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.49.50</b></p>
+                            </span>
+                        </div>
                         </div>
 
                     
@@ -623,15 +643,15 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"520px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"600px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"570px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
-
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-45px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-65px",left:"65px"}}>Petrol</p>
+                         </span> 
+                         <div class="paymentRs1">
                          <h5>Daily Rate <b>Rs.5,800.00</b></h5> 
 
                          <span class="monthlyRate">  
@@ -644,7 +664,7 @@ export default function BookingPage(){
                             <h5>Free Km Day <b>100</b></h5>
                             <p>Extre Km <b>Rs.60.00</b></p>
                          </span>
-
+                    </div>
                         </div>
 
                     
@@ -664,28 +684,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"501px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"580px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"548px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
-
-                         <h5>Daily Rate <b>Rs.6,000.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.175,230.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-66px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-87px",left:"65px"}}>Petrol</p>
                          </span>
+                         <div class="paymentRs2">
+                            <h5>Daily Rate <b>Rs.6,000.00</b></h5> 
+
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.175,230.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.65.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.65.00</b></p>
+                            </span>
+                            </div>
                         </div>
 
                     
@@ -706,28 +726,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"490px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"580px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"548px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-66px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-87px",left:"65px"}}>Petrol</p>
                          </span>  
+                         <div class="paymentRs2">
+                            <h5>Daily Rate <b>Rs.10,000.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.10,000.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.227,150.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                            <span class="monthlyRate">  
+                                <h5>Monthly Rate <b>Rs.227,150.00</b></h5>
+                                <p>Free Km Month <b>2400</b></p>
+                            </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.85.00</b></p>
-                         </span>
-
+                            <span class="freeDay">  
+                                <h5>Free Km Day <b>100</b></h5>
+                                <p>Extre Km <b>Rs.85.00</b></p>
+                            </span>
+                        </div>
                         </div>
 
                     
@@ -745,28 +765,28 @@ export default function BookingPage(){
                          <Button variant="contained" style={{position: "relative",top:"480px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
                          
                          <span  class="pepoleImg"> 
-                            <img src={user}/>
-                            <p>5 Peoples</p>
+                            <img src={user} style={{position: "relative",top:"580px",left:"400px"}}/>
+                            <p style={{position: "relative",top:"548px",left:"530px"}}>5 Peoples</p>
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"10%"}}/>
-                            <p>Petrol</p>
-                         </span>  
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-66px",left:"23px"}}/>
+                            <p style={{position: "relative",top:"-87px",left:"65px"}}>Petrol</p>
+                         </span> 
+                         <div class="paymentRs2">
+                                    <h5>Daily Rate <b>Rs.18,000.00</b></h5> 
 
-                         <h5>Daily Rate <b>Rs.18,000.00</b></h5> 
-
-                         <span class="monthlyRate">  
-                            <h5>Monthly Rate <b>Rs.300,000.00</b></h5>
-                            <p>Free Km Month <b>2400</b></p>
-                         </span>
+                                    <span class="monthlyRate">  
+                                    <h5>Monthly Rate <b>Rs.300,000.00</b></h5>
+                                    <p>Free Km Month <b>2400</b></p>
+                                </span>
 
 
-                         <span class="freeDay">  
-                            <h5>Free Km Day <b>100</b></h5>
-                            <p>Extre Km <b>Rs.100.00</b></p>
-                         </span>
-
+                                <span class="freeDay">  
+                                    <h5>Free Km Day <b>100</b></h5>
+                                    <p>Extre Km <b>Rs.100.00</b></p>
+                                </span>
+                            </div>
                         </div>
 
                     </div>
@@ -780,9 +800,10 @@ export default function BookingPage(){
                 <div id="footerSeperator1"></div> 
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoPremium1}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoPremium2}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoPremium3}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoPremium4}/></Item>
                         </Carousel>
                     </div>
 
@@ -790,20 +811,10 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoK1}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoK2}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoK3}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiAltoK4}/></Item>
                         </Carousel>
                     </div>
 
@@ -812,9 +823,22 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                             <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={SuzukiCelerioPremium1}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiCelerioPremium2}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiCelerioPremium3}/></Item>
+                            <Item><img class='sliderCar' src={SuzukiCelerioPremium4}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                             <Item><img class='sliderCar' src={PeroduaAxia1}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaAxia2}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaAxia3}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaAxia4}/></Item>
                         </Carousel>
                     </div>
 
@@ -896,7 +920,25 @@ export default function BookingPage(){
 
 
 
+{/* --------------------Experdiya  car discription----------------------- */}
 
+<section id="carDiscription">
+
+                
+<Typography id="carRentalTopic" variant="h4" gutterBottom component="div" style={{position: "relative",top:"-2120px",left:"110px",zIndex:"1",color:"rgb(241, 136, 75)"}}>
+    <b>ENJOY A ROAD TRIP THROUGH<br/> PARADISE WITH CAR RENTAL IN<br/> SRI LANKA</b>
+</Typography>
+
+<Typography variant="body1" gutterBottom style={{position: "relative",top:"-2073px",left:"110px",zIndex:"1",color:"black"}}>
+    Whichever model you choose for your Sri Lanka car rental you<br/> can enhance your experience with our useful extras. Great deals <br/>on numerous upgrades are available to help you have an optimal<br/>
+     drive. Prearrange your rental online or over the phone and include<br/> optional features as you book.
+     You can tack on a child seat, GPS,<br/> additional driver coverage and more. Please note Experdia cannot<br/> guarantee you to receive an exact car model, but you will receive an <br/>equivalent vehicle in your
+      chosen car category.
+</Typography>
+
+<img src={carDiscrip} style={{position: "relative",top:"-2530px",left:"680px",zIndex:"1",width:"50%",height:"60%"}}/>
+
+</section>
 
 
 

@@ -232,34 +232,59 @@
     
  }
 
- .pepoleImg{
+ /* .pepoleImg{
     position: relative;
-    left: -270px;
-    top: -220px; 
+    left: 400px;
+    top: 517px; 
 }
 
 .pepoleImg p{
     position: relative;
-    left: 100px;
-    top: -34px; 
+    left: 133px;
+    top: -32px; 
     font-size: 16px;
-}
+} */
 
 
 
 .filingStationImg{
     position: relative;
-    left: -238px;
-    top: -288px;   
+    left: 490px;
+    top: 500px;  
   
 }
 
 .filingStationImg p{
     position: relative;
-    left: 48px;
-    top: -32px;
+    left: 44px;
+    top: -20px;
     font-size: 16px;  
   
+}
+
+
+.paymentRs{
+    position: relative;
+    left: 10px;
+    top: 760px;
+    text-align: center;
+    margin: auto;
+}
+
+.paymentRs1{
+    position: relative;
+    left: 10px;
+    top: 720px;
+    text-align: center;
+    margin: auto;
+}
+
+.paymentRs2{
+    position: relative;
+    left: 10px;
+    top: 700px;
+    text-align: center;
+    margin: auto;
 }
 
 
@@ -359,7 +384,7 @@
     background-color: gray;
     left: 8%;
     bottom: 20%;
-    z-index: 2;
+    z-index: 12;
     
 }
 
@@ -407,7 +432,7 @@
 
 #footerSeperator{
     position: absolute;
-    top: 593%;
+    top: 698%;
     width: 85%;
     height: 1px;
     background-color: gray;
@@ -417,7 +442,7 @@
 
 #footerFirstLineWord{
     position: absolute;
-    top: 597.8%;
+    top: 706%;
     left: 38%;
     bottom: 50%;
     color: gray;
@@ -425,7 +450,7 @@
 
 #footerSecondLineWord{
     position: absolute;
-    top: 602%;
+    top: 710%;
     left: 16%;
     bottom: 50%;
     color: gray;
@@ -433,7 +458,7 @@
 
 #endFooterSeperator{
     position: absolute;
-    top: 610%;
+    top: 720%;
     width: 100%;
     height: 1px;
     background-color: gray;
