@@ -321,7 +321,7 @@ export default function BookingPage(){
             <section>
 
             {/* <div id="mainseperator"></div> */}
-            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"850px",left:"578px",zIndex:"1",color:"#025502"}}>
+            <Typography variant="h3" gutterBottom component="div" style={{position: "absolute",top:"880px",left:"578px",zIndex:"1",color:"#025502"}}>
                 Car Rental Rate</Typography>
 
             
@@ -889,12 +889,10 @@ export default function BookingPage(){
                             <Item><img class='sliderCar' src={carSlide}/></Item>
                         </Carousel>
                     </div>
-
+                   
             
             </section>
-
-
-
+ 
 
 
 
@@ -911,6 +909,7 @@ export default function BookingPage(){
 
             {/* --------------------footer----------------------- */}
             <section>
+                <div id="sliderSeperetor1"></div>
                 <div id="footerSeperator"></div>
                 <Typography id="footerFirstLineWord"  variant="caption" display="block" gutterBottom>
                     Experdia, Inc. is not responsible for content on external Web sites.

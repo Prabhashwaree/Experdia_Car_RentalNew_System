@@ -7,10 +7,10 @@ export default styled.div`
   height: 280px;
   width: 80%;
   background-color: white;
-  border-top: 5px solid gray;
+  border-top: 3px solid gray;
   // border-left: 1px solid #ff5f00;
   // border-right: 1px solid #ff5f00;
-  border-bottom: 5px solid gray;
+  border-bottom: 3px solid gray;
   color: #fff;
   // position: relative;
   top:500px;
