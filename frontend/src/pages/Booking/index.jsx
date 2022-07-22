@@ -3,6 +3,7 @@ import { Component } from "react";
 import {withStyles} from "@mui/styles";
 import './booking.css';
 import Item from '../Booking/Item';
+import ItemSlider from '../Booking/ItemSlider';
 import Carousel from "react-elastic-carousel";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -312,6 +313,122 @@ export default function BookingPage(){
                         
                         </section>
 
+            
+
+                <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                            <Item>Three</Item>
+                            <Item>Four</Item>
+                        </Carousel>
+                    </div>
+            
+
 
         {/* --------------------Car Rental Rate----------------------- */}
             <section>
@@ -324,7 +441,9 @@ export default function BookingPage(){
             <div>
                     <Item>
                         <div class="sliderDiv">
-                        <img class='imgcar' src={carSlide}/>
+
+                            <img class='imgcar' src={carSlide}/>
+                       
                         <h1><b>Genaral Car</b></h1>  
                         <h6>Suzuki Alto - Premium</h6>
                          <h4>Manual</h4> 

@@ -278,10 +278,6 @@ export default function HomePage(){
             <div className="rentalSlider">
                 <Carousel breakPoints={breakPoints}>
 
-
-                    
-
-
                     <Item>
                         <div class="sliderDiv">
                         <img class='imgcar' src={carSlide}/>

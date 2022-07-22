@@ -68,6 +68,14 @@
 
 
 
+
+ /* ------------------------------------------------------------------ */
+
+
+
+
+
+
 /* --------------------------Car Rates------------------------------- */
 
 
@@ -88,17 +96,17 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    top: 105%;
-    position: absolute;
+    top: 800%;
+    position: relative;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     
 }
 .sliderDiv{
     color: #000000;
     /* border: 1px solid red; */
-    height: 70%;
-    top: -44px;
+    height:68%;
+    top: -2250px;
     position: relative;
 
 }
@@ -133,9 +141,11 @@
 
  .imgcar{
     position: relative;
-    width: 30%;
-    left: 380px;
-    top:48px;   
+    width: 20%;
+    left: 420px;
+    top:46px; 
+    /* background-color: white;  */
+
     
  }
 
@@ -233,6 +243,46 @@
 #carRentalTopic{
     text-shadow: none;
 }
+
+
+.carImgSlider{
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 30%;
+    height:260px;
+    position: relative;
+    z-index:32;
+    left:64%;
+    top:630px;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.sliderCar{
+    width: 83%;
+    top: 5px;
+    position: relative;
+}
+
+#footerSeperator1{
+    position: relative;
+    top: 610px;
+    width: 85%;
+    height: 2px;
+    background-color: gray;
+    left: 8%;
+    bottom: 20%;
+    z-index: 2;
+    
+}
+
+
+
+
+
 
 
 /* --------------------------select discription------------------------------- */
