@@ -12,8 +12,8 @@ function App() {
     //  <HomePage />
     // <SignInPage />
     // <SignUpPage />
-    <CustomerRegisterPage />
-    // <DashBoardPage />
+    // <CustomerRegisterPage />
+    <DashBoardPage />
     // <BookingPage />
   );
 }
