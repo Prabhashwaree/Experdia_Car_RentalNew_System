@@ -12,9 +12,9 @@ function App() {
     //  <HomePage />
     // <SignInPage />
     // <SignUpPage />
-    // <CustomerRegisterPage />
+    <CustomerRegisterPage />
     // <DashBoardPage />
-    <BookingPage />
+    // <BookingPage />
   );
 }
 export default App;

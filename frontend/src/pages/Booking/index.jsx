@@ -32,6 +32,41 @@ import PeroduaAxia2 from '../../assets/img/PeroduaAxia2.jpg';
 import PeroduaAxia3 from '../../assets/img/PeroduaAxia3.jpg';
 import PeroduaAxia4 from '../../assets/img/PeroduaAxia4.jpg';
 
+import ToyotaPriusAqua1 from '../../assets/img/ToyotaPriusAqua1.jpg';
+import ToyotaPriusAqua2 from '../../assets/img/ToyotaPriusAqua2.jpg';
+import ToyotaPriusAqua3 from '../../assets/img/ToyotaPriusAqua3.jpg';
+import ToyotaPriusAqua4 from '../../assets/img/ToyotaPriusAqua4.jpg';
+
+import ToyotaCorollaAxio1 from '../../assets/img/ToyotaCorollaAxio1.jpg';
+import ToyotaCorollaAxio2 from '../../assets/img/ToyotaCorollaAxio2.jpg';
+import ToyotaCorollaAxio3 from '../../assets/img/ToyotaCorollaAxio3.jpg';
+import ToyotaCorollaAxio4 from '../../assets/img/ToyotaCorollaAxio4.jpg';
+
+import PeroduaBezzPrime1 from '../../assets/img/PeroduaBezzPrime1.jpg';
+import PeroduaBezzPrime2 from '../../assets/img/PeroduaBezzPrime2.jpg';
+import PeroduaBezzPrime3 from '../../assets/img/PeroduaBezzPrime3.jpg';
+import PeroduaBezzPrime4 from '../../assets/img/PeroduaBezzPrime4.jpg';
+
+import ToyotaAllionNZT1 from '../../assets/img/ToyotaAllionNZT1.jpg';
+import ToyotaAllionNZT2 from '../../assets/img/ToyotaAllionNZT2.jpg';
+import ToyotaAllionNZT3 from '../../assets/img/ToyotaAllionNZT3.jpg';
+import ToyotaAllionNZT4 from '../../assets/img/ToyotaAllionNZT4.jpg';
+
+import ToyotaAxioNKR1 from '../../assets/img/ToyotaAxioNKR1.jpg';
+import ToyotaAxioNKR2 from '../../assets/img/ToyotaAxioNKR2.jpg';
+import ToyotaAxioNKR3 from '../../assets/img/ToyotaAxioNKR3.jpg';
+import ToyotaAxioNKR4 from '../../assets/img/ToyotaAxioNKR4.jpg';
+
+import ToyotaPremio1 from '../../assets/img/ToyotaPremio1.jpg';
+import ToyotaPremio2 from '../../assets/img/ToyotaPremio2.jpg';
+import ToyotaPremio3 from '../../assets/img/ToyotaPremio3.jpg';
+import ToyotaPremio4 from '../../assets/img/ToyotaPremio4.jpg';
+
+import MercedesBMWi1 from '../../assets/img/MercedesBMWi1.jpg';
+import MercedesBMWi2 from '../../assets/img/MercedesBMWi2.jpg';
+import MercedesBMWi3 from '../../assets/img/MercedesBMWi3.jpg';
+import MercedesBMWi4 from '../../assets/img/MercedesBMWi4.jpg';
+
 import carLogo from '../../assets/img/carLogo.png';
 import orderBackGround from '../../assets/img/orderBackGround.jpeg';
 import carDiscrip from '../../assets/img/carDiscrip.png';
@@ -846,9 +881,10 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={ToyotaPriusAqua1}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPriusAqua2}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPriusAqua3}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPriusAqua4}/></Item>
                         </Carousel>
                     </div>
 
@@ -856,9 +892,10 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={ToyotaCorollaAxio1}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaCorollaAxio2}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaCorollaAxio3}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaCorollaAxio4}/></Item>
                         </Carousel>
                     </div>
 
@@ -866,9 +903,10 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={PeroduaBezzPrime1}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaBezzPrime2}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaBezzPrime3}/></Item>
+                            <Item><img class='sliderCar' src={PeroduaBezzPrime4}/></Item>
                         </Carousel>
                     </div>
 
@@ -876,30 +914,10 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                        </Carousel>
-                    </div>
-
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                        </Carousel>
-                    </div>
-
-
-                    <div id="footerSeperator1"></div>
-                    <div class="carImgSlider">
-                        <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={ToyotaAllionNZT1}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAllionNZT2}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAllionNZT3}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAllionNZT4}/></Item>
                         </Carousel>
                     </div>
 
@@ -908,9 +926,33 @@ export default function BookingPage(){
                     <div id="footerSeperator1"></div>
                     <div class="carImgSlider">
                         <Carousel breakPoints={breakPoints}>
-                        <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
-                            <Item><img class='sliderCar' src={carSlide}/></Item>
+                        <Item><img class='sliderCar' src={ToyotaAxioNKR1}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAxioNKR2}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAxioNKR3}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaAxioNKR4}/></Item>
+                        </Carousel>
+                    </div>
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={ToyotaPremio1}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPremio2}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPremio3}/></Item>
+                            <Item><img class='sliderCar' src={ToyotaPremio4}/></Item>
+                        </Carousel>
+                    </div>
+
+
+
+                    <div id="footerSeperator1"></div>
+                    <div class="carImgSlider">
+                        <Carousel breakPoints={breakPoints}>
+                        <Item><img class='sliderCar' src={MercedesBMWi1}/></Item>
+                            <Item><img class='sliderCar' src={MercedesBMWi2}/></Item>
+                            <Item><img class='sliderCar' src={MercedesBMWi3}/></Item>
+                            <Item><img class='sliderCar' src={MercedesBMWi4}/></Item>
                         </Carousel>
                     </div>
                    

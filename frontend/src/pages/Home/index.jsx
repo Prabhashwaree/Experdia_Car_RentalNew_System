@@ -2,7 +2,7 @@ import {styleSheet} from  "./style";
 import { Component } from "react";
 import {withStyles} from "@mui/styles";
 import './home.css';
-import Item from './Item';
+import Item from '../Home/Item';
 import Carousel from "react-elastic-carousel";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
