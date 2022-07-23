@@ -246,7 +246,7 @@ export default function DashBoardPage(){
                             options={top100Films}
                             sx={{ width: 300 }}
                             renderInput={(params) => <TextField {...params} label="Booking ID" />}
-                            style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"250px",zIndex:"1",width:"25%"}}/>
+                            style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"240px",zIndex:"1",width:"25%"}}/>
 
                       <Autocomplete
                             disablePortal
@@ -254,17 +254,20 @@ export default function DashBoardPage(){
                             options={car}
                             sx={{ width: 300 }}
                             renderInput={(params) => <TextField {...params} label="Car No" />}
-                            style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"410px",zIndex:"1",width:"25%"}}/>
+                            style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"395px",zIndex:"1",width:"25%"}}/>
 
                             <TextField id="outlined-basic" label="Payment ID" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
                             <TextField id="outlined-basic" label="currently KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+                            <Button variant="contained" color="success" style={{position: "relative",top:"-25px",left:"35px",width:"20%",backgroundColor:"Green"}}>Save</Button>
                             <TextField id="outlined-basic" label="Ride KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
                             <TextField id="outlined-basic" label="Total KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+                            <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"Blue",left:"35px",width:"20%",zIndex:"1"}}>Update</Button>
                             <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
                             <TextField id="outlined-basic" label="Total Price" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
-                            <Button variant="contained" color="success" style={{position: "relative",top:"-140px",left:"37px",width:"20%",backgroundColor:"Green"}}>Save</Button>
-                            <Button variant="contained" color="success"style={{position: "relative",top:"-136px",backgroundColor:"Blue",left:"481px",width:"20%"}}>Update</Button>
-                            <Button variant="contained" color="success"style={{position: "relative",top:"-80px",backgroundColor:"red",left:"356px",width:"20%"}}>Delete</Button>
+                            <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"35px",width:"20%"}}>Delete</Button>
+                            
+                            
+                            
                             
       
 
@@ -283,42 +286,95 @@ export default function DashBoardPage(){
                   <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"28px",top:"25px"}}>
                          Add Car Details
                         </Typography>
-                  <TextField id="outlined-basic" label="Register ID" variant="outlined" style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"250px",zIndex:"1",width:"25%"}}/>
+                  <TextField id="outlined-basic" label="Register ID" variant="outlined" style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"240px",zIndex:"1",width:"25%"}}/>
                             
                       <Autocomplete
                             disablePortal
                             id="combo-box-demo"
                             options={car}
                             sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Rental Rate ID" />}
-                            style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"410px",zIndex:"1",width:"25%"}}/>
+                            renderInput={(params) => <TextField {...params} label="Rate ID" />}
+                            style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"395px",zIndex:"1",width:"25%"}}/>
 
-                            <TextField id="outlined-basic" label="Payment ID" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
-                            <TextField id="outlined-basic" label="currently KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
-                            <TextField id="outlined-basic" label="Ride KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
-                            <TextField id="outlined-basic" label="Total KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
-                            <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
-                            <TextField id="outlined-basic" label="Total Price" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
-                            <Button variant="contained" color="success" style={{position: "relative",top:"-140px",left:"37px",width:"20%",backgroundColor:"Green"}}>Save</Button>
-                            <Button variant="contained" color="success"style={{position: "relative",top:"-136px",backgroundColor:"Blue",left:"481px",width:"20%"}}>Update</Button>
-                            <Button variant="contained" color="success"style={{position: "relative",top:"-80px",backgroundColor:"red",left:"356px",width:"20%"}}>Delete</Button>
+                            <TextField id="outlined-basic" label="Brand" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Type" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+                            <Button variant="contained" color="success" style={{position: "relative",top:"27px",left:"35px",width:"20%",backgroundColor:"Green"}}>Save</Button>
+                            <TextField id="outlined-basic" label="Passenger" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Transmission Type" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/><br/>
+                           
+                           
+                            {/*  */}
                             
-      
+                            <TextField id="outlined-basic" label="Fuel" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"17%"}}/>
+                            <TextField id="outlined-basic" label="Color" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"17%"}}/>
+                            <TextField id="outlined-basic" label="Loss Damage Price" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"31px",zIndex:"1",width:"35%"}}/>
+                            <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"44px",width:"20%"}}>Delete</Button>
+                            
+                            
+                            
+                  </div>
+                    
+
+                </section>
 
 
 
+
+{/*--------------------------------  Rental rate details section --------------------------------------*/}
+
+                <section id="dashboardReectangle3">
+                  <div>
+                  <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"28px",top:"25px"}}>
+                         Payment Details
+                        </Typography>
+                        <TextField id="outlined-basic" label="Rate ID" variant="outlined" style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"240px",zIndex:"1",width:"25%"}}/>
+                        <TextField id="outlined-basic" label="Type" variant="outlined" style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"240px",zIndex:"1",width:"25%"}}/>
+                     
+                        <div id="driverBtn">
+                              <Button variant="contained" color="success" style={{position: "relative",top:"130px",backgroundColor:"green",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Save</Button><br/><br/>
+                                <Button variant="contained" color="success"style={{position: "relative",top:"130px",backgroundColor:"blue",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Update</Button><br/><br/>
+                                <Button variant="contained" color="success"style={{position: "relative",top:"130px",backgroundColor:"red",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Delete</Button>
+                            </div>
+                
+                        <TextField id="outlined-basic" label="Driver NIC" variant="outlined" style={{position: "relative",top:"-90x",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="License No" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Name" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Address" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/><br/>
+                            <TextField id="outlined-basic" label="Contact No" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Salary" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>  
+
+                            
+                            
+                 
+                 
                   </div>
                 </section>
 
 
 
-
-                <section id="dashboardReectangle3">
-                  <div></div>
-                </section>
+{/*--------------------------------  Driver details section --------------------------------------*/}
 
                 <section id="dashboardReectangle4">
-                  <div></div>
+                  <div>
+                    
+                  <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"28px",top:"25px",zIndex:"2"}}>
+                         Add Driver Details
+                        </Typography>
+                  
+                          <div id="driverBtn">
+                              <Button variant="contained" color="success" style={{position: "relative",top:"130px",backgroundColor:"green",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Save</Button><br/><br/>
+                                <Button variant="contained" color="success"style={{position: "relative",top:"130px",backgroundColor:"blue",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Update</Button><br/><br/>
+                                <Button variant="contained" color="success"style={{position: "relative",top:"130px",backgroundColor:"red",color:"white",left:"508px",zIndex:"1",width:"20%"}}>Delete</Button>
+                            </div>
+                      
+                            <TextField id="outlined-basic" label="Driver NIC" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="License No" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Name" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Address" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/><br/>
+                            <TextField id="outlined-basic" label="Contact No" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+                            <TextField id="outlined-basic" label="Salary" variant="outlined" style={{position: "relative",top:"-80px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>  
+
+                  </div>
                 </section>
       
       
