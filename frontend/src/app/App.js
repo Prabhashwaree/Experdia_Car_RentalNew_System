@@ -15,11 +15,11 @@ function App() {
     // <SignInPage />
     // <SignUpPage />
     // <CustomerRegisterPage />
-    <DriverShedulePage/>
+    // <DriverShedulePage/>
     // <Routes>
     //     <Route exact path="/" element={<DashBoardPage />}/>
     // </Routes>
-    // <AdminDashBoardPages />
+    <AdminDashBoardPages />
     // <BookingPage />
   );
 }
