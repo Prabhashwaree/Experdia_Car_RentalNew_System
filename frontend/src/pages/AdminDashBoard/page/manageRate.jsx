@@ -27,7 +27,7 @@ const rows = [
 
 
 
-export default function ManageCar() {
+export default function ManageRate() {
   return (
     <section>
     <div>
