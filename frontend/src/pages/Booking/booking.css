@@ -9,9 +9,18 @@
     height: 65px;
     width: 100%;
     background-color: rgb(128, 128, 128);
+    
 }
 
 #bookingContainer{
     background-color: #f73f3f;
     width: 300px;
+}
+
+#sliderImg{
+    top: 10px;
+    left:800px;
+    position: relative;
+    left: 980px;
+    top: -350px;
 }
