@@ -68,6 +68,14 @@
 
 
 
+
+ /* ------------------------------------------------------------------ */
+
+
+
+
+
+
 /* --------------------------Car Rates------------------------------- */
 
 
@@ -82,31 +90,36 @@
 
 
 
-.rentalSlider{
+
+
+
+
+/* .rentalSlider{
     font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    top: 105%;
-    position: absolute;
+    top: 800%;
+    position: relative;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     
-}
+} */
 .sliderDiv{
     color: #000000;
     /* border: 1px solid red; */
-    height: 70%;
-    top: -44px;
+    height:68%;
+    top: 205px; 
     position: relative;
 
 }
-.sliderDiv p{
+.sliderDiv h1{
     position: relative;
-    top: -115px;
-    left: 25px;
+    /* top: 500px;
+    left: 220px; */
     font-size: 25px;
+    color:#b2c505;
     
     /* border: 1px solid black; */
    
@@ -115,102 +128,212 @@
 
 .sliderDiv h6{
     position: relative;
-    top: -111px;
-    left: 25px;
+    /* top: 520px;
+    left: -480px; */
     font-size: 20px;
     font-weight: 100;
+}
+.mainTopic1{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 570px;
+}
+
+.mainTopic2{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 570px;
+}
+.mainTopic3{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 555px;
+}
+.mainTopic4{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 550px;
+}
+.mainTopic5{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 530px;
+}
+.mainTopic6{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 525px;
+}
+.mainTopic7{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 520px;
+}
+.mainTopic8{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 510px;
+}
+.mainTopic9{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 490px;
+}
+.mainTopic10{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 480px;
+}
+.mainTopic11{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    left: -465px;
+    top: 470px;
 }
 
 
 .sliderDiv  h4{
     position: relative;
-    top: -106px;
-    left: 25px;
+    /* top: 528px;
+    left: 160px; */
     font-size: 17px;
     font-weight: 100;
  }
 
  .imgcar{
     position: relative;
-    width: 40%;
-    left: 225px;
-    top:48px;   
+    width: 30%;
+    
+    left: 420px;
+    top:46px; 
+    /* background-color: white;  */
+
+    
  }
 
- .pepoleImg{
+ /* .pepoleImg{
     position: relative;
-    left: 23px;
-    top:-125px; 
+    left: 400px;
+    top: 517px; 
 }
 
 .pepoleImg p{
     position: relative;
-    left: 34px;
-    top:-32px; 
-    font-size: 14px;
-}
+    left: 133px;
+    top: -32px; 
+    font-size: 16px;
+} */
 
 
 
 .filingStationImg{
     position: relative;
-    left: 24px;
-    top:-188px;   
+    left: 490px;
+    top: 500px;  
   
 }
 
 .filingStationImg p{
     position: relative;
-    left: 34px;
-    top:-28px; 
-    font-size: 14px;  
+    left: 44px;
+    top: -20px;
+    font-size: 16px;  
   
+}
+
+
+.paymentRs{
+    position: relative;
+    left: 10px;
+    top: 760px;
+    text-align: center;
+    margin: auto;
+}
+
+.paymentRs1{
+    position: relative;
+    left: 10px;
+    top: 720px;
+    text-align: center;
+    margin: auto;
+}
+
+.paymentRs2{
+    position: relative;
+    left: 10px;
+    top: 700px;
+    text-align: center;
+    margin: auto;
 }
 
 
 .sliderDiv h5{
     position: relative;
-    top:-198px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -410px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    
     
 }
 
 .monthlyRate h5{
     position: relative;
-    top:-192px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -400px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
 }
 
 .monthlyRate p{
     position: relative;
-    top:-210px; 
-    left: 250px;
-    font-size: 14px;
+    left: 48px;
+    top: -350px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    color:#e20d06;
 }
 
 
 .freeDay h5{
     position: relative;
-    top:-202px; 
-    left: 25px;
-    font-size: 14px;
+    left: 48px;
+    top: -340px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
+    color:#e20d06;
 }
 
 .freeDay p{
     position: relative;
-    top:-218px; 
-    left: 250px;
-    font-size: 14px;
+    left: 48px;
+    top: -430px;
+    font-size: 16px;
     font-weight: 100;
     z-index: 1;
     
@@ -227,7 +350,49 @@
 
 #carRentalTopic{
     text-shadow: none;
+    
 }
+
+
+.carImgSlider{
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 30%;
+    height:260px;
+    position: relative;
+    z-index:32;
+    left:64%;
+    top:-2300px;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.sliderCar{
+    width: 83%;
+    top: 5px;
+    position: relative;
+    
+}
+
+#footerSeperator1{
+    position: relative;
+    top: -2326px;
+    width: 85%;
+    height: 2px;
+    background-color: gray;
+    left: 8%;
+    bottom: 20%;
+    z-index: 12;
+    
+}
+
+
+
+
+
 
 
 /* --------------------------select discription------------------------------- */
@@ -236,7 +401,7 @@
     width: 80%;
     height: 80px;
     position: relative;
-    top: 1260px;
+    top: 599px;
     background-color: rgb(243, 243, 243);
     text-align: center;
     margin: auto;
@@ -254,9 +419,21 @@
 
 /* --------------------------footer------------------------------- */
 
+/* #sliderSeperetor1{
+    position: absolute;
+    top: 581%;
+    width: 85%;
+    height: 1px;
+    background-color: gray;
+    left: 8%;
+    bottom: 20%;
+    border: 1px solid gray;
+    z-index: 1;
+} */
+
 #footerSeperator{
     position: absolute;
-    top: 310%;
+    top: 649%;
     width: 85%;
     height: 1px;
     background-color: gray;
@@ -266,7 +443,7 @@
 
 #footerFirstLineWord{
     position: absolute;
-    top: 316.8%;
+    top: 655%;
     left: 38%;
     bottom: 50%;
     color: gray;
@@ -274,7 +451,7 @@
 
 #footerSecondLineWord{
     position: absolute;
-    top: 321%;
+    top: 658%;
     left: 16%;
     bottom: 50%;
     color: gray;
@@ -282,7 +459,7 @@
 
 #endFooterSeperator{
     position: absolute;
-    top: 330%;
+    top: 668%;
     width: 100%;
     height: 1px;
     background-color: gray;

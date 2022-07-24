@@ -4,7 +4,9 @@ import SignInPage from "../pages/SignIn"
 import SignUpPage from "../pages/SignUp"
 import CustomerRegisterPage from "../pages/CustomerRegister"
 import BookingPage from "../pages/Booking"
-import DashBoardPage from "../pages/DashBoard"
+import AdminDashBoardPages from "../pages/AdminDashBoard"
+import DriverShedulePage from "../pages/DriverShedule"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -13,7 +15,11 @@ function App() {
     // <SignInPage />
     // <SignUpPage />
     // <CustomerRegisterPage />
-    <DashBoardPage />
+    <DriverShedulePage/>
+    // <Routes>
+    //     <Route exact path="/" element={<DashBoardPage />}/>
+    // </Routes>
+    // <AdminDashBoardPages />
     // <BookingPage />
   );
 }

@@ -47,7 +47,7 @@ export default function SignInPage(){
                 <img src={facebook} style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"-10px",zIndex:"1",width:"50px",height:"50px",cursor:"pointer"}}/>
                 <img src={googel} style={{position: "relative",top:"125px",zIndex:"1",width:"98.5px",height:"1px",left:"2px",zIndex:"1",width:"100px",height:"70px",cursor:"pointer"}}/>
                 <img src={linkPhone} style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"9px",zIndex:"1",width:"50px",height:"48px",cursor:"pointer"}}/>
-                <p style={{color:"rgb(25, 60, 173)",top:"130px",cursor:"pointer"}}><b>More ways to sign in</b></p>
+                <p style={{color:"rgb(25, 60, 173)",top:"130px",cursor:"pointer"}}><Button variant="Continue with account" style={{backgroundColor:"transparent"}}><b>Create a New Account</b></Button></p>
                 <div style={{position: "relative",top:"162px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{position: "relative",fontSize:"14px",top:"180px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
                 <div style={{position: "relative",top:"198px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>

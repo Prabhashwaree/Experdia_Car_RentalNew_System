@@ -1,7 +1,7 @@
 import {styleSheet} from  "./style";
 import { Component } from "react";
 import {withStyles} from "@mui/styles";
-import './booking.css';
+import './driverShedule.css';
 import carLogo from '../../assets/img/carLogo.png';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -19,7 +19,7 @@ const booking = [
       ];
 
 
-export default function BookingPage(){
+export default function DriverShedulePage(){
 
     
     return (
@@ -55,13 +55,13 @@ export default function BookingPage(){
               id="combo-box-demo"
               options={driver}
               sx={{ width: 300 }}
-              renderInput={(params) => <TextField {...params} label="Car No" />}
+              renderInput={(params) => <TextField {...params} label="Driver NIC" />}
               style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"395px",zIndex:"1",width:"25%"}}/>
 
-              <TextField id="outlined-basic" label="Payment ID" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
-              <TextField id="outlined-basic" label="currently KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
+              <TextField id="outlined-basic" label="Date" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+              <TextField id="outlined-basic" label="Time" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
               <Button variant="contained" color="success" style={{position: "relative",top:"-25px",left:"35px",width:"20%",backgroundColor:"Green"}}>Save</Button>
-              <TextField id="outlined-basic" label="Ride KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
+              <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>
               <TextField id="outlined-basic" label="Total KM" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
               <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"Blue",left:"35px",width:"20%",zIndex:"1"}}>Update</Button>
               <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}/>

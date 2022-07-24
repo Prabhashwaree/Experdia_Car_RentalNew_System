@@ -1,0 +1,11 @@
+#navivar{
+    height: 65px;
+    width: 100%;
+    background-color: rgb(128, 128, 128);
+}
+
+#driverSection{
+    width: 60%;
+    height: 80%;
+    background-color: rgb(226, 226, 226);
+}
