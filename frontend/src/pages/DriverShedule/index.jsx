@@ -8,6 +8,13 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 
 const booking = [
@@ -17,6 +24,28 @@ const booking = [
     const driver = [
       { label: 'Empty' },
       ];
+
+
+
+      function createData(bookingId, driverNIC, date, time, status) {
+        return { bookingId, driverNIC, date, time, status};
+      }
+      
+      const rows = [
+         createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0002','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0003','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0004','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0005','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0006','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0007','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0008','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0009','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-00010','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
+         createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
+      ];   
+
 
 
 export default function DriverShedulePage(){
@@ -68,14 +97,55 @@ export default function DriverShedulePage(){
               <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"25px",zIndex:"1",width:"35%"}}/>
               <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"35px",width:"20%"}}>Delete</Button>
         
-              
-              
-              
-       
-       
        
         </div>
   </section>
+
+
+
+{/* -------table--------- */}
+  <section>
+            <div>
+
+            <TableContainer component={Paper} style={{width:"94%",left:"30px",position:"relative",top:"30px"}}>
+      <Table  aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            {/* <TableCell>BookingId</TableCell>
+            <TableCell align="right">DriverNIC</TableCell>
+            <TableCell align="right">Date</TableCell>
+            <TableCell align="right">Time</TableCell>
+            <TableCell>Status</TableCell> */}
+            
+            
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell>bookingId</TableCell>
+            <TableCell align="right">driverNIC</TableCell>
+            <TableCell align="right">date</TableCell>
+            <TableCell align="right">time</TableCell>
+            <TableCell>status</TableCell>
+            </TableRow> 
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+            </div>
+        </section>
+
+
+
+
 
         </section>
 
