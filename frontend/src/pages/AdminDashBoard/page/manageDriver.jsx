@@ -31,8 +31,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(DriverNIC,Date, Time, LicenceNumber,Name,Address,ContactNumber,Salary) {
-  return { DriverNIC,Date, Time, LicenceNumber,Name,Address,ContactNumber,Salary };
+function createData(DriverNIC,Date, Time, Licence,Number,Name,Address,ContactNumber,Salary) {
+  return { DriverNIC,Date, Time, Licence,Number,Name,Address,ContactNumber,Salary };
 }
 
 const rows = [
@@ -50,11 +50,11 @@ const rows = [
 const ariaLabel = { 'aria-label': 'description' };
 
 
-export default function ManagePayment() {
+export default function ManageDriver() {
   return (
     <section>
     <div>
-    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"120px",top:"118px",zIndex:"2",color:"black"}}>
+    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
            Manage Driver Details
           </Typography>
           <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
@@ -67,7 +67,7 @@ export default function ManagePayment() {
               <StyledTableCell>Driver NIC</StyledTableCell>
               <StyledTableCell align="right"> Date</StyledTableCell>
               <StyledTableCell align="right"> Time</StyledTableCell>
-              <StyledTableCell align="right">Licence Number</StyledTableCell>
+              <StyledTableCell align="right">Licence</StyledTableCell>
               <StyledTableCell align="right">Name</StyledTableCell>
               <StyledTableCell align="right">Address</StyledTableCell>
               <StyledTableCell align="right">Contact Number</StyledTableCell>
@@ -83,7 +83,7 @@ export default function ManagePayment() {
           
                 <TableCell align="right">{row.Date}</TableCell>
                 <TableCell align="right">{row.Time}</TableCell>
-                <TableCell align="right">{row.LicenceNumber}</TableCell>
+                <TableCell align="right">{row.Licence}</TableCell>
                 <TableCell align="right">{row.Name}</TableCell>
                 <TableCell align="right">{row.Address}</TableCell>
                 <TableCell align="right">{row.ContactNumber}</TableCell>

@@ -26,7 +26,7 @@ import ManagePayment from "./page/managePayment";
 import ManageRate from "./page/manageRate";
 import Management from "./page/management";
 import ManageCar from "./page/manageCar";
-import ManageCustomer from "./page/manageCustomer";
+import ManageCustomerBooking from "./page/manageCustomerBooking";
 import ManageDriver from "./page/manageDriver";
 import carLogo from '../../assets/img/carLogo.png';
 import HomeIcon from '@mui/icons-material/Home';
@@ -36,6 +36,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import ReplyAllIcon from '@mui/icons-material/ReplyAll';
  
 const drawerWidth = 240;
 
@@ -129,8 +130,9 @@ export default function AdminDashBoardPages() {
 
    const listItemData2 = [
     {label: "Manage Car", link: "/ManageCar", icon:<DirectionsCarIcon />},
-    {label: "Manage Customer", link: "/ManageCustomer", icon:<SupportAgentIcon />},
+    {label: "Manage Customer Booking", link: "/ManageCustomerBooking", icon:<SupportAgentIcon />},
     {label: "Management", link: "/Management", icon:<ManageAccountsIcon />}, 
+    
    ]
 
 
@@ -156,9 +158,11 @@ export default function AdminDashBoardPages() {
           <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"130px"}}>
           EXPERDIA Car Rental
           </Typography>
+          <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"980px",zIndex:"1",width:"120px"}}><b>Log Out</b></Button>
           <Typography variant="h7" noWrap component="div" style={{position: "relative",left:"1030px"}}>
          Date
           </Typography>
+          
           <Typography variant="h7" noWrap component="div" style={{position: "relative",left:"1110px"}}>
           Time
           </Typography>
@@ -242,7 +246,7 @@ export default function AdminDashBoardPages() {
                     <Route exact path="/ManageDriver" element={<ManageDriver/>}/>
                     <Route exact path="/ManageCar" element={<ManageCar/>}/>
                     <Route exact path="/ManageRate" element={<ManageRate/>}/>
-                    <Route exact path="/ManageCustomer" element={<ManageCustomer/>}/>
+                    <Route exact path="/ManageCustomerBooking" element={<ManageCustomerBooking/>}/>
                     <Route exact path="/Management" element={<Management/>}/>
                     
 

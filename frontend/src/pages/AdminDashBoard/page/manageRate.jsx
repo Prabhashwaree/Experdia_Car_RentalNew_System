@@ -50,12 +50,12 @@ const rows = [
 const ariaLabel = { 'aria-label': 'description' };
 
 
-export default function ManagePayment() {
+export default function ManageRate() {
   return (
     <section>
     <div>
-    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"120px",top:"118px",zIndex:"2",color:"black"}}>
-           Manage Payment Details
+    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
+           Manage Rental Rate Details
           </Typography>
           <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
           <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
