@@ -40,21 +40,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(BookingId, DriverNIC, Date, Time, Status) {
-  return {BookingId, DriverNIC, Date, Time, Status};
-}
-
-const rows = [
-        createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0002','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0003','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0004','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0005','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0006','998674584V','7/25/2022/','8.00','Pending'),
-  
-  
-];
-
 const ariaLabel = { 'aria-label': 'description' };
 
 
@@ -69,115 +54,110 @@ const booking = [
       ];
 
 
-export default function DriverShedulePage(){
-
+class DriverShedulePage extends Component{
+    constructor(props){
+      super(props);
+    }
     
+  render(){
     return (
-
-        <>
-
-        {/* --------------------------loging----------------------- */}
-        <section>
-
-            <div id="navivar"></div>
-
-            <img src={carLogo} style={{position: "absolute",left:"80px",top:"1.9%",zIndex:"1",width:"40px",height:"40px"}} />
-            <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>Back</h1>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{position: "absolute",left:"130px",top:"2.5%",zIndex:"1",color:"white"}}>
-            <b>EXPERDIA Car Rental</b>
-            </Typography>
-            <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"886px",top:"10px",width:"30%",zIndex:"2"}}/>
-          <img src={Search}style={{position: "absolute",left:"1295px",top:"10px",width:"2%"}}/>
-
-            <section>
-        <div id="driverSection">
-        <Typography variant="h4" noWrap component="div" style={{position: "absolute",left:"30px",top:"80px"}}>
-           Driver Shedule
-          </Typography>
-            <Autocomplete
-              disablePortal
-              id="combo-box-demo"
-              options={booking}
-              sx={{ width: 300 }}
-              renderInput={(params) => <TextField {...params} label="Booking ID" />}
-              style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"1000px",zIndex:"1",width:"25%"}}/>
-
-        <Autocomplete
-              disablePortal
-              id="combo-box-demo"
-              options={driver}
-              sx={{ width: 300 }}
-              renderInput={(params) => <TextField {...params} label="Driver NIC" />}
-              style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"610px",zIndex:"1",width:"25%"}}/>
-
-                <TextField disabled id="outlined-disabled" label="PicUp Location" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
-                <TextField disabled id="outlined-disabled" label="PicUp Date" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
-              <Button variant="contained" color="success" style={{position: "relative",top:"-25px",left:"48px",width:"10%",backgroundColor:"Green"}}>Save</Button>
-              <TextField disabled id="outlined-disabled" label="PicUp Time" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
-              <TextField id="outlined-basic" label="Date" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
-              <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"Blue",left:"48px",width:"10%",zIndex:"1"}}>Update</Button>
-              <TextField id="outlined-basic" label="Time" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
-              <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
-              <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"48px",width:"10%"}}>Delete</Button>
-        
        
-        </div>
-  </section>
+      <>
+
+      {/* --------------------------loging----------------------- */}
+      <section>
+
+          <div id="navivar"></div>
+
+          <img src={carLogo} style={{position: "absolute",left:"80px",top:"1.9%",zIndex:"1",width:"40px",height:"40px"}} />
+          <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>Back</h1>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{position: "absolute",left:"130px",top:"2.5%",zIndex:"1",color:"white"}}>
+          <b>EXPERDIA Car Rental</b>
+          </Typography>
+          <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"886px",top:"10px",width:"30%",zIndex:"2"}}/>
+        <img src={Search}style={{position: "absolute",left:"1295px",top:"10px",width:"2%"}}/>
+
+          <section>
+      <div id="driverSection">
+      <Typography variant="h4" noWrap component="div" style={{position: "absolute",left:"30px",top:"80px"}}>
+         Driver Shedule
+        </Typography>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={booking}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="Booking ID" />}
+            style={{position: "relative",top:"13px",backgroundColor:"transparent",color:"white",left:"1000px",zIndex:"1",width:"25%"}}/>
+
+      <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={driver}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="Driver NIC" />}
+            style={{position: "relative",top:"-43px",backgroundColor:"transparent",color:"white",left:"610px",zIndex:"1",width:"25%"}}/>
+
+              <TextField disabled id="outlined-disabled" label="PicUp Location" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
+              <TextField disabled id="outlined-disabled" label="PicUp Date" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
+            <Button variant="contained" color="success" style={{position: "relative",top:"-25px",left:"48px",width:"10%",backgroundColor:"Green"}}>Save</Button>
+            <TextField disabled id="outlined-disabled" label="PicUp Time" defaultValue="" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
+            <TextField id="outlined-basic" label="Date" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
+            <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"Blue",left:"48px",width:"10%",zIndex:"1"}}>Update</Button>
+            <TextField id="outlined-basic" label="Time" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"38%"}}/>
+            <TextField id="outlined-basic" label="Status" variant="outlined" style={{position: "relative",top:"-35px",backgroundColor:"white",color:"white",left:"38px",zIndex:"1",width:"38%"}}/>
+            <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"48px",width:"10%"}}>Delete</Button>
+      
+     
+      </div>
+</section>
 
 
 
 {/* -------table--------- */}
-  <section>
-            <div>
+<section>
+          <div>
 
-            <div style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
-   
+          <div style={{position: "absolute",left:"600px",top:"10px",zIndex:"2",color:"black"}}>
+ 
+        </div>
+        
+  
+  <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"10px"}}>
+  <Table sx={{ minWidth: 700 }} aria-label="customized table">
+    <TableHead>
+      <TableRow>
+        <StyledTableCell>BookingId</StyledTableCell>
+        <StyledTableCell align="right">DriverNIC</StyledTableCell>
+        <StyledTableCell align="right">Date</StyledTableCell>
+        <StyledTableCell align="right">Time</StyledTableCell>
+        <StyledTableCell align="right">Status</StyledTableCell>
+
+      </TableRow>
+    </TableHead>
+    <TableBody>
+     
+    </TableBody>
+  </Table>
+</TableContainer>
           </div>
-          
-    
-    <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"90px"}}>
-    <Table sx={{ minWidth: 700 }} aria-label="customized table">
-      <TableHead>
-        <TableRow>
-          <StyledTableCell>BookingId</StyledTableCell>
-          <StyledTableCell align="right">DriverNIC</StyledTableCell>
-          <StyledTableCell align="right">Date</StyledTableCell>
-          <StyledTableCell align="right">Time</StyledTableCell>
-          <StyledTableCell align="right">Status</StyledTableCell>
-
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {rows.map((row) => (
-          <StyledTableRow key={row.BookingId}>
-            <StyledTableCell component="th" scope="row">
-              {row.BookingId}
-            </StyledTableCell>
-          
-            <StyledTableCell align="right">{row. DriverNIC}</StyledTableCell>
-            <StyledTableCell align="right">{row.Date}</StyledTableCell>
-            <StyledTableCell align="right">{row.Time}</StyledTableCell>
-            <StyledTableCell align="right">{row.Status}</StyledTableCell>
-           
-          </StyledTableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </TableContainer>
-            </div>
-        </section>
+      </section>
 
 
 
 
 
-        </section>
+      </section>
 
-       
-        </>
+     
+      </>
 
     );
+
+  }
 
 
 
 }
+
+export default DriverShedulePage;

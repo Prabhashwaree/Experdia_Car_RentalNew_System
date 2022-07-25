@@ -12,11 +12,15 @@ import Button from '@mui/material/Button';
 
 
 
-export default function SignInPage(){
+class SignInPage extends Component{
 
-    
-    return (
-
+    constructor(props){
+        super(props);
+      }
+      
+    render(){
+      return (
+  
         <>
 
         {/* --------------------------loging----------------------- */}
@@ -41,7 +45,7 @@ export default function SignInPage(){
                     style={{position: "relative",top:"70px",zIndex:"1",width:"380px"}}/><br/>
                 <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
                 <div style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{}}>or use one of these options</p>
+                <p style={{color:"black",position: "relative",top:"105px"}}>or use one of these options</p>
                 <div style={{position: "relative",top:"96.1px",zIndex:"1",width:"98.5px",height:"1px",left:"850px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 
                 <img src={facebook} style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"-10px",zIndex:"1",width:"50px",height:"50px",cursor:"pointer"}}/>
@@ -58,9 +62,11 @@ export default function SignInPage(){
 
        
         </>
-
-    );
-
+  
+      );
+  
+    }
 
 
 }
+export default SignInPage;

@@ -13,6 +13,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Autocomplete from '@mui/material/Autocomplete';
 import Input from '@mui/material/Input';
+import IconButton from '@mui/material/IconButton';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -23,11 +25,16 @@ const top100Films = [
 ];
 
 
-export default function CustomerRegisterPage(){
+ class CustomerRegisterPage extends Component{
 
     
-    return (
-
+    constructor(props){
+        super(props);
+      }
+      
+    render(){
+      return (
+  
         <>
 
         {/* --------------------------loging----------------------- */}
@@ -36,7 +43,7 @@ export default function CustomerRegisterPage(){
             <div id="navivar"></div>
 
             <img src={carLogo} style={{position: "absolute",left:"80px",top:"1.9%",zIndex:"1",width:"40px",height:"40px"}} />
-            <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>Back</h1>
+            <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>My Profile</h1>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{position: "absolute",left:"130px",top:"2.5%",zIndex:"1",color:"white"}}>
             <b>EXPERDIA Car Rental</b>
             </Typography>
@@ -45,12 +52,10 @@ export default function CustomerRegisterPage(){
                 <h1>Create Account</h1>
 
                 {/* <p style={{textAlign:"left",margin:"auto",left:"570px",position: "relative"}}>Use a minimum of 10 characters, including uppercase letters,<br/> lowercase letters and numbers.</p> */}
-
-                <Button style={{position: "relative",left:"388px",top:"100px",width:"35px"}}><img src={cam} style={{width:"35px"}}/> </Button>
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"380px",top:"100px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
                 <TextField id="outlined-basic" label="NIC Number" variant="outlined" style={{position: "relative",left:"-56px",top:"95px",zIndex:"1",width:"380px"}}/>
-                <Button style={{position: "relative",left:"430px",top:"100px",width:"35px"}}><img src={cam} style={{width:"35px"}}/> </Button>
-
-                <TextField id="outlined-basic" label="License Number" variant="outlined" style={{position: "relative",left:"-6px",top:"95px",zIndex:"1",width:"380px"}}/><br/>
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"440px",top:"100px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
+                <TextField id="outlined-basic" label="License Number" variant="outlined" style={{position: "relative",left:"8px",top:"95px",zIndex:"1",width:"380px"}}/><br/>
                 
 
                 <TextField id="outlined-basic" label="Name" variant="outlined" style={{position: "relative",left:"-57px",top:"110px",zIndex:"1",width:"380px"}}/>
@@ -79,9 +84,11 @@ export default function CustomerRegisterPage(){
 
        
         </>
-
-    );
-
+  
+      );
+  
+    }
 
 
 }
+export default CustomerRegisterPage;

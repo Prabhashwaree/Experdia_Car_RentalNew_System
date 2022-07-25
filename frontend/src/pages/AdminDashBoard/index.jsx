@@ -158,7 +158,7 @@ export default function AdminDashBoardPages() {
           <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"130px"}}>
           EXPERDIA Car Rental
           </Typography>
-          <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"980px",zIndex:"1",width:"120px"}}><b>Log Out</b></Button>
+          <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"980px",zIndex:"1",width:"120px"}}>Log Out</Button>
           <Typography variant="h7" noWrap component="div" style={{position: "relative",left:"1030px"}}>
          Date
           </Typography>

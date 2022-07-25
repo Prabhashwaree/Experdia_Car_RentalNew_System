@@ -3,6 +3,7 @@ import './dashBoard.css';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Component } from "react";
 
 import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -16,11 +17,15 @@ const top100Films = [
     { label: 'Empty' },
     ];
 
-export default function Home() {
+class Home extends Component {
+    constructor(props){
+      super(props);
+    }
     
-
+  render(){
     return (
-       <>
+
+      <>
 
 {/* {/-------------------------------- payment details section --------------------------------------/} */}
 
@@ -161,5 +166,10 @@ export default function Home() {
   </section>
        
        </>
+
     );
+
 }
+}
+
+export default Home;
