@@ -1,78 +1,100 @@
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Input from '@mui/material/Input';
+import Search from '../../../assets/img/search.png';
 
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
-
-function createData(booking_Id, picUp_Date, drop_Date, picUp_Time, drop_Time,bookingStatus,driverStatus,picUpLocation,lossDamagePrice,rent_Duration,car_Count,customerID,paymentID) {
-  return { booking_Id, picUp_Date, drop_Date, picUp_Time, drop_Time,bookingStatus,driverStatus,picUpLocation,lossDamagePrice,rent_Duration ,car_Count,customerID,paymentID};
+function createData(DriverNIC,Date, Time, LicenceNumber,Name,Address,ContactNumber,Salary) {
+  return { DriverNIC,Date, Time, LicenceNumber,Name,Address,ContactNumber,Salary };
 }
 
 const rows = [
-  createData('B-0001','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0001'),
-  createData('B-0002','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0002'),
-  createData('B-0003','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0003'),
-  createData('B-0004','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0004'),
-  createData('B-0005','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0005'),
-  createData('B-0006','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0006'),
-  createData('B-0007','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0007'),
-  createData('B-0008','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0008'),
-  createData('B-0009','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0009'),
-];   
+  createData('8995487V','7/24/2022','12.30','8444545','Gayathree','Panadura','077497485','5000.00'),
+  createData('5995487V','7/24/2022','12.30','8444545','silva','Panadura','077497485','5000.00'),
+  createData('8995487V','7/24/2022','12.30','8444545','nethmini','Panadura','077497485','5000.00'),
+  createData('6995487V','7/24/2022','12.30','8444545','Prabha','Panadura','077497485','5000.00'),
+  createData('8995487V','7/24/2022','12.30','8444545','silva','Panadura','077497485','5000.00'),
+  createData('6995487V','7/24/2022','12.30','8444545','nethu','Panadura','077497485','5000.00'),
+  createData('8995487V','7/24/2022','12.30','8444545','nelu','Panadura','077497485','5000.00'),
+  createData('9995487V','7/24/2022','12.30','8444545','siman','Panadura','077497485','5000.00'),
+  
+];
+
+const ariaLabel = { 'aria-label': 'description' };
 
 
-
-export default function ManageDriver() {
+export default function ManagePayment() {
   return (
     <section>
     <div>
-
-    <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"-330px"}}>
-<Table  aria-label="simple table">
-<TableHead>
-  <TableRow>
-    <TableCell>Booking_Id</TableCell>
-    <TableCell align="right">PicUp Date</TableCell>
-    <TableCell align="right">Drop Date</TableCell>
-    <TableCell align="right">PicUp Time</TableCell>
-    <TableCell>Drop Time</TableCell>
-    <TableCell align="right">Booking Status</TableCell>
-    <TableCell align="right">Driver Status</TableCell>
-    <TableCell align="right">PicUpLocation</TableCell>
-    <TableCell>Loss Damage Price</TableCell>
-    <TableCell align="right">Rent Duration</TableCell>
-    <TableCell align="right">Car Count</TableCell>
-    <TableCell align="right">PicUpLocation</TableCell>
-    <TableCell align="right">Customer NIC</TableCell>
-    <TableCell align="right">Payment ID</TableCell>
+    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"120px",top:"118px",zIndex:"2",color:"black"}}>
+           Manage Driver Details
+          </Typography>
+          <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
+          <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
     
-  </TableRow>
-</TableHead>
-<TableBody>
-  {rows.map((row) => (
-    <TableRow
-      key={row.name}
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell component="th" scope="row">
-        {row.name}
-      </TableCell>
-      <TableCell align="right">{row.calories}</TableCell>
-      <TableCell align="right">{row.fat}</TableCell>
-      <TableCell align="right">{row.carbs}</TableCell>
-      <TableCell align="right">{row.protein}</TableCell>
-    </TableRow>
-  ))}
-</TableBody>
-</Table>
-</TableContainer>
-
-    </div>
-</section>
-  );
-}
+    <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"90px"}}>
+    <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <TableHead>
+        <TableRow>
+              <StyledTableCell>Driver NIC</StyledTableCell>
+              <StyledTableCell align="right"> Date</StyledTableCell>
+              <StyledTableCell align="right"> Time</StyledTableCell>
+              <StyledTableCell align="right">Licence Number</StyledTableCell>
+              <StyledTableCell align="right">Name</StyledTableCell>
+              <StyledTableCell align="right">Address</StyledTableCell>
+              <StyledTableCell align="right">Contact Number</StyledTableCell>
+              <StyledTableCell align="right">Salary</StyledTableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row) => (
+          <StyledTableRow key={row.name}>
+            <StyledTableCell component="th" scope="row">
+              {row.DriverNIC}
+            </StyledTableCell>
+          
+                <TableCell align="right">{row.Date}</TableCell>
+                <TableCell align="right">{row.Time}</TableCell>
+                <TableCell align="right">{row.LicenceNumber}</TableCell>
+                <TableCell align="right">{row.Name}</TableCell>
+                <TableCell align="right">{row.Address}</TableCell>
+                <TableCell align="right">{row.ContactNumber}</TableCell>
+                <TableCell align="right">{row.Salary}</TableCell>
+      
+          </StyledTableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </TableContainer>
+          </div>
+      </section>
+        );
+      }

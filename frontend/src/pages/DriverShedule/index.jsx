@@ -33,17 +33,17 @@ const booking = [
       
       const rows = [
          createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0002','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0003','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0004','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0005','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0006','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0007','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0008','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0009','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-00010','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
-         createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0002','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0003','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0004','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0005','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0006','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0007','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0008','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0009','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-00010','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
+        //  createData('B-0001','998674584V','7/25/2022/','8.00','Pending'),
       ];   
 
 
@@ -133,7 +133,7 @@ export default function DriverShedulePage(){
             <TableCell align="right">driverNIC</TableCell>
             <TableCell align="right">date</TableCell>
             <TableCell align="right">time</TableCell>
-            <TableCell>status</TableCell>
+            <TableCell>status</TableCell> 
             </TableRow> 
           ))}
         </TableBody>

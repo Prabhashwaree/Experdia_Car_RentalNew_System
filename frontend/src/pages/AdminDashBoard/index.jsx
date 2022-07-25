@@ -35,6 +35,7 @@ import HandymanIcon from '@mui/icons-material/Handyman';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
  
 const drawerWidth = 240;
 
@@ -129,7 +130,7 @@ export default function AdminDashBoardPages() {
    const listItemData2 = [
     {label: "Manage Car", link: "/ManageCar", icon:<DirectionsCarIcon />},
     {label: "Manage Customer", link: "/ManageCustomer", icon:<SupportAgentIcon />},
-    {label: "Management", link: "/Management", icon:<DirectionsCarIcon />}, 
+    {label: "Management", link: "/Management", icon:<ManageAccountsIcon />}, 
    ]
 
 

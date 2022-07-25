@@ -1,78 +1,99 @@
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Input from '@mui/material/Input';
+import Search from '../../../assets/img/search.png';
 
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
-
-function createData(booking_Id, picUp_Date, drop_Date, picUp_Time, drop_Time,bookingStatus,driverStatus,picUpLocation,lossDamagePrice,rent_Duration,car_Count,customerID,paymentID) {
-  return { booking_Id, picUp_Date, drop_Date, picUp_Time, drop_Time,bookingStatus,driverStatus,picUpLocation,lossDamagePrice,rent_Duration ,car_Count,customerID,paymentID};
+function createData(PaymentId, Date,Time,CurrentlyRunKM,RideAKM,TotalKM,Status,TotalPrice) {
+  return { PaymentId, Date,Time,CurrentlyRunKM,RideAKM,TotalKM,Status,TotalPrice };
 }
 
 const rows = [
-  createData('B-0001','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0001'),
-  createData('B-0002','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0002'),
-  createData('B-0003','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0003'),
-  createData('B-0004','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0004'),
-  createData('B-0005','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0005'),
-  createData('B-0006','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0006'),
-  createData('B-0007','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0007'),
-  createData('B-0008','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0008'),
-  createData('B-0009','7/24/2022','7/25/2022/','8.00','10.00','Pending','Active','Panadura',10000,'1','1','995876485V','P-0009'),
-];   
+  createData('P-0001','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0002','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0003','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0004','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0005','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0006','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  createData('P-0007','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
+  
+];
 
+const ariaLabel = { 'aria-label': 'description' };
 
 
 export default function ManagePayment() {
   return (
     <section>
     <div>
-
-    <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"-330px"}}>
-<Table  aria-label="simple table">
-<TableHead>
-  <TableRow>
-    <TableCell>Booking_Id</TableCell>
-    <TableCell align="right">PicUp Date</TableCell>
-    <TableCell align="right">Drop Date</TableCell>
-    <TableCell align="right">PicUp Time</TableCell>
-    <TableCell>Drop Time</TableCell>
-    <TableCell align="right">Booking Status</TableCell>
-    <TableCell align="right">Driver Status</TableCell>
-    <TableCell align="right">PicUpLocation</TableCell>
-    <TableCell>Loss Damage Price</TableCell>
-    <TableCell align="right">Rent Duration</TableCell>
-    <TableCell align="right">Car Count</TableCell>
-    <TableCell align="right">PicUpLocation</TableCell>
-    <TableCell align="right">Customer NIC</TableCell>
-    <TableCell align="right">Payment ID</TableCell>
+    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"120px",top:"118px",zIndex:"2",color:"black"}}>
+           Manage Payment Details
+          </Typography>
+          <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
+          <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
     
-  </TableRow>
-</TableHead>
-<TableBody>
-  {rows.map((row) => (
-    <TableRow
-      key={row.name}
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell component="th" scope="row">
-        {row.name}
-      </TableCell>
-      <TableCell align="right">{row.calories}</TableCell>
-      <TableCell align="right">{row.fat}</TableCell>
-      <TableCell align="right">{row.carbs}</TableCell>
-      <TableCell align="right">{row.protein}</TableCell>
-    </TableRow>
-  ))}
-</TableBody>
-</Table>
-</TableContainer>
+    <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"90px"}}>
+    <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <TableHead>
+        <TableRow>
+          <StyledTableCell>Payment Id</StyledTableCell>
+          <StyledTableCell align="right"> Date</StyledTableCell>
+          <StyledTableCell align="right">Time</StyledTableCell>
+          <StyledTableCell align="right">Currently Run KM</StyledTableCell>
+          <StyledTableCell align="right">Ride A KM</StyledTableCell>
 
-    </div>
-</section>
-  );
-}
+          <StyledTableCell align="right">Total KM</StyledTableCell>
+          <StyledTableCell align="right">Status</StyledTableCell>
+          <StyledTableCell align="right">Total Price</StyledTableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row) => (
+          <StyledTableRow key={row.name}>
+            <StyledTableCell component="th" scope="row">
+              {row.PaymentId}
+            </StyledTableCell>
+          
+            <StyledTableCell align="right">{row.Date}</StyledTableCell>
+            <StyledTableCell align="right">{row.Time}</StyledTableCell>
+            <StyledTableCell align="right">{row.CurrentlyRunKM}</StyledTableCell>
+            <StyledTableCell align="right">{row.RideAKM}</StyledTableCell>
+            <StyledTableCell align="right">{row.TotalKM}</StyledTableCell>
+            <StyledTableCell align="right">{row.Status}</StyledTableCell>
+            <StyledTableCell align="right">{row.TotalPrice}</StyledTableCell>
+          </StyledTableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </TableContainer>
+          </div>
+      </section>
+        );
+      }
