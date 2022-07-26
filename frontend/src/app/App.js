@@ -19,8 +19,8 @@ function App() {
     // <Routes>
     //     <Route exact path="/" element={<DashBoardPage />}/>
     // </Routes>
-    // <AdminDashBoardPages />
-    <BookingPage />
+    <AdminDashBoardPages />
+    // <BookingPage />
   );
 }
 export default App;

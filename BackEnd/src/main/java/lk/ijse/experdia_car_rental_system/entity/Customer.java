@@ -21,12 +21,8 @@ public class Customer {
     private String address;
     private String contact_No;
     private String email;
-    private String date;
-    private String time;
 
-    @OneToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-//    @JoinColumn(name = "userdID",referencedColumnName = "user_Id",nullable = false)
-    private UserLogin userLogin;
+
 }
 
 

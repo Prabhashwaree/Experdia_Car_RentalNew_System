@@ -159,13 +159,7 @@ export default function AdminDashBoardPages() {
           EXPERDIA Car Rental
           </Typography>
           <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"980px",zIndex:"1",width:"120px"}}>Log Out</Button>
-          <Typography variant="h7" noWrap component="div" style={{position: "relative",left:"1030px"}}>
-         Date
-          </Typography>
           
-          <Typography variant="h7" noWrap component="div" style={{position: "relative",left:"1110px"}}>
-          Time
-          </Typography>
         </Toolbar>
 
                 

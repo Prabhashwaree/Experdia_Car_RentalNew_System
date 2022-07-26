@@ -16,8 +16,6 @@ import javax.persistence.*;
 public class Car {
     @Id
     private String register_No;
-    private String date;
-    private String time;
     private String brand;
     private String type;
     private String no_Passenger;

@@ -19,8 +19,6 @@ public class DriverSchedule {
     private String booking_Id;
     @Id
     private String driver_NIC;
-    private String date;
-    private String time;
     private String status;
 
     @ManyToOne

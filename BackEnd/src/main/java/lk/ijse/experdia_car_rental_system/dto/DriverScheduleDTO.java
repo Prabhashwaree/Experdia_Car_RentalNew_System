@@ -13,7 +13,5 @@ import lombok.ToString;
 public class DriverScheduleDTO {
     private String booking_Id;
     private String driver_NIC;
-    private String date;
-    private String time;
     private String status;
 }

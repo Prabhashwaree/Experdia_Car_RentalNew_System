@@ -13,8 +13,6 @@ import lombok.ToString;
 
 public class CarDTO {
     private String register_No;
-    private String date;
-    private String time;
     private String brand;
     private String type;
     private String no_Passenger;

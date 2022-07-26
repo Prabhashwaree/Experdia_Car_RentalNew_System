@@ -12,8 +12,6 @@ import lombok.ToString;
 
 public class DriverDTO {
     private String driver_NIC;
-    private String date;
-    private String time;
     private String licen;
     private String name;
     private String address;

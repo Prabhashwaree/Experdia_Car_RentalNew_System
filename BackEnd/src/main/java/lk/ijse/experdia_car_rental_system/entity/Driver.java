@@ -17,8 +17,6 @@ import java.util.List;
 public class Driver {
     @Id
     private String driver_NIC;
-    private String date;
-    private String time;
     private String licen;
     private String name;
     private String address;

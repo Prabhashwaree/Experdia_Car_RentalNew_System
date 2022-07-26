@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,6 +11,12 @@ import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
+import rentalRateService from '../../../service/rentalRate';
+
+import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -39,8 +45,49 @@ const ariaLabel = { 'aria-label': 'description' };
 
 class ManageRate extends Component {
           constructor(props){
-            super(props);
+            super(props)
+            this.state = {
+              FormData:{
+                rate_Id:'',
+                brand:'',
+                type:'',
+                daily_Rate:'',
+                free_KM_Day:'',
+                free_KM_Month:'',
+                monthly_Rate:'',
+                pricePerExtraKM:''
+              },
+              data: []
+            }
+            
           }
+
+
+                exampleForMap = () =>{
+          this.state.data.map((value,index) =>{
+            console.log(value.index)
+          });
+        }
+
+        loadData = async () =>{
+          console.log("load method Calling")
+          let res =await rentalRateService.GetRentalRates();
+          console.log("rental data " + res.data.data);
+        
+          if(res.status === 200){
+             this.setState({
+            data :res.data.data
+            });
+          }
+          console.log(this.state.data);
+
+          this.exampleForMap();
+         }
+
+         componentDidMount() { 
+          this.loadData();
+       }
+
           
         render(){
           return (  
@@ -59,8 +106,6 @@ class ManageRate extends Component {
             <TableHead>
               <TableRow>
                 <StyledTableCell>RateId</StyledTableCell>
-                <StyledTableCell align="right"> Date</StyledTableCell>
-                <StyledTableCell align="right">Time</StyledTableCell>
                 <StyledTableCell align="right">Brand</StyledTableCell>
                 <StyledTableCell align="right">Type</StyledTableCell>
 
@@ -68,10 +113,43 @@ class ManageRate extends Component {
                 <StyledTableCell align="right">FreeKMMonth</StyledTableCell>
                 <StyledTableCell align="right">MonthlyRate</StyledTableCell>
                 <StyledTableCell align="right">PricePerExtraKM</StyledTableCell>
+                 <StyledTableCell align="right">Action</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              
+                {
+                  this.state.data.map((row) => (
+                    <TableRow>
+                    <TableCell>{row.rate_Id}</TableCell>
+                    <StyledTableCell align="right">{row.brand}</StyledTableCell>
+                    <StyledTableCell align="right">{row.type}</StyledTableCell>
+    
+                    <StyledTableCell align="right">{row.free_KM_Day}</StyledTableCell>
+                    <StyledTableCell align="right">{row.free_KM_Month}</StyledTableCell>
+                    <StyledTableCell align="right">{row.monthly_Rate}</StyledTableCell>
+                    <StyledTableCell align="right">{row.pricePerExtraKM}</StyledTableCell>
+                     <StyledTableCell align="right">
+
+                     <Tooltip title="Delete"><IconButton
+                                        onClick={() => {
+                                            this.deleteRentalRate(row.rate_Id)
+                                        }}
+                                    ><DeleteIcon color="error" /></IconButton>
+                                    </Tooltip>
+
+                                    {/* <Tooltip title="Edit"><IconButton
+                                        onClick={() => {
+                                            console.log("edit icon clicked!")
+                                            this.updateRentalRate(row);
+                                        }}
+                                    ><EditIcon color='primary'/></IconButton>
+                                    </Tooltip> */}
+                     </StyledTableCell>
+                  </TableRow>
+                  ))
+
+                 
+                }
             </TableBody>
           </Table>
         </TableContainer>
