@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
+import { Component } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -31,27 +32,21 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(PaymentId, Date,Time,CurrentlyRunKM,RideAKM,TotalKM,Status,TotalPrice) {
-  return { PaymentId, Date,Time,CurrentlyRunKM,RideAKM,TotalKM,Status,TotalPrice };
-}
 
-const rows = [
-  createData('P-0001','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0002','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0003','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0004','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0005','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0006','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  createData('P-0007','7/24/2022','8.23','8 KM','10 KM','18 KM','Pending',10000),
-  
-];
 
 const ariaLabel = { 'aria-label': 'description' };
 
 
-export default function ManagePayment() {
-  return (
-    <section>
+class ManagePayment extends Component{
+        constructor(props){
+          super(props);
+        }
+        
+      render(){
+        return (  
+              <>
+              
+              <section>
     <div>
     <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
            Manage Payment Details
@@ -75,25 +70,16 @@ export default function ManagePayment() {
         </TableRow>
       </TableHead>
       <TableBody>
-        {rows.map((row) => (
-          <StyledTableRow key={row.name}>
-            <StyledTableCell component="th" scope="row">
-              {row.PaymentId}
-            </StyledTableCell>
-          
-            <StyledTableCell align="right">{row.Date}</StyledTableCell>
-            <StyledTableCell align="right">{row.Time}</StyledTableCell>
-            <StyledTableCell align="right">{row.CurrentlyRunKM}</StyledTableCell>
-            <StyledTableCell align="right">{row.RideAKM}</StyledTableCell>
-            <StyledTableCell align="right">{row.TotalKM}</StyledTableCell>
-            <StyledTableCell align="right">{row.Status}</StyledTableCell>
-            <StyledTableCell align="right">{row.TotalPrice}</StyledTableCell>
-          </StyledTableRow>
-        ))}
+        
       </TableBody>
     </Table>
   </TableContainer>
           </div>
       </section>
+
+              </>
         );
+
       }
+  }
+  export default ManagePayment;

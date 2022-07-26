@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
+import { Component } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -31,28 +32,21 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(DriverNIC,Date, Time, Licence,Number,Name,Address,ContactNumber,Salary) {
-  return { DriverNIC,Date, Time, Licence,Number,Name,Address,ContactNumber,Salary };
-}
 
-const rows = [
-  createData('8995487V','7/24/2022','12.30','8444545','Gayathree','Panadura','077497485','5000.00'),
-  createData('5995487V','7/24/2022','12.30','8444545','silva','Panadura','077497485','5000.00'),
-  createData('8995487V','7/24/2022','12.30','8444545','nethmini','Panadura','077497485','5000.00'),
-  createData('6995487V','7/24/2022','12.30','8444545','Prabha','Panadura','077497485','5000.00'),
-  createData('8995487V','7/24/2022','12.30','8444545','silva','Panadura','077497485','5000.00'),
-  createData('6995487V','7/24/2022','12.30','8444545','nethu','Panadura','077497485','5000.00'),
-  createData('8995487V','7/24/2022','12.30','8444545','nelu','Panadura','077497485','5000.00'),
-  createData('9995487V','7/24/2022','12.30','8444545','siman','Panadura','077497485','5000.00'),
-  
-];
 
 const ariaLabel = { 'aria-label': 'description' };
 
 
-export default function ManageDriver() {
-  return (
-    <section>
+class ManageDriver extends Component{
+        constructor(props){
+          super(props);
+        }
+        
+      render(){
+        return (  
+              <>
+              
+              <section>
     <div>
     <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
            Manage Driver Details
@@ -75,26 +69,16 @@ export default function ManageDriver() {
         </TableRow>
       </TableHead>
       <TableBody>
-        {rows.map((row) => (
-          <StyledTableRow key={row.name}>
-            <StyledTableCell component="th" scope="row">
-              {row.DriverNIC}
-            </StyledTableCell>
-          
-                <TableCell align="right">{row.Date}</TableCell>
-                <TableCell align="right">{row.Time}</TableCell>
-                <TableCell align="right">{row.Licence}</TableCell>
-                <TableCell align="right">{row.Name}</TableCell>
-                <TableCell align="right">{row.Address}</TableCell>
-                <TableCell align="right">{row.ContactNumber}</TableCell>
-                <TableCell align="right">{row.Salary}</TableCell>
-      
-          </StyledTableRow>
-        ))}
+       
       </TableBody>
     </Table>
   </TableContainer>
           </div>
       </section>
+              
+              </>
         );
+
       }
+ }
+ export default ManageDriver;

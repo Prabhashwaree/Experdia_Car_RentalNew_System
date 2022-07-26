@@ -22,5 +22,20 @@
     left:800px;
     position: relative;
     left: 980px;
-    top: -350px;
+    top: -800px;
+}
+
+#bookingTextSection{
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    position: relative;
+    top:-439px;
+   
+}
+
+#bookingBackgroundSection{
+    width: 100%;
+    height: 400px;
+    
 }

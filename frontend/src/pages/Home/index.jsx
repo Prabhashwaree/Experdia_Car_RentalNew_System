@@ -165,8 +165,8 @@ export default function HomePage(){
         open={isMenuOpen}
         onClose={handleMenuClose}
         >
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Sign in</MenuItem>
+        <MenuItem onClick={handleMenuClose}>My Profile</MenuItem>
         </Menu>
     );
 
