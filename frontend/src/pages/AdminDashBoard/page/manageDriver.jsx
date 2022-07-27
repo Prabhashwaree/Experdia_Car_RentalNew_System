@@ -12,6 +12,15 @@ import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
 
+import driverService from '../../../service/driver';
+
+import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -39,8 +48,48 @@ const ariaLabel = { 'aria-label': 'description' };
 
 class ManageDriver extends Component{
         constructor(props){
-          super(props);
+          super(props)
+          this.state = {
+            driverData:{
+              driver_NIC:'',
+              licen:'',
+              name:'',
+              address:'',
+              contact_No:'',
+              salary:'',
+             
+            },
+            data:[]
+          }
         }
+
+
+        exampleForMap = () =>{
+          this.state.data.map((value,index) =>{
+            console.log(value.index)
+          });
+        }
+
+        loadData = async () =>{
+          console.log("load method Calling")
+          let res =await driverService.GetDriver();
+          console.log("rental data " + res.data.data);
+        
+          if(res.status === 200){
+             this.setState({
+            data :res.data.data
+            });
+          }
+          console.log(this.state.data);
+
+          this.exampleForMap();
+         }
+
+         componentDidMount() { 
+          this.loadData();
+       }
+
+
         
       render(){
         return (  
@@ -59,17 +108,52 @@ class ManageDriver extends Component{
       <TableHead>
         <TableRow>
               <StyledTableCell>Driver NIC</StyledTableCell>
-              <StyledTableCell align="right"> Date</StyledTableCell>
-              <StyledTableCell align="right"> Time</StyledTableCell>
               <StyledTableCell align="right">Licence</StyledTableCell>
               <StyledTableCell align="right">Name</StyledTableCell>
               <StyledTableCell align="right">Address</StyledTableCell>
               <StyledTableCell align="right">Contact Number</StyledTableCell>
               <StyledTableCell align="right">Salary</StyledTableCell>
+              <StyledTableCell align="right">Action</StyledTableCell>
         </TableRow>
       </TableHead>
       <TableBody>
        
+
+      {
+                  this.state.data.map((row) => (
+                    <TableRow>
+                    <TableCell>{row.driver_NIC}</TableCell>
+                    <StyledTableCell align="right">{row.licen}</StyledTableCell>
+                    <StyledTableCell align="right">{row.name}</StyledTableCell>
+    
+                    <StyledTableCell align="right">{row.address}</StyledTableCell>
+                    <StyledTableCell align="right">{row.contact_No}</StyledTableCell>
+                    <StyledTableCell align="right">{row.salary}</StyledTableCell>
+                    
+                     <StyledTableCell align="right">
+
+                     <Tooltip title="Delete"><IconButton
+                                        onClick={() => {
+                                            this.deleteDriver(row.driver_NIC)
+                                        }}
+                                    ><DeleteIcon color="error" /></IconButton>
+                                    </Tooltip>
+
+                                    {/* <Tooltip title="Edit"><IconButton
+                                        onClick={() => {
+                                            console.log("edit icon clicked!")
+                                            this.updateRentalRate(row);
+                                        }}
+                                    ><EditIcon color='primary'/></IconButton>
+                                    </Tooltip> */}
+                     </StyledTableCell>
+                  </TableRow>
+                  ))
+
+                 
+                }
+
+
       </TableBody>
     </Table>
   </TableContainer>

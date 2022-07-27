@@ -12,6 +12,15 @@ import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
 
+import paymentService from '../../../service/payment';
+
+import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -39,8 +48,49 @@ const ariaLabel = { 'aria-label': 'description' };
 
 class ManagePayment extends Component{
         constructor(props){
-          super(props);
+          super(props)
+          this.state = {
+            PaymentFormData:{
+              payment_Id:'',
+              currently_Run_KM:'',
+              ride_A_KM:'',
+              total_KM:'',
+              status:'',
+              total_Price:''
+            },
+            data:[]
+          }
+          
         }
+
+
+        exampleForMap = () =>{
+          this.state.data.map((value,index) =>{
+            console.log(value.index)
+          });
+        }
+
+        loadData = async () =>{
+          console.log("load method Calling")
+          let res =await paymentService.GetPayment();
+          console.log("rental data " + res.data.data);
+        
+          if(res.status === 200){
+             this.setState({
+            data :res.data.data
+            });
+          }
+          console.log(this.state.data);
+
+          this.exampleForMap();
+         }
+
+         componentDidMount() { 
+          this.loadData();
+       }
+
+
+
         
       render(){
         return (  
@@ -59,18 +109,52 @@ class ManagePayment extends Component{
       <TableHead>
         <TableRow>
           <StyledTableCell>Payment Id</StyledTableCell>
-          <StyledTableCell align="right"> Date</StyledTableCell>
-          <StyledTableCell align="right">Time</StyledTableCell>
           <StyledTableCell align="right">Currently Run KM</StyledTableCell>
           <StyledTableCell align="right">Ride A KM</StyledTableCell>
 
           <StyledTableCell align="right">Total KM</StyledTableCell>
           <StyledTableCell align="right">Status</StyledTableCell>
           <StyledTableCell align="right">Total Price</StyledTableCell>
+          <StyledTableCell align="right">Action</StyledTableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         
+
+      {
+                  this.state.data.map((row) => (
+                    <TableRow>
+                    <TableCell>{row.payment_Id}</TableCell>
+                    <StyledTableCell align="right">{row.currently_Run_KM}</StyledTableCell>
+                    <StyledTableCell align="right">{row.ride_A_KM}</StyledTableCell>
+    
+                    <StyledTableCell align="right">{row.total_KM}</StyledTableCell>
+                    <StyledTableCell align="right">{row.status}</StyledTableCell>
+                    <StyledTableCell align="right">{row.total_Price}</StyledTableCell>
+                    
+                     <StyledTableCell align="right">
+
+                     <Tooltip title="Delete"><IconButton
+                                        onClick={() => {
+                                            this.deletePayment(row.payment_Id)
+                                        }}
+                                    ><DeleteIcon color="error" /></IconButton>
+                                    </Tooltip>
+
+                                    {/* <Tooltip title="Edit"><IconButton
+                                        onClick={() => {
+                                            console.log("edit icon clicked!")
+                                            this.updateRentalRate(row);
+                                        }}
+                                    ><EditIcon color='primary'/></IconButton>
+                                    </Tooltip> */}
+                     </StyledTableCell>
+                  </TableRow>
+                  ))
+
+                 
+                }
+
       </TableBody>
     </Table>
   </TableContainer>

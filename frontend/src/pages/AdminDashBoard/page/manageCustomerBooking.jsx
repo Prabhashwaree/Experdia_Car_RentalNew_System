@@ -12,6 +12,16 @@ import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
 
+
+import customerService from '../../../service/customer';
+
+import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -38,14 +48,57 @@ const ariaLabel = { 'aria-label': 'description' };
 
 class ManageCustomerBooking extends Component {
         constructor(props){
-          super(props);
+          super(props)
+          this.state = {
+            CustomerFormData:{
+              nic_Number:'',
+              license_Id:'',
+              cus_Name:'',
+              address:'',
+              contact_No:'',
+              email:'',
+              userName:'',
+              password:'',  
+            },
+            data:[]
+    
+          }
         }
+
+
+        exampleForMap = () =>{
+          this.state.data.map((value,index) =>{
+            console.log(value.index)
+          });
+        }
+
+        loadData = async () =>{
+          console.log("load method Calling")
+          let res =await  customerService.GetCustomer();
+          console.log("rental data " + res.data.data);
+        
+          if(res.status === 200){
+             this.setState({
+            data :res.data.data
+            });
+          }
+          console.log(this.state.data);
+
+          this.exampleForMap();
+         }
+
+         componentDidMount() { 
+          this.loadData();
+       }
+
+
+
         
       render(){
         return (  
           <>
 
-          {/* ------------------------Booking -------------------------------------- */}
+          {/* ------------------------Customer -------------------------------------- */}
           
               <section>
               <div>
@@ -57,7 +110,7 @@ class ManageCustomerBooking extends Component {
                      Booking Details
                     </Typography>
                     <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"-480px",top:"-20px",color:"gray"}}>
-                     Booking Information
+                     Customer Information
                     </Typography>
                     </div>
                     <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
@@ -73,12 +126,51 @@ class ManageCustomerBooking extends Component {
                       <StyledTableCell align="right">Address</StyledTableCell>
                       <StyledTableCell  align="right">ContactNo</StyledTableCell>
                       <StyledTableCell align="right">Email</StyledTableCell>
-                      <StyledTableCell align="right">Date</StyledTableCell>
-                      <StyledTableCell align="right">Time</StyledTableCell>
+                      <StyledTableCell align="right">UserName</StyledTableCell>
+                      <StyledTableCell align="right">Password</StyledTableCell>
+                      <StyledTableCell align="right">Action</StyledTableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   
+
+                {
+                  this.state.data.map((row) => (
+                    <TableRow>
+                    <TableCell>{row.nic_Number}</TableCell>
+                    <StyledTableCell align="right">{row.license_Id}</StyledTableCell>
+                    <StyledTableCell align="right">{row.cus_Name}</StyledTableCell>
+    
+                    <StyledTableCell align="right">{row.address}</StyledTableCell>
+                    <StyledTableCell align="right">{row.contact_No}</StyledTableCell>
+                    <StyledTableCell align="right">{row.email}</StyledTableCell>
+                    <StyledTableCell align="right">{row.userName}</StyledTableCell>
+                    <StyledTableCell align="right">{row.password}</StyledTableCell>
+                    
+                     <StyledTableCell align="right">
+
+                     <Tooltip title="Delete"><IconButton
+                                        onClick={() => {
+                                            this.deleteCustomer(row.nic_Number)
+                                        }}
+                                    ><DeleteIcon color="error" /></IconButton>
+                                    </Tooltip>
+
+                                    {/* <Tooltip title="Edit"><IconButton
+                                        onClick={() => {
+                                            console.log("edit icon clicked!")
+                                            this.updateRentalRate(row);
+                                        }}
+                                    ><EditIcon color='primary'/></IconButton>
+                                    </Tooltip> */}
+                     </StyledTableCell>
+                  </TableRow>
+                  ))
+
+                 
+                }
+
+
                 
                 </TableBody>
               </Table>

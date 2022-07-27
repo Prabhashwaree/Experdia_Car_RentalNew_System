@@ -23,6 +23,7 @@ import { NavLink } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Home from "./page/home"
 import ManagePayment from "./page/managePayment";
+import ManageBooking from "./page/manageBooking";
 import ManageRate from "./page/manageRate";
 import Management from "./page/management";
 import ManageCar from "./page/manageCar";
@@ -37,6 +38,9 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+
+
  
 const drawerWidth = 240;
 
@@ -131,7 +135,8 @@ export default function AdminDashBoardPages() {
    const listItemData2 = [
     {label: "Manage Car", link: "/ManageCar", icon:<DirectionsCarIcon />},
     {label: "Manage Customer Booking", link: "/ManageCustomerBooking", icon:<SupportAgentIcon />},
-    {label: "Management", link: "/Management", icon:<ManageAccountsIcon />}, 
+    {label: "Management", link: "/Management", icon:<ManageAccountsIcon />},
+    {label: "Manage Booking", link: "/ManageBooking", icon:<LibraryBooksIcon />}, 
     
    ]
 
@@ -242,6 +247,7 @@ export default function AdminDashBoardPages() {
                     <Route exact path="/ManageRate" element={<ManageRate/>}/>
                     <Route exact path="/ManageCustomerBooking" element={<ManageCustomerBooking/>}/>
                     <Route exact path="/Management" element={<Management/>}/>
+                    <Route exact path="/ManageBooking" element={<ManageBooking/>}/>
                     
 
                    </Routes>

@@ -1,10 +1,10 @@
 import axios from "../axios";
 
-class driver{
-    postDriver = async (data) => {
+class booking{
+    postBooking = async (data) => {
         //   console.log(data);
         const promise = new Promise((resolve, reject) => {
-            axios.post('Driver', data)    // 20s
+            axios.post('Booking', data)    // 20s
                 .then((res) => {
                     return resolve(res)
                 })
@@ -18,9 +18,9 @@ class driver{
 
 
 
-        GetDriver = async () => {
+        GetBooking = async () => {
             const promise = new Promise((resolve, reject) => {
-                axios.get('Driver')
+                axios.get('Booking')
                     .then((res) => {
                         return resolve(res)
                     })
@@ -31,4 +31,4 @@ class driver{
             return await promise;
         }
 }
-export default  new driver();
+export default  new booking();
