@@ -109,13 +109,13 @@ class ManageCustomerBooking extends Component {
                     <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"430px",top:"18px",color:"gray"}}>
                      Booking Details
                     </Typography>
-                    <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"-480px",top:"-20px",color:"gray"}}>
+                    <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"-320px",top:"-20px",color:"gray"}}>
                      Customer Information
                     </Typography>
                     </div>
-                    <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
-                    <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
-              
+                    <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"70%",top:"110px",width:"25%"}}/>
+                    <img src={Search}style={{position: "absolute",left:"1230px",top:"110px",width:"2%"}}/>
+    
               <TableContainer component={Paper} style={{width:"63%",left:"30px",position:"relative",top:"130px"}}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
@@ -190,9 +190,7 @@ class ManageCustomerBooking extends Component {
                         Booking Details
                         </Typography>
                         </div>
-                        <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
-                        <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
-          
+                       
                   <TableContainer component={Paper} style={{width:"30%",left:"925px",position:"relative",top:"-350px"}}>
                   <Table sx={{ minWidth: 300 }} aria-label="customized table">
                     <TableHead>

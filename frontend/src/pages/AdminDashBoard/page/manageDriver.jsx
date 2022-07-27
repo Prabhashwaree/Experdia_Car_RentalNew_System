@@ -97,11 +97,11 @@ class ManageDriver extends Component{
               
               <section>
     <div>
-    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"600px",top:"118px",zIndex:"2",color:"black"}}>
+    <Typography variant="h5" noWrap component="div" style={{position: "absolute",left:"120px",top:"118px",zIndex:"2",color:"black"}}>
            Manage Driver Details
           </Typography>
-          <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
-          <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
+          <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"880px",top:"110px",width:"30%"}}/>
+          <img src={Search}style={{position: "absolute",left:"1230px",top:"110px",width:"2%"}}/>
     
     <TableContainer component={Paper} style={{width:"94%",left:"30px",top:"20px",position:"relative",top:"90px"}}>
     <Table sx={{ minWidth: 700 }} aria-label="customized table">

@@ -61,9 +61,9 @@ class Managemant extends  Component{
                      User Details
                     </Typography>
                     </div>
-                    <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
-                    <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
-              
+                    <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"70%",top:"110px",width:"25%"}}/>
+                    <img src={Search}style={{position: "absolute",left:"1230px",top:"110px",width:"2%"}}/>
+    
               <TableContainer component={Paper} style={{width:"40%",left:"30px",position:"relative",top:"130px"}}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
@@ -95,9 +95,7 @@ class Managemant extends  Component{
                         Admin Details
                         </Typography>
                         </div>
-                        <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"986px",top:"110px",width:"30%"}}/>
-                        <img src={Search}style={{position: "absolute",left:"1386px",top:"110px",width:"2%"}}/>
-          
+                        
                   <TableContainer component={Paper} style={{width:"40%",left:"665px",position:"relative",top:"-298px"}}>
                   <Table sx={{ minWidth: 300 }} aria-label="customized table">
                     <TableHead>

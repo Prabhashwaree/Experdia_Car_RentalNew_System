@@ -163,7 +163,7 @@ export default function AdminDashBoardPages() {
           <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"130px"}}>
           EXPERDIA Car Rental
           </Typography>
-          <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"980px",zIndex:"1",width:"120px"}}>Log Out</Button>
+          <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",left:"960px",zIndex:"1",width:"120px"}}>Log Out</Button>
           
         </Toolbar>
 
@@ -225,8 +225,8 @@ export default function AdminDashBoardPages() {
 
         <List id="toolBar">
          
-         <h1 style={{height:"138px",top:"80px",fontSize:"25px"}} disablePadding sx={{ display: 'block' }}>Total</h1>
-         <Typography variant="h6" noWrap component="div" style={{position:"relative",top:"-55px",left:"65px",fontSize:"30px"}}>
+         <h1 style={{height:"10px",top:"80px",fontSize:"25px"}} disablePadding sx={{ display: 'block' }}>Total</h1>
+         <Typography variant="h6" noWrap component="div" style={{position:"relative",top:"-11px",left:"79px",fontSize:"30px"}}>
           000.00/=
           </Typography>
         </List>
@@ -236,7 +236,7 @@ export default function AdminDashBoardPages() {
      
 
                 
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }} style={{backgroundColor:"#F2F2F2",height:"694px"}}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }} style={{backgroundColor:"#F2F2F2",height:"635px"}}>
         <DrawerHeader />
  
                     <Routes>
