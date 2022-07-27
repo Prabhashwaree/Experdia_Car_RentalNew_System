@@ -30,5 +30,21 @@ class payment{
             })
             return await promise;
         }
+
+
+
+        deletePayments = async (params) => {
+            const promise = new Promise((resolve, reject) => {
+               axios.delete('Payment', {params: params})
+               .then((res) => {
+                   return resolve(res)
+               }) 
+               .catch((err) => {
+                   return resolve(err)
+               })
+            })
+            return await promise;
+       };
+
 }
 export default  new payment();

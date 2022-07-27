@@ -12,9 +12,10 @@
 }
 
 #loginSection{
-    position: relative;
+    position: fix;
     text-align: center;
     margin: auto;
+
 }
 
 #loginSection h1{

@@ -63,6 +63,31 @@ class ManagePayment extends Component{
           
         }
 
+        deletePayment = async (id) =>{
+          let params = {
+            id: id
+
+          }
+
+          let res = await paymentService.deletePayments(params)
+
+          if(res.status === 200) {
+            this.setState({
+                alert: true,
+                // message: res.data.message,
+                severity: 'success'
+            });
+            this.loadData();
+         } else {
+            this.setState({
+                alert: true,
+                // message: res.data.message,
+                severity: 'error'
+            });
+         }
+
+        }
+
 
         exampleForMap = () =>{
           this.state.data.map((value,index) =>{

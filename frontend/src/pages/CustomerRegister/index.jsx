@@ -83,8 +83,8 @@ const top100Films = [
                 <h1>Create Account</h1>
 
                 {/* <p style={{textAlign:"left",margin:"auto",left:"570px",position: "relative"}}>Use a minimum of 10 characters, including uppercase letters,<br/> lowercase letters and numbers.</p> */}
-                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"380px",top:"100px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="NIC Number" variant="outlined" style={{position: "relative",left:"-56px",top:"95px",zIndex:"1",width:"380px"}}
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"-1%",top:"102px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="NIC Number" variant="outlined" style={{position: "relative",left:"-17%",top:"65px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.nic_Number}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -93,8 +93,8 @@ const top100Films = [
                 }}
                 validators={['required']}  
                 />
-                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"440px",top:"100px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="License Number" variant="outlined" style={{position: "relative",left:"8px",top:"95px",zIndex:"1",width:"380px"}}
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"33%",top:"26px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="License Number" variant="outlined" style={{position: "relative",left:"17%",top:"-16px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.license_Id}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -105,7 +105,7 @@ const top100Films = [
                 /><br/>
                 
 
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Name" variant="outlined" style={{position: "relative",left:"-57px",top:"110px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Name" variant="outlined" style={{position: "relative",left:"-17%",top:"-23px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.cus_Name}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -114,7 +114,7 @@ const top100Films = [
                 }}
                 validators={['required']} 
                 />
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Address" variant="outlined" style={{position: "relative",left:"55px",top:"110px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Address" variant="outlined" style={{position: "relative",left:"17%",top:"-65px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.address}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -123,7 +123,7 @@ const top100Films = [
                 }}
                 validators={['required']}
                 /><br/>
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Contact No" variant="outlined" style={{position: "relative",left:"-57px",top:"125px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Contact No" variant="outlined" style={{position: "relative",left:"-17%",top:"-70px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.contact_No}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -132,7 +132,7 @@ const top100Films = [
                 }}
                 validators={['required']}
                 />
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="E_mail" variant="outlined" style={{position: "relative",left:"55px",top:"125px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="E_mail" variant="outlined" style={{position: "relative",left:"17%",top:"-113px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.email}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -142,7 +142,7 @@ const top100Films = [
                 validators={['required']}
                 /><br/>
 
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",left:"93px",top:"140px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",left:"-17%",top:"-118px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.userName}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -151,7 +151,7 @@ const top100Films = [
                 }}
                 validators={['required']}
                 />
-                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-password-input" label="Password" type="password" autoComplete="current-password" style={{position: "relative",left:"205px",top:"140px",zIndex:"1",width:"380px"}}
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-password-input" label="Password" type="password" autoComplete="current-password" style={{position: "relative",left:"17%",top:"-160px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.password}
                 onChange={(e) => {
                     let CustomerFormDatas = this.state.CustomerFormData
@@ -166,13 +166,13 @@ const top100Films = [
                 
                 
                 
-                <Button label={this.state.btnLabelCustomerSave} type="submit" variant="Create account" style={{position: "relative",top:"170px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Create  Account</Button><br/>
+                <Button label={this.state.btnLabelCustomerSave} type="submit" variant="Create account" style={{position: "relative",top:"-135px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Create  Account</Button><br/>
                 
             
-                <div style={{position: "relative",top:"190px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{position: "relative",fontSize:"14px",top:"200px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
-                <div style={{position: "relative",top:"220px",zIndex:"1",width:"380px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{position: "relative",fontSize:"14px",top:"245px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
+                <div style={{position: "relative",top:"-120px",zIndex:"1",width:"380px",height:"1px",left:"480px",backgroundColor:"rgb(212, 212, 212)"}}></div>
+                <p style={{position: "relative",fontSize:"14px",top:"-100px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
+                <div style={{position: "relative",top:"-80px",zIndex:"1",width:"380px",height:"1px",left:"480px",backgroundColor:"rgb(212, 212, 212)"}}></div>
+                <p style={{position: "relative",fontSize:"14px",top:"-60px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
             </div>
 
         </section>
