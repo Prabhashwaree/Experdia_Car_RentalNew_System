@@ -30,5 +30,21 @@ class car{
             })
             return await promise;
         }
+
+        deleteCar = async (params) => {
+            const promise = new Promise((resolve, reject) => {
+               axios.delete('Car', {params: params})
+               .then((res) => {
+                   return resolve(res)
+               }) 
+               .catch((err) => {
+                   return resolve(err)
+               })
+            })
+            return await promise;
+       };
+
+
+
 }
 export default  new car();

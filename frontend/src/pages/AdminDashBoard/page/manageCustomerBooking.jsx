@@ -126,8 +126,6 @@ class ManageCustomerBooking extends Component {
                       <StyledTableCell align="right">Address</StyledTableCell>
                       <StyledTableCell  align="right">ContactNo</StyledTableCell>
                       <StyledTableCell align="right">Email</StyledTableCell>
-                      <StyledTableCell align="right">UserName</StyledTableCell>
-                      <StyledTableCell align="right">Password</StyledTableCell>
                       <StyledTableCell align="right">Action</StyledTableCell>
                   </TableRow>
                 </TableHead>
@@ -144,8 +142,7 @@ class ManageCustomerBooking extends Component {
                     <StyledTableCell align="right">{row.address}</StyledTableCell>
                     <StyledTableCell align="right">{row.contact_No}</StyledTableCell>
                     <StyledTableCell align="right">{row.email}</StyledTableCell>
-                    <StyledTableCell align="right">{row.userName}</StyledTableCell>
-                    <StyledTableCell align="right">{row.password}</StyledTableCell>
+                  
                     
                      <StyledTableCell align="right">
 
@@ -156,13 +153,7 @@ class ManageCustomerBooking extends Component {
                                     ><DeleteIcon color="error" /></IconButton>
                                     </Tooltip>
 
-                                    {/* <Tooltip title="Edit"><IconButton
-                                        onClick={() => {
-                                            console.log("edit icon clicked!")
-                                            this.updateRentalRate(row);
-                                        }}
-                                    ><EditIcon color='primary'/></IconButton>
-                                    </Tooltip> */}
+                                
                      </StyledTableCell>
                   </TableRow>
                   ))

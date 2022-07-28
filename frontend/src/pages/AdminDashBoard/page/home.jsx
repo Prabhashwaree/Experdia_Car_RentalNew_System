@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Component } from "react";
+import Stack from '@mui/material/Stack';
 
 import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -13,12 +14,19 @@ import driverService from '../../../service/driver';
 import carService from '../../../service/car';
 import paymentService from '../../../service/payment';
 
+import CheckIcon from '@mui/icons-material/Check';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import Alert from '@mui/material/Alert';
+
 const top100Films = [
   { label: 'Empty' },
   ];
 
   const car = [
-    { label: 'Empty' },
+    { label: 'R0001' },
+    { label: 'R0002' },
+    { label: 'R0003' },
+    { label: 'R0004' },
     ];
 
 class Home extends Component {
@@ -38,6 +46,10 @@ class Home extends Component {
           monthly_Rate:'',
           pricePerExtraKM:''
         },
+        alert: false,
+        message: "",
+        severity: "",
+
         btnLabelSave:'save',
 
 
@@ -49,6 +61,9 @@ class Home extends Component {
           contact_No:'',
           salary:''
         },
+        alert: false,
+        message: "",
+        severity: "",
         btnLabelDriverSave:'save',
 
 
@@ -73,6 +88,9 @@ class Home extends Component {
                   pricePerExtraKM:''
                 }
           },
+          alert: false,
+        message: "",
+        severity: "",
           btnLabelCarSave:'save',
 
                 PaymentFormData:{
@@ -83,34 +101,98 @@ class Home extends Component {
                   status:'',
                   total_Price:''
                 },
+                alert: false,
+                message: "",
+                severity: "",
                 btnLabelPaymentSave:'save',
-
-
       }
-
-// --------------Driver---------------
-      // this.state = {
-      //   driverData:{
-      //     driver_NIC:'',
-      //     licen:'',
-      //     name:'',
-      //     address:'',
-      //     contact_No:'',
-      //     salary:'',
-         
-      //   },
-      //   btnLabelDriverSave:'save'
-      // }
-
-
-
-
+  
     }
+
+
+
+
+    clearRentalRateTextFeild = (e) => {
+      this.setState({
+        FormData:{
+          rate_Id:'',
+          brand:'',
+          type:'',
+          daily_Rate:'',
+          free_KM_Day:'',
+          free_KM_Month:'',
+          monthly_Rate:'',
+          pricePerExtraKM:''
+        }
+        
+      })
+  }
+
+  clearDriverTextFeild = (e) => {
+    this.setState({
+     
+      DriverFormData:{
+        driver_NIC:'',
+        licen:'',
+        name:'',
+        address:'',
+        contact_No:'',
+        salary:''
+      }
+    })
+}
+
+    clearCarTextFeild = (e) => {
+      this.setState({
+        CarFormData:{
+          register_No:'',
+          brand:'',
+          type:'',
+          no_Passenger:'',
+          transmission_Type:'',
+          fuel:'',
+          colour:'',
+          lossDamagePrice:''
+        }
+      })
+    }
+
+        
+        clearPaymentTextFeild = (e) => {
+          this.setState({
+            PaymentFormData:{
+              payment_Id:'',
+              currently_Run_KM:'',
+              ride_A_KM:'',
+              total_KM:'',
+              status:'',
+              total_Price:''
+            }
+          })
+        }
+  
+
+
+
     submitRentalRate = async () =>{
       let FormData = this.state.FormData;
       console.log("form data : " + JSON.stringify(FormData))
       let rest = await rentalRate.postRentalRate(FormData);
       console.log(rest);
+      if (rest.status === 201) {
+        this.setState({
+            alert: true,
+            message: rest.data.message,
+            severity: "success"
+        });
+        this.clearRentalRateTextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: rest.response.data.message,
+            severity: "error"
+        });
+    }
     }
 
     submitDriverData = async () =>{
@@ -119,6 +201,20 @@ class Home extends Component {
       console.log("form data : " + JSON.stringify(DriverFormData))
       let resDriver = await driverService.postDriver(DriverFormData);
       console.log(resDriver)
+      if (resDriver.status === 201) {
+        this.setState({
+            alert: true,
+            message: resDriver.data.message,
+            severity: "success"
+        });
+        this.clearDriverTextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: resDriver.response.data.message,
+            severity: "error"
+        });
+    }
     }
  
     submitCarData = async () =>{
@@ -127,6 +223,20 @@ class Home extends Component {
       console.log("form data : " + JSON.stringify(CarFormData))
       let resCar = await carService.postCar(CarFormData);
       console.log(resCar)
+      if (resCar.status === 201) {
+        this.setState({
+            alert: true,
+            message: resCar.data.message,
+            severity: "success"
+        });
+        this.clearCarTextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: resCar.response.data.message,
+            severity: "error"
+        });
+    }
     }
 
 
@@ -136,6 +246,20 @@ class Home extends Component {
       console.log("form data : " + JSON.stringify(PaymentFormData))
       let resPay = await paymentService.postPayment(PaymentFormData);
       console.log(resPay)
+      if (resPay.status === 201) {
+        this.setState({
+            alert: true,
+            message: resPay.data.message,
+            severity: "success"
+        });
+        this.clearPaymentTextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: resPay.response.data.message,
+            severity: "error"
+        });
+    }
     }
     
 
@@ -535,7 +659,18 @@ class Home extends Component {
   
   </section>
   </ValidatorForm>
-       
+  <Stack  sx={{ width: '50%' }} spacing={2}>
+              <Alert
+               icon={<CheckIcon fontSize="inherit" />} 
+               open={this.state.alert}
+                    onClose={() => {this.setState({alert: false})}}
+                    message={this.state.message}
+                    autoHideDuration={300000}
+                    severity={this.state.severity}
+                    variant="standard" >
+                    This is a success alert — check it out!
+              </Alert>
+            </Stack> 
        </>
 
     );

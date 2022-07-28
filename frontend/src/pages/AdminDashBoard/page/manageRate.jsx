@@ -62,6 +62,16 @@ class ManageRate extends Component {
             
           }
 
+          
+          deleteRentalRate  = async (id) => { 
+            let params = {
+              rateId: id
+            }
+             let res = await rentalRateService.deleteDriver(params);
+        
+           }; 
+        
+
 
                 exampleForMap = () =>{
           this.state.data.map((value,index) =>{

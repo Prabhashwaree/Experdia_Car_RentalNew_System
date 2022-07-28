@@ -75,6 +75,29 @@ class ManageCar extends Component {
     }
   }
 
+  deleteCar = async (id) => { 
+    let params = {
+      register_No: id
+    }
+     let res = await carService.deleteCar(params);
+  
+     if(res.status === 200) {
+        this.setState({
+            alert: true,
+            message: res.data.message,
+            severity: 'success'
+        });
+        this.loadData();
+     } else {
+        this.setState({
+            alert: true,
+            message: res.data.message,
+            severity: 'error'
+        });
+     }
+   }; 
+  
+
 
           exampleForMap = () =>{
             this.state.data.map((value,index) =>{
@@ -150,7 +173,7 @@ render(){
                     <StyledTableCell align="right">{row.fuel}</StyledTableCell>
                     <StyledTableCell align="right">{row.colour}</StyledTableCell>
                     <StyledTableCell align="right">{row.lossDamagePrice}</StyledTableCell>
-                    <StyledTableCell align="right">{row.rentalRate.r_Id}</StyledTableCell>
+                    <StyledTableCell align="right">{row.rentalRate.rate_Id}</StyledTableCell>
                     
                      <StyledTableCell align="right">
 

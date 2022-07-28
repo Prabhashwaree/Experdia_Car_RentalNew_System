@@ -64,6 +64,28 @@ class ManageDriver extends Component{
         }
 
 
+        deleteDriver = async (id) => { 
+          let params = {
+            driver_NIC: id
+          }
+           let res = await driverService.deleteDriver(params);
+      
+           if(res.status === 200) {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'success'
+              });
+              this.loadData();
+           } else {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'error'
+              });
+           }
+         }; 
+
         exampleForMap = () =>{
           this.state.data.map((value,index) =>{
             console.log(value.index)

@@ -31,5 +31,20 @@ class rentalRate{
             })
             return await promise;
         }
+
+
+        deleteRates = async (params) => {
+            const promise = new Promise((resolve, reject) => {
+               axios.delete('RentalRate', {params: params})
+               .then((res) => {
+                   return resolve(res)
+               }) 
+               .catch((err) => {
+                   return resolve(err)
+               })
+            })
+            return await promise;
+       };
+
 }
 export default  new rentalRate();
