@@ -59,7 +59,8 @@
     100%{
         width:1400px;
         height:680px;
-        top: -10%;
+        top: -16%;
+        left:-2%;
         /* color: rgb(72, 100, 104);*/
         filter: drop-shadow(10px 10px 10px rgb(235, 235, 235)); 
     }
@@ -110,7 +111,7 @@
     color: #000000;
     /* border: 1px solid red; */
     height:68%;
-    top: 205px; 
+    top: 250px; 
     position: relative;
 
 }
@@ -137,7 +138,7 @@
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 570px;
 }
 
@@ -145,70 +146,70 @@
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 570px;
 }
 .mainTopic3{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 555px;
 }
 .mainTopic4{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 550px;
 }
 .mainTopic5{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 530px;
 }
 .mainTopic6{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 525px;
 }
 .mainTopic7{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 520px;
 }
 .mainTopic8{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 510px;
 }
 .mainTopic9{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 490px;
 }
 .mainTopic10{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 480px;
 }
 .mainTopic11{
     position: relative;
     text-align: center;
     margin: auto;
-    left: -465px;
+    left: -390px;
     top: 470px;
 }
 
@@ -256,7 +257,7 @@
 
 .filingStationImg p{
     position: relative;
-    left: 44px;
+    left: 30px;
     top: -20px;
     font-size: 16px;  
   
@@ -361,7 +362,7 @@
     position: relative;
     z-index:32;
     left:64%;
-    top:-2300px;
+    top:-2210px;
     /* background-color: white; */
     display: flex;
     align-items: center;
@@ -379,7 +380,7 @@
 
 #footerSeperator1{
     position: relative;
-    top: -2326px;
+    top: -2220px;
     width: 85%;
     height: 2px;
     background-color: gray;
@@ -433,17 +434,17 @@
 
 #footerSeperator{
     position: absolute;
-    top: 649%;
+    top: 708%;
     width: 85%;
     height: 1px;
     background-color: gray;
-    left: 8%;
+    left: 8%;           
     bottom: 20%;
 }
 
 #footerFirstLineWord{
     position: absolute;
-    top: 655%;
+    top: 714%;
     left: 38%;
     bottom: 50%;
     color: gray;
@@ -451,7 +452,7 @@
 
 #footerSecondLineWord{
     position: absolute;
-    top: 658%;
+    top: 718%;
     left: 16%;
     bottom: 50%;
     color: gray;
@@ -459,7 +460,7 @@
 
 #endFooterSeperator{
     position: absolute;
-    top: 668%;
+    top: 728%;
     width: 100%;
     height: 1px;
     background-color: gray;

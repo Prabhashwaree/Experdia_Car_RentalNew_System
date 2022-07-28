@@ -11,6 +11,15 @@ import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
+import adminService from '../../../service/admin';
+
+import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+
+
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -39,8 +48,80 @@ const ariaLabel = { 'aria-label': 'description' };
 
 class Managemant extends  Component{
         constructor(props){
-          super(props);
+          super(props)
+          this.state = {
+            AdminFormData:{
+              admin_Id:'',
+              admin_Name:'',
+              password:'',
+              type:'',
+                  userLogin:{
+                      user_Id:'',
+                      type:'',
+                      user_Name:'',
+                      password:''
+                      
+                    }
+            },
+            data:[]
         }
+        }
+
+        deleteAdmin = async (id) =>{
+          let params = {
+            id: id
+
+          }
+
+          let res = await adminService.deleteAdmin(params)
+
+          if(res.status === 200) {
+            this.setState({
+                alert: true,
+                // message: res.data.message,
+                severity: 'success'
+            });
+            this.loadData();
+         } else {
+            this.setState({
+                alert: true,
+                // message: res.data.message,
+                severity: 'error'
+            });
+         }
+
+        }
+
+
+        exampleForMap = () =>{
+          this.state.data.map((value,index) =>{
+            console.log(value.index)
+          });
+        }
+      
+        loadData = async () =>{
+          console.log("load method Calling")
+          let res =await adminService.GetAdmin();
+          console.log("rental data " + res.data.data);
+        
+          if(res.status === 200){
+             this.setState({
+            data :res.data.data
+            });
+          }
+          console.log(this.state.data);
+      
+          this.exampleForMap();
+         }
+      
+         componentDidMount() { 
+          this.loadData();
+       }
+      
+
+
+
+
         
       render(){
         return (  
@@ -96,18 +177,56 @@ class Managemant extends  Component{
                         </Typography>
                         </div>
                         
-                  <TableContainer component={Paper} style={{width:"40%",left:"665px",position:"relative",top:"-298px"}}>
-                  <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                    <TableHead>
-                      <TableRow>
-                            <StyledTableCell>AdminId</StyledTableCell>
-                              <StyledTableCell align="right">AdminName</StyledTableCell>
-                              <StyledTableCell align="right">AdminContact</StyledTableCell>
+                        <TableContainer component={Paper} style={{width:"40%",left:"650px",position:"relative",top:"73px"}}>
+              <Table sx={{ minWidth: 100 }} aria-label="customized table">
+                <TableHead>
+                  <TableRow>
+                            <StyledTableCell>Id</StyledTableCell>
+                              <StyledTableCell align="right">Name</StyledTableCell>
+                              <StyledTableCell align="right">Password</StyledTableCell>
+                              <StyledTableCell align="right">Type</StyledTableCell>
                               <StyledTableCell align="right">UserId</StyledTableCell>
+                              <StyledTableCell align="right">Action</StyledTableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                      
+
+                    {
+                        this.state.data.map((row) => (
+                          <TableRow>
+                          <TableCell>{row.admin_Id}</TableCell>
+                          <StyledTableCell align="right">{row.admin_Name}</StyledTableCell>
+                          <StyledTableCell align="right">{row.password}</StyledTableCell>
+          
+                          <StyledTableCell align="right">{row.type}</StyledTableCell>
+                          <StyledTableCell align="right">{row.user_Id}</StyledTableCell>
+                          
+                          
+                          <StyledTableCell align="right">
+
+                          <Tooltip title="Delete"><IconButton
+                                              onClick={() => {
+                                                  this.deleteAdmin(row.register_No)
+                                              }}
+                                          ><DeleteIcon color="error" /></IconButton>
+                                          </Tooltip>
+
+                                          {/* <Tooltip title="Edit"><IconButton
+                                              onClick={() => {
+                                                  console.log("edit icon clicked!")
+                                                  this.updateRentalRate(row);
+                                              }}
+                                          ><EditIcon color='primary'/></IconButton>
+                                          </Tooltip> */}
+                          </StyledTableCell>
+                        </TableRow>
+                        ))
+
+                 
+                }
+
+                  
                         </TableBody>
                       </Table>
                       </TableContainer>

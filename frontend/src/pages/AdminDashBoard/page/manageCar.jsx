@@ -76,30 +76,30 @@ class ManageCar extends Component {
   }
 
 
-  exampleForMap = () =>{
-    this.state.data.map((value,index) =>{
-      console.log(value.index)
-    });
-  }
+          exampleForMap = () =>{
+            this.state.data.map((value,index) =>{
+              console.log(value.index)
+            });
+          }
 
-  loadData = async () =>{
-    console.log("load method Calling")
-    let res =await carService.GetCar();
-    console.log("rental data " + res.data.data);
-  
-    if(res.status === 200){
-       this.setState({
-      data :res.data.data
-      });
-    }
-    console.log(this.state.data);
+          loadData = async () =>{
+            console.log("load method Calling")
+            let res =await carService.GetCar();
+            console.log("rental data " + res.data.data);
+          
+            if(res.status === 200){
+              this.setState({
+              data :res.data.data
+              });
+            }
+            console.log(this.state.data);
 
-    this.exampleForMap();
-   }
+            this.exampleForMap();
+          }
 
-   componentDidMount() { 
-    this.loadData();
- }
+          componentDidMount() { 
+            this.loadData();
+        }
 
 
   

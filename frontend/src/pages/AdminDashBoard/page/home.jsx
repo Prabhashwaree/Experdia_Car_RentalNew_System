@@ -175,7 +175,7 @@ class Home extends Component {
 
     <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitPaymentData} >
 
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Payment ID" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"28%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Payment ID" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"28%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
                value={this.state.PaymentFormData.payment_Id}
                onChange={(e) => {
                    let PaymentFormDatas = this.state.PaymentFormData
@@ -184,7 +184,7 @@ class Home extends Component {
                }}
                validators={['required']} 
               />
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="currently KM" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"28%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="currently KM" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"28%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
               value={this.state.PaymentFormData.currently_Run_KM}
               onChange={(e) => {
                   let PaymentFormDatas = this.state.PaymentFormData
@@ -194,7 +194,7 @@ class Home extends Component {
               validators={['required']} 
               />
              
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Ride KM" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"48%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Ride KM" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"48%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
               value={this.state.PaymentFormData.ride_A_KM}
               onChange={(e) => {
                   let PaymentFormDatas = this.state.PaymentFormData
@@ -203,7 +203,7 @@ class Home extends Component {
               }}
               validators={['required']} 
               />
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Total KM" variant="outlined" style={{position: "absolute",top:"48%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Total KM" variant="outlined" style={{position: "absolute",top:"48%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
               value={this.state.PaymentFormData.total_KM}
               onChange={(e) => {
                   let PaymentFormDatas = this.state.PaymentFormData
@@ -213,7 +213,7 @@ class Home extends Component {
               validators={['required']} 
               />
               
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Status" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"68%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Status" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"68%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
               value={this.state.PaymentFormData.status}
               onChange={(e) => {
                   let PaymentFormDatas = this.state.PaymentFormData
@@ -222,7 +222,7 @@ class Home extends Component {
               }}
               validators={['required']} 
               />
-              <TextField size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Total Price" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"68%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
+              <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Total Price" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"68%",backgroundColor:"white",color:"white",left:"40%",zIndex:"1",width:"35%"}}
               value={this.state.PaymentFormData.total_Price}
               onChange={(e) => {
                   let PaymentFormDatas = this.state.PaymentFormData

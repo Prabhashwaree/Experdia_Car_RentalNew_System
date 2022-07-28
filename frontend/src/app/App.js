@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    //  <HomePage />
+     <HomePage />
     // <SignInPage />
     // <SignUpPage />
     // <CustomerRegisterPage />
@@ -19,7 +19,7 @@ function App() {
     // <Routes>
     //     <Route exact path="/" element={<DashBoardPage />}/>
     // </Routes>
-    <AdminDashBoardPages />
+    // <AdminDashBoardPages />
     // <BookingPage />
   );
 }

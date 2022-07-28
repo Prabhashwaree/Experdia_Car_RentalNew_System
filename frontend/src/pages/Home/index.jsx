@@ -303,7 +303,7 @@ export default function HomePage(){
             <section>
                 
                 <div style={{position: "absolute",top:"65px",backgroundColor:"#ff5f00",width:"100%",height:"58vh"}}></div>
-                <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-80px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
+                <img id="mainCar" src={mainCarSet} style={{position: "absolute",top:"-60px",left:"50px",zIndex:"1" ,width:"1300px",height:"640px"}} />
                 
                 {/* <TextField id="filled-basic" label="Date" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1000px",zIndex:"1",width:"11%"}}/>
                 <TextField id="filled-basic" label="Time" variant="filled" style={{position: "relative",top:"158px",backgroundColor:"transparent",color:"white",left:"1020px",zIndex:"1",width:"11%"}}/>
@@ -396,7 +396,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-12px",left:"69.5px"}}>Petrol</p>
                          </span>  
                         <div class="paymentRs">
@@ -439,7 +439,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-12px",left:"69.5px"}}>Petrol</p>
                          </span>   
                          <div class="paymentRs">
@@ -480,7 +480,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"10px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-12px",left:"69.5px"}}>Petrol</p>
                          </span>
                          <div class="paymentRs">
@@ -521,7 +521,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-40px",left:"69.5px"}}>Petrol</p>
                          </span>  
                          <div class="paymentRs">
@@ -561,7 +561,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-40px",left:"69.5px"}}>Petrol</p>
                          </span>     
                          <div class="paymentRs1">
@@ -601,7 +601,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-40px",left:"69.5px"}}>Petrol</p>
                          </span>      
                          <div class="paymentRs1">
@@ -641,7 +641,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-20px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-40px",left:"69.5px"}}>Petrol</p>
                          </span>    
                          <div class="paymentRs1">
@@ -682,7 +682,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-50px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-50px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-70px",left:"69.5px"}}>Petrol</p>
                          </span>  
                          <div class="paymentRs1">
@@ -723,7 +723,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-50px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-50px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-70px",left:"69.5px"}}>Petrol</p>
                          </span>
                          <div class="paymentRs2">
@@ -765,7 +765,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-70px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-70px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-90px",left:"69.5px"}}>Petrol</p>
                          </span> 
                          <div class="paymentRs2">
@@ -804,7 +804,7 @@ export default function HomePage(){
                          </span>
 
                          <span class="filingStationImg">
-                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-70px",left:"21px"}}/>
+                            <img src={petrol} style={{width:"",height:"8%",position: "relative",top:"-70px",left:"12px"}}/>
                             <p style={{position: "relative",top:"-90px",left:"69.5px"}}>Petrol</p>
                          </span>
                          <div class="paymentRs2">

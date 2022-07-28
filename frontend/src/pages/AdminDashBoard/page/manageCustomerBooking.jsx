@@ -106,7 +106,7 @@ class ManageCustomerBooking extends Component {
               <Typography variant="h5" noWrap component="div" >
                      Manage Customer Details
                     </Typography>
-                    <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"430px",top:"18px",color:"gray"}}>
+                    <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"320px",top:"18px",color:"gray"}}>
                      Booking Details
                     </Typography>
                     <Typography variant="h6" noWrap component="div" style={{position: "relative",left:"-320px",top:"-20px",color:"gray"}}>
@@ -116,7 +116,7 @@ class ManageCustomerBooking extends Component {
                     <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"70%",top:"110px",width:"25%"}}/>
                     <img src={Search}style={{position: "absolute",left:"1230px",top:"110px",width:"2%"}}/>
     
-              <TableContainer component={Paper} style={{width:"63%",left:"30px",position:"relative",top:"130px"}}>
+              <TableContainer component={Paper} style={{width:"50%",left:"30px",position:"relative",top:"130px"}}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>
@@ -191,10 +191,10 @@ class ManageCustomerBooking extends Component {
                         </Typography>
                         </div>
                        
-                  <TableContainer component={Paper} style={{width:"30%",left:"925px",position:"relative",top:"-350px"}}>
-                  <Table sx={{ minWidth: 300 }} aria-label="customized table">
-                    <TableHead>
-                      <TableRow>
+                        <TableContainer component={Paper} style={{width:"40%",left:"660px",position:"relative",top:"-88px"}}>
+              <Table sx={{ minWidth: 100 }} aria-label="customized table">
+                <TableHead>
+                  <TableRow>
                             <StyledTableCell>BookingId</StyledTableCell>
                               <StyledTableCell align="right">RegisterNo</StyledTableCell>
                               <StyledTableCell align="right">Date</StyledTableCell>

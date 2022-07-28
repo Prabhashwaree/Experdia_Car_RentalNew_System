@@ -17,7 +17,8 @@ public class Admin {
     @Id
     private String admin_Id;
     private String admin_Name;
-    private String admin_Contact;
+    private String password;
+    private String type;
 
     @OneToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
     @JoinColumn(name = "u_ID",referencedColumnName = "user_Id",nullable = false)
