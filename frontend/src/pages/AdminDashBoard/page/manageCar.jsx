@@ -71,7 +71,8 @@ class ManageCar extends Component {
                 pricePerExtraKM:''
               }
       },
-      data:[]
+      data:[],
+      // typeData: [],
     }
   }
 

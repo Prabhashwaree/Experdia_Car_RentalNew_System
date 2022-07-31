@@ -14,16 +14,16 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ExtendWith(SpringExtension.class)
 
 public class DriverRepoTest {
-    @Autowired
-    DriverRepo driverRepo;
-
-    @Test
-    public void getAllDriver(){
-    }
-
-
-    @Test
-    public void saveDriver(){
+//    @Autowired
+//    DriverRepo driverRepo;
+//
+//    @Test
+//    public void getAllDriver(){
+//    }
+//
+//
+//    @Test
+//    public void saveDriver(){
 //        Driver driver1 = new Driver(
 //                "995867816V",
 //                "2022-07-08",
@@ -51,7 +51,7 @@ public class DriverRepoTest {
 //        }else{
 //            throw new RuntimeException("No Such Driver To Update.....");
 //        }
-    }
+//    }
 //
 //    @Test
 //    public void searchDriverSchedule(){}

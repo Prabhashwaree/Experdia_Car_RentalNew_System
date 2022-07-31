@@ -29,16 +29,16 @@ class SignUpPage extends Component{
             this.state = {
               AdminFormData:{
                 admin_Id:'',
-                admin_Name:'',
-                password:'',
                 type:'',
-                    userLogin:{
-                        user_Id:'',
-                        type:'',
-                        user_Name:'',
-                        password:''
+                userName:'',
+                password:'',
+                    // userLogin:{
+                    //     user_Id:'',
+                    //     type:'',
+                    //     user_Name:'',
+                    //     password:''
                         
-                      }
+                    //   }
               },
               btnLabelAdminSave:'save',
           }
@@ -50,9 +50,44 @@ class SignUpPage extends Component{
           console.log("load method Calling")
           let AdminFormData = this.state.AdminFormData;
           console.log("form data : " + JSON.stringify(AdminFormData))
-          let res = await adminService.postAdmin(AdminFormData);
-          console.log(res)
+          let resAdmin = await adminService.postAdmin(AdminFormData);
+          console.log(resAdmin)
+          if (resAdmin.status === 201) {
+            this.setState({
+                alert: true,
+                message: resAdmin.data.message,
+                severity: "success"
+            });
+            this.clearAdminTextFeild();
+        } else {
+            this.setState({
+                alert: true,
+                // message: resAdmin.response.data.message,
+                severity: "error"
+            });
         }
+
+        }
+
+
+        clearAdminTextFeild = (e) => {
+          this.setState({
+            AdminFormData:{
+              admin_Id:'',
+              type:'',
+              userName:'',
+              password:'',
+                  // userLogin:{
+                  //     user_Id:'',
+                  //     type:'',
+                  //     user_Name:'',
+                  //     password:''
+                      
+                  //   }
+            }
+          })
+        }
+
 
           
         render(){
@@ -87,10 +122,10 @@ class SignUpPage extends Component{
                      validators={['required']} 
                     /><br/>
                     <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",top:"80px",zIndex:"1",width:"380px"}}
-                    value={this.state.AdminFormData.admin_Name}
+                    value={this.state.AdminFormData.userName}
                     onChange={(e) => {
                         let AdminFormDatas = this.state.AdminFormData
-                        AdminFormDatas.admin_Name = e.target.value
+                        AdminFormDatas.userName = e.target.value
                         this.setState({ AdminFormDatas })
                     }}
                     validators={['required']} 

@@ -245,7 +245,7 @@ class Home extends Component {
       let PaymentFormData = this.state.PaymentFormData;
       console.log("form data : " + JSON.stringify(PaymentFormData))
       let resPay = await paymentService.postPayment(PaymentFormData);
-      console.log(resPay)
+      // console.log(resPay)
       if (resPay.status === 201) {
         this.setState({
             alert: true,
@@ -262,6 +262,23 @@ class Home extends Component {
     }
     }
     
+
+// --------------------rental combo loard------------------
+      // comboDataForSelect = async () => {
+      //   const res = await carService.GetCar();
+      //   let comboData = [];
+      //   if (res.status == 200){
+      //     res.data.data.map((value,index) => {
+      //       typeData.push(value)
+      //       console.log(value)
+
+      //     })
+      //     this.setState({
+      //       typeData:typeData,
+      //     })
+      //   }
+      // }
+
 
 
 
@@ -358,7 +375,7 @@ class Home extends Component {
               
               <Button label={this.state.btnLabelPaymentSave} type="submit" variant="contained" color="success" style={{position: "absolute",top:"28%",left:"77%",width:"20%",backgroundColor:"Green"}}>Save</Button>
               <Button variant="contained" color="success"style={{position: "absolute",top:"48%",backgroundColor:"Blue",left:"77%",width:"20%",zIndex:"1"}}>Update</Button>
-              <Button variant="contained" color="success"style={{position: "absolute",top:"68%",backgroundColor:"red",left:"77%",width:"20%"}}>Delete</Button>
+              {/* <Button variant="contained" color="success"style={{position: "absolute",top:"68%",backgroundColor:"red",left:"77%",width:"20%"}}>Delete</Button> */}
     
     </ValidatorForm>
         
@@ -393,7 +410,7 @@ class Home extends Component {
               options={car}
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Rate ID" size="small"
-              
+              name = "RateID"
               value={this.state.CarFormData.rate_Id}
               onChange={(e) => {
                   let CarFormDatas = this.state.CarFormData
@@ -403,6 +420,29 @@ class Home extends Component {
               validators={['required']} 
               />}
               style={{position: "absolute",top:"8%",borderRadius:"7px",backgroundColor:"transparent",color:"white",left:"355px",zIndex:"1",width:"22%"}}/>
+
+                {/* <TextValidator
+                    select
+                    lable = "Rate ID"
+                    name = "rateID"
+                    onChange={this.handleChange}
+                    valuev={this.state.formData.type.rateId}
+                    validators = {["required"]}
+                    errorMessages = {["Tis field is required"]}
+                    className = "w-full"
+                    style={{position: "absolute",top:"8%",borderRadius:"7px",backgroundColor:"transparent",color:"white",left:"355px",zIndex:"1",width:"22%"}}
+                >
+
+                {this.state.typeData.map((option) => (
+                  <MenuItem key = {option.rateID} value = {option.rateID}>
+                    {option.type}
+                    </MenuItem>
+                ))}
+
+                </TextValidator>   */}
+
+
+
 
               <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Brand" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"28%",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
                value={this.state.CarFormData.brand}
@@ -472,9 +512,9 @@ class Home extends Component {
                }}
                validators={['required']} 
               />
-              <Button variant="contained" color="success"style={{position: "absolute",top:"48%",backgroundColor:"red",left:"78%",width:"20%"}}>Delete</Button>
+              {/* <Button variant="contained" color="success"style={{position: "absolute",top:"48%",backgroundColor:"red",left:"78%",width:"20%"}}>Delete</Button> */}
                <Button label={this.state.btnLabelCarSave} type="submit" variant="contained" color="success" style={{position: "absolute",top:"28%",left:"30px",width:"20%",backgroundColor:"Green",left:"78%"}}>Save</Button>
-              
+               <Button variant="contained" color="success"style={{position: "absolute",top:"48%",backgroundColor:"Blue",left:"77%",width:"20%",zIndex:"1"}}>Update</Button>
               
     </div>
       
@@ -517,7 +557,7 @@ class Home extends Component {
           <div id="driverBtn">
                   <Button label={this.state.btnLabelSave} type="submit" variant="contained" color="success" style={{position: "absolute",top:"80px",backgroundColor:"green",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Save</Button><br/><br/>
                   <Button variant="contained" color="success"style={{position: "absolute",top:"133px",backgroundColor:"blue",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Update</Button><br/><br/>
-                  <Button variant="contained" color="success"style={{position: "absolute",top:"186px",backgroundColor:"red",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Delete</Button>
+                  {/* <Button variant="contained" color="success"style={{position: "absolute",top:"186px",backgroundColor:"red",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Delete</Button> */}
               </div>
   
           <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Brand" variant="outlined" style={{position: "absolute",top:"80px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}
@@ -598,7 +638,7 @@ class Home extends Component {
             <div id="driverBtn1">
             <Button label={this.state.btnLabelDriverSave} type="submit" variant="contained" color="success" style={{position: "absolute",top:"110px",backgroundColor:"green",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Save</Button><br/><br/>    
                   <Button variant="contained" color="success"style={{position: "absolute",top:"160px",backgroundColor:"blue",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Update</Button><br/><br/>
-                  <Button variant="contained" color="success"style={{position: "absolute",top:"210px",backgroundColor:"red",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Delete</Button>
+                  {/* <Button variant="contained" color="success"style={{position: "absolute",top:"210px",backgroundColor:"red",color:"white",right:"-10px",zIndex:"1",width:"20%"}}>Delete</Button> */}
               </div>
         
               <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="Driver NIC" variant="outlined" style={{position: "absolute",borderRadius:"7px",top:"80px",margin:"5px",backgroundColor:"white",color:"white",left:"20px",zIndex:"1",width:"35%"}}

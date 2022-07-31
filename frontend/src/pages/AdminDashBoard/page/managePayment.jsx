@@ -65,7 +65,7 @@ class ManagePayment extends Component{
 
         deletePayment = async (id) =>{
           let params = {
-            id: id
+            payment_Id: id
 
           }
 

@@ -30,7 +30,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     public void saveUserLogin(UserLoginDTO userLoginDTO) {
         UserLogin userLogin = new UserLogin();
         userLogin.setUser_Id(userLoginDTO.getUser_Id());
-        userLogin.setType(userLoginDTO.getType());
+//        userLogin.setType(userLoginDTO.getType());
         userLogin.setUser_Name(userLoginDTO.getUser_Name());
         userLogin.setPassword(passwordEncoder.encode(userLoginDTO.getPassword()));
 

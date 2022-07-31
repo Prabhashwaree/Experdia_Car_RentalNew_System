@@ -12,6 +12,7 @@ import Input from '@mui/material/Input';
 import Search from '../../../assets/img/search.png';
 import { Component } from "react";
 import adminService from '../../../service/admin';
+import signInService from '../../../service/signIn';
 
 import Tooltip from '@mui/material/Tooltip';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -52,24 +53,33 @@ class Managemant extends  Component{
           this.state = {
             AdminFormData:{
               admin_Id:'',
-              admin_Name:'',
-              password:'',
               type:'',
-                  userLogin:{
-                      user_Id:'',
-                      type:'',
-                      user_Name:'',
-                      password:''
+              userName:'',
+              password:'',
+                  // userLogin:{
+                  //     user_Id:'',
+                  //     type:'',
+                  //     user_Name:'',
+                  //     password:''
                       
-                    }
+                  //   }
+            },
+            adminData:[],
+
+            SignInFormData:{
+              user_Id:'',
+              user_Name:'',
+              password:'',
             },
             data:[]
+
+
         }
         }
 
         deleteAdmin = async (id) =>{
           let params = {
-            id: id
+            admin_Id: id
 
           }
 
@@ -78,14 +88,14 @@ class Managemant extends  Component{
           if(res.status === 200) {
             this.setState({
                 alert: true,
-                // message: res.data.message,
+                message: res.data.message,
                 severity: 'success'
             });
             this.loadData();
          } else {
             this.setState({
                 alert: true,
-                // message: res.data.message,
+                message: res.data.message,
                 severity: 'error'
             });
          }
@@ -102,7 +112,7 @@ class Managemant extends  Component{
         loadData = async () =>{
           console.log("load method Calling")
           let res =await adminService.GetAdmin();
-          console.log("rental data " + res.data.data);
+          console.log("admin data " + res.data.data);
         
           if(res.status === 200){
              this.setState({
@@ -117,7 +127,60 @@ class Managemant extends  Component{
          componentDidMount() { 
           this.loadData();
        }
+
+
+
+      //  ---------------------user------------------------
+
+
+      deleteSignIn = async (id) =>{
+        let params = {
+          user_Id: id
+
+        }
+
+        let res = await signInService.deleteSignIn(params)
+
+        if(res.status === 200) {
+          this.setState({
+              alert: true,
+              message: res.data.message,
+              severity: 'success'
+          });
+          this.loadSignInData();
+       } else {
+          this.setState({
+              alert: true,
+              message: res.data.message,
+              severity: 'error'
+          });
+       }
+
+      }
+
+
+
       
+      loadSignInData = async () =>{
+        console.log("load method Calling")
+        let res =await signInService.GetSignIn();
+        console.log("SignInData " + res.data.data);
+      
+        if(res.status === 200){
+           this.setState({
+          data :res.data.data
+          });
+        }
+        console.log(this.state.data);
+    
+        this.exampleForMap();
+       }
+    
+       componentDidMount() { 
+        this.loadSignInData();
+        
+     }
+    
 
 
 
@@ -150,14 +213,49 @@ class Managemant extends  Component{
                 <TableHead>
                   <TableRow>
                       <StyledTableCell>UserId</StyledTableCell>
-                      <StyledTableCell align="right">Type</StyledTableCell>
+                      {/* <StyledTableCell align="right">Type</StyledTableCell> */}
                       <StyledTableCell align="right">UserName</StyledTableCell>
                       <StyledTableCell align="right">Password</StyledTableCell>
+                       <StyledTableCell align="right">Action</StyledTableCell>
                       
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   
+
+                {
+                        this.state.data.map((row) => (
+                          <TableRow>
+                          <TableCell>{row.user_Id}</TableCell>
+                          <StyledTableCell align="right">{row.user_Name}</StyledTableCell>
+                          <StyledTableCell align="right">{row.password}</StyledTableCell>
+                          {/* <StyledTableCell align="right">{row.password}</StyledTableCell> */}
+                          {/* <StyledTableCell align="right">{row.user_Id}</StyledTableCell> */}
+                          
+                          
+                          <StyledTableCell align="right">
+
+                          <Tooltip title="Delete"><IconButton
+                                              onClick={() => {
+                                                  this.deleteSignIn(row.user_Id)
+                                              }}
+                                          ><DeleteIcon color="error" /></IconButton>
+                                          </Tooltip>
+
+                                          {/* <Tooltip title="Edit"><IconButton
+                                              onClick={() => {
+                                                  console.log("edit icon clicked!")
+                                                  this.updateRentalRate(row);
+                                              }}
+                                          ><EditIcon color='primary'/></IconButton>
+                                          </Tooltip> */}
+                          </StyledTableCell>
+                        </TableRow>
+                        ))
+
+                 
+                }
+
                 </TableBody>
               </Table>
             </TableContainer>
@@ -182,32 +280,31 @@ class Managemant extends  Component{
                 <TableHead>
                   <TableRow>
                             <StyledTableCell>Id</StyledTableCell>
-                              <StyledTableCell align="right">Name</StyledTableCell>
-                              <StyledTableCell align="right">Password</StyledTableCell>
                               <StyledTableCell align="right">Type</StyledTableCell>
-                              <StyledTableCell align="right">UserId</StyledTableCell>
+                              <StyledTableCell align="right">UserName</StyledTableCell>
+                              <StyledTableCell align="right">Password</StyledTableCell>
+                              {/* <StyledTableCell align="right">UserId</StyledTableCell> */}
                               <StyledTableCell align="right">Action</StyledTableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                     
-
+                  
                     {
                         this.state.data.map((row) => (
                           <TableRow>
                           <TableCell>{row.admin_Id}</TableCell>
-                          <StyledTableCell align="right">{row.admin_Name}</StyledTableCell>
-                          <StyledTableCell align="right">{row.password}</StyledTableCell>
-          
                           <StyledTableCell align="right">{row.type}</StyledTableCell>
-                          <StyledTableCell align="right">{row.user_Id}</StyledTableCell>
+                          <StyledTableCell align="right">{row.userName}</StyledTableCell>
+                          <StyledTableCell align="right">{row.password}</StyledTableCell>
+                          {/* <StyledTableCell align="right">{row.user_Id}</StyledTableCell> */}
+                          {/* console.log(row.admin); */}
                           
                           
                           <StyledTableCell align="right">
 
                           <Tooltip title="Delete"><IconButton
                                               onClick={() => {
-                                                  this.deleteAdmin(row.register_No)
+                                                  this.deleteAdmin(row.admin_Id)
                                               }}
                                           ><DeleteIcon color="error" /></IconButton>
                                           </Tooltip>

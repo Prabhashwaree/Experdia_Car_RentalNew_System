@@ -9,6 +9,8 @@ import facebook from '../../assets/img/facebook.png';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
+import signInService from '../../service/signIn';
 
 
 
@@ -16,7 +18,57 @@ class SignInPage extends Component{
 
     constructor(props){
         super(props);
+        this.state = {
+          SignInFormData:{
+            user_Id:'',
+              user_Name:'',
+              password:''
+          },
+          alert: false,
+          message: "",
+          severity: "",
+  
+          btnLabelSave:'save',
       }
+    }
+
+
+    clearSignInTextFeild = (e) => {
+      this.setState({
+        SignInFormData:{
+          user_Id:'',
+          user_Name:'',
+          password:''
+          
+        }
+        
+      })
+  }
+
+
+  submitSignIn = async () =>{
+    console.log("load method Calling")
+    let SignInFormData = this.state.SignInFormData;
+    console.log("form data : " + JSON.stringify(SignInFormData))
+    let resSignIn = await signInService.postSignIn(SignInFormData);
+    console.log(resSignIn)
+    if (resSignIn.status === 201) {
+      this.setState({
+          alert: true,
+          message: resSignIn.data.message,
+          severity: "success"
+      });
+      this.clearSignInTextFeild();
+  } else {
+      this.setState({
+          alert: true,
+          // message: resSignIn.response.data.message,
+          severity: "error"
+      });
+  }
+  }
+
+
       
     render(){
       return (
@@ -24,6 +76,7 @@ class SignInPage extends Component{
         <>
 
         {/* --------------------------loging----------------------- */}
+         <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitSignIn} >
         <section>
 
             <div id="navivar"></div>
@@ -36,14 +89,41 @@ class SignInPage extends Component{
 
             <div id="loginSection">
                 <h1>Sign in</h1>
-                <TextField id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",top:"55px",zIndex:"1",width:"380px"}}/><br/>
-                <TextField
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="User Id" variant="outlined" style={{position: "relative",top:"55px",zIndex:"1",width:"380px"}}
+                value={this.state.SignInFormData.user_Id}
+                onChange={(e) => {
+                    let SignInFormDatas = this.state.SignInFormData
+                    SignInFormDatas.user_Id = e.target.value
+                    this.setState({ SignInFormDatas })
+                }}
+                validators={['required']} 
+                /><br/>
+                <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="User Name" variant="outlined" style={{position: "relative",top:"55px",zIndex:"1",width:"380px"}}
+                value={this.state.SignInFormData.user_Name}
+                onChange={(e) => {
+                    let SignInFormDatas = this.state.SignInFormData
+                    SignInFormDatas.user_Name = e.target.value
+                    this.setState({ SignInFormDatas })
+                }}
+                validators={['required']} 
+                /><br/>
+                <TextValidator
+                 size="small" sx={{ width: '40ch'}} 
                     id="outlined-password-input"
                     label="Password"
                     type="password"
                     autoComplete="current-password"
-                    style={{position: "relative",top:"70px",zIndex:"1",width:"380px"}}/><br/>
-                <Button variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
+
+                    value={this.state.SignInFormData.password}
+                onChange={(e) => {
+                    let SignInFormDatas = this.state.SignInFormData
+                    SignInFormDatas.password = e.target.value
+                    this.setState({ SignInFormDatas })
+                  }}
+                  validators={['required']} 
+                    style={{position: "relative",top:"70px",zIndex:"1",width:"380px"}}
+                    /><br/>
+                <Button label={this.state.btnLabelSave} type="submit" variant="Continue with account" style={{position: "relative",top:"85px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
                 <div style={{position: "relative",top:"115px",zIndex:"1",width:"98.5px",height:"1px",left:"570px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{color:"black",position: "relative",top:"105px"}}>or use one of these options</p>
                 <div style={{position: "relative",top:"96.1px",zIndex:"1",width:"98.5px",height:"1px",left:"850px",backgroundColor:"rgb(212, 212, 212)"}}></div>
@@ -59,7 +139,7 @@ class SignInPage extends Component{
             </div>
 
         </section>
-
+        </ValidatorForm>
        
         </>
   

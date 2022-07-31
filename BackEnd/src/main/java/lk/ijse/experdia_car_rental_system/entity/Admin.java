@@ -16,13 +16,13 @@ import javax.persistence.*;
 public class Admin {
     @Id
     private String admin_Id;
-    private String admin_Name;
-    private String password;
     private String type;
+    private String userName;
+    private String password;
 
-    @OneToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name = "u_ID",referencedColumnName = "user_Id",nullable = false)
-    private UserLogin userLogin;
+    //@OneToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
+    //@JoinColumn(name = "u_ID",referencedColumnName = "user_Id",nullable = false)
+    //private UserLogin userLogin;
 
 }
 

@@ -3,7 +3,7 @@ package lk.ijse.experdia_car_rental_system.repo;
 import lk.ijse.experdia_car_rental_system.config.JPAConfig;
 import lk.ijse.experdia_car_rental_system.dto.CustomerDTO;
 import lk.ijse.experdia_car_rental_system.entity.Customer;
-import lk.ijse.experdia_car_rental_system.entity.UserLogin;
+//import lk.ijse.experdia_car_rental_system.entity.UserLogin;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +18,12 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 
 class CustomerRepoTest {
-    @Autowired
-    CustomerRepo customerRepo;
-
-    @Test
-    public void addOneCustomer() {
-        Customer customer = new Customer(
+//    @Autowired
+//    CustomerRepo customerRepo;
+//
+//    @Test
+//    public void addOneCustomer() {
+//        Customer customer = new Customer(
 
 //                "C001",
 //                "L1548",
@@ -38,10 +38,10 @@ class CustomerRepoTest {
 //                        "Driver",
 //                        "Silva",
 //                        "silva"
-//                )
-        );
-        customerRepo.save(customer);
-    }
+////                )
+//        );
+//        customerRepo.save(customer);
+//    }
 
 
 }

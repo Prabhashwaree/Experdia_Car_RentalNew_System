@@ -15,16 +15,16 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ExtendWith(SpringExtension.class)
 
 public class DriverScheduleRepoTest {
-    @Autowired
-    DriverScheduleRepo driverScheduleRepo;
-
-    @Test
-    public void getAllDriverSchedule(){
-    }
-
-
-    @Test
-    public void saveDriverSchedule(){
+//    @Autowired
+//    DriverScheduleRepo driverScheduleRepo;
+//
+//    @Test
+//    public void getAllDriverSchedule(){
+//    }
+//
+//
+//    @Test
+//    public void saveDriverSchedule(){
 //        DriverSchedule driverSchedule = new DriverSchedule(
 //                "B001",
 //                "995867816V",
@@ -101,11 +101,11 @@ public class DriverScheduleRepoTest {
 //
 //        driverScheduleRepo.save(driverSchedule);
 
-    }
-
-    @Test
-    public void deleteDriverSchedule(){
-        driverScheduleRepo.deleteById("P001");
-    }
+//    }
+//
+//    @Test
+//    public void deleteDriverSchedule(){
+//        driverScheduleRepo.deleteById("P001");
+//    }
 
 }

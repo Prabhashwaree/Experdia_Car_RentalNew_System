@@ -17,7 +17,7 @@ import javax.persistence.Id;
 public class UserLogin {
     @Id
     private String user_Id;
-    private String type;
+    //private String type;
     private String user_Name;
     private String password;
 }

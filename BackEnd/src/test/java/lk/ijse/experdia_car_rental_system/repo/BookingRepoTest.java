@@ -13,15 +13,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ExtendWith(SpringExtension.class)
 
 public class BookingRepoTest {
-    @Autowired
-    BookingRepo bookingRepo;
-
-    @Test
-    public void getAllBooking(){
-    }
-
-    @Test
-    public void saveBooking(){
+//    @Autowired
+//    BookingRepo bookingRepo;
+//
+//    @Test
+//    public void getAllBooking(){
+//    }
+//
+//    @Test
+//    public void saveBooking(){
 
 
 
@@ -105,12 +105,12 @@ public class BookingRepoTest {
 
 
       //  bookingRepo.save(booking);
-
-    }
-
-    @Test
-    public void deleteBooking(){
-        bookingRepo.deleteById("B001");
-    }
+//
+//    }
+//
+//    @Test
+//    public void deleteBooking(){
+//        bookingRepo.deleteById("B001");
+//    }
 
 }

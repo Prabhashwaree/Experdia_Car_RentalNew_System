@@ -45,10 +45,29 @@ const top100Films = [
             userName:'',
             password:'',  
           },
+          alert: false,
+          message: "",
+          severity: "",
           btnLabelCustomerSave:'save',
   
         }
 
+    }
+
+
+    clearCustomerTextFeild = (e) => {
+        this.setState({
+            CustomerFormData:{
+                nic_Number:'',
+                license_Id:'',
+                cus_Name:'',
+                address:'',
+                contact_No:'',
+                email:'',
+                userName:'',
+                password:''
+          }
+        })
     }
 
 
@@ -59,7 +78,25 @@ const top100Films = [
       console.log("form data : " + JSON.stringify(CustomerFormData))
       let resCustomer = await customerService.postCustomer(CustomerFormData);
       console.log(resCustomer)
+      if (resCustomer.status === 201) {
+        this.setState({
+            alert: true,
+            message: resCustomer.data.message,
+            severity: "success"
+        });
+        this.clearCustomerTextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: resCustomer.response.data.message,
+            severity: "error"
+        });
     }
+   
+    }
+
+
+
       
     render(){
       return (

@@ -57,7 +57,8 @@ class ManageRate extends Component {
                 monthly_Rate:'',
                 pricePerExtraKM:''
               },
-              data: []
+              data: [],
+             
             }
             
           }
@@ -65,9 +66,24 @@ class ManageRate extends Component {
           
           deleteRentalRate  = async (id) => { 
             let params = {
-              rateId: id
+              rate_Id: id
             }
-             let res = await rentalRateService.deleteDriver(params);
+             let res = await rentalRateService.deleteRates(params);
+
+             if(res.status === 200) {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'success'
+              });
+              this.loadData();
+           } else {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'error'
+              });
+           }
         
            }; 
         

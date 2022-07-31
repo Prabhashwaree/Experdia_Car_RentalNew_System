@@ -66,6 +66,32 @@ class ManageCustomerBooking extends Component {
         }
 
 
+
+        deleteCustomer = async (id) => { 
+          let params = {
+            nic_Number: id
+          }
+           let res = await customerService.deleteCustomer(params);
+      
+           if(res.status === 200) {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'success'
+              });
+              this.loadData();
+           } else {
+              this.setState({
+                  alert: true,
+                  message: res.data.message,
+                  severity: 'error'
+              });
+           }
+         }; 
+
+
+
+
         exampleForMap = () =>{
           this.state.data.map((value,index) =>{
             console.log(value.index)
@@ -116,7 +142,7 @@ class ManageCustomerBooking extends Component {
                     <Input placeholder="Search" inputProps={ariaLabel} style={{position: "absolute",left:"70%",top:"110px",width:"25%"}}/>
                     <img src={Search}style={{position: "absolute",left:"1230px",top:"110px",width:"2%"}}/>
     
-              <TableContainer component={Paper} style={{width:"50%",left:"30px",position:"relative",top:"130px"}}>
+              <TableContainer component={Paper} style={{width:"45%",left:"30px",position:"relative",top:"130px"}}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>
@@ -182,7 +208,7 @@ class ManageCustomerBooking extends Component {
                         </Typography>
                         </div>
                        
-                        <TableContainer component={Paper} style={{width:"40%",left:"660px",position:"relative",top:"-88px"}}>
+                        <TableContainer component={Paper} style={{width:"40%",left:"660px",position:"relative",top:"60px"}}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>
