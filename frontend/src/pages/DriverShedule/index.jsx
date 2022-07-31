@@ -299,8 +299,8 @@ class DriverShedulePage extends Component {
                 }}
                 validators={['required']}
                 />
-                <Button variant="contained" color="success" style={{ position: "relative", top: "-25px", backgroundColor: "Blue", left: "48px", width: "10%", zIndex: "1" }}>Update</Button>
-                <TextField size="small" sx={{ width: '40ch' }} id="outlined-basic" label="Status" variant="outlined" style={{ position: "relative", top: "45px", backgroundColor: "white", color: "white", left: "-50px", zIndex: "1", width: "38%" }}
+                <Button variant="contained" color="success" style={{ position: "relative", top: "45px", backgroundColor: "Blue", left: "570px", width: "10%", zIndex: "5" }}>Update</Button>
+                <TextField size="small" sx={{ width: '40ch' }} id="outlined-basic" label="Status" variant="outlined" style={{ position: "relative", top: "45px", backgroundColor: "white", color: "white", left: "-97px", zIndex: "1", width: "38%" }}
                 value={this.state.DriverScheduleFormData.status}
                 onChange={(e) => {
                   let DriverScheduleFormDatas = this.state.DriverScheduleFormData
@@ -326,7 +326,7 @@ class DriverShedulePage extends Component {
             </div>
 
 
-            <TableContainer component={Paper} style={{ width: "94%", left: "30px", top: "20px", position: "relative", top: "10px" }}>
+            <TableContainer component={Paper} style={{ width: "94%", left: "30px", top: "300px", position: "relative", top: "10px" }}>
               <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>

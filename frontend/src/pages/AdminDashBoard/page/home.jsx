@@ -13,7 +13,7 @@ import rentalRate from '../../../service/rentalRate';
 import driverService from '../../../service/driver';
 import carService from '../../../service/car';
 import paymentService from '../../../service/payment';
-
+import bookingDetailService from '../../../service/bookingDetail';
 import CheckIcon from '@mui/icons-material/Check';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Alert from '@mui/material/Alert';
@@ -105,6 +105,42 @@ class Home extends Component {
                 message: "",
                 severity: "",
                 btnLabelPaymentSave:'save',
+
+                BookingDetailFormData: {
+                  status: '',
+          
+                  booking: {
+                    booking_Id: '',
+                    picUp_Date: '',
+                    drop_Date: '',
+                    picUp_Time: '',
+                    drop_Time: '',
+                    bookingStatus: '',
+                    driverStatus: '',
+                    picUpLocation: '',
+                    lossDamagePrice: '',
+                    rent_Duration: '',
+                    car_Count: ''
+                  },
+          
+                  car: {
+                    register_No: '',
+                    brand: '',
+                    type: '',
+                    no_Passenger: '',
+                    transmission_Type: '',
+                    fuel: '',
+                    colour: '',
+                    lossDamagePrice: '',
+          
+                  }
+                },
+                alert: false,
+                message: "",
+                severity: "",
+                btnLabelBookingDetailSave:'save',
+
+
       }
   
     }
@@ -172,6 +208,45 @@ class Home extends Component {
         }
   
 
+
+
+        clearBookingDetailextFeild = (e) => {
+          this.setState({
+            BookingDetailFormData: {
+              status: '',
+      
+              booking: {
+                booking_Id: '',
+                picUp_Date: '',
+                drop_Date: '',
+                picUp_Time: '',
+                drop_Time: '',
+                bookingStatus: '',
+                driverStatus: '',
+                picUpLocation: '',
+                lossDamagePrice: '',
+                rent_Duration: '',
+                car_Count: ''
+              },
+      
+              car: {
+                register_No: '',
+                brand: '',
+                type: '',
+                no_Passenger: '',
+                transmission_Type: '',
+                fuel: '',
+                colour: '',
+                lossDamagePrice: '',
+      
+              }
+            }
+          })
+        }
+
+
+
+       
 
 
     submitRentalRate = async () =>{
@@ -263,6 +338,32 @@ class Home extends Component {
     }
     
 
+
+    submitBookingDetailData = async () =>{
+      console.log("load method Calling")
+      let BookingDetailFormData = this.state.BookingDetailFormData;
+      console.log("form data : " + JSON.stringify(BookingDetailFormData))
+      let resDetail = await bookingDetailService.postBookingDetail(BookingDetailFormData);
+      // console.log(resPay)
+      if (resDetail.status === 201) {
+        this.setState({
+            alert: true,
+            message: resDetail.data.message,
+            severity: "success"
+        });
+        this.clearBookingDetailextFeild();
+    } else {
+        this.setState({
+            alert: true,
+            message: resDetail.response.data.message,
+            severity: "error"
+        });
+    }
+    }
+
+
+
+
 // --------------------rental combo loard------------------
       // comboDataForSelect = async () => {
       //   const res = await carService.GetCar();
@@ -293,6 +394,7 @@ class Home extends Component {
 
 <section>
         <div id="dashboardReectangle1">
+        <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitBookingDetailData} >
         <Typography variant="h6" noWrap component="div" style={{position: "absolute",left:"28px",top:"25px"}}>
            Payment Details
           </Typography>
@@ -303,7 +405,15 @@ class Home extends Component {
               options={top100Films}
               // sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Booking ID" />}
-              style={{position: "absolute",top:"8%",backgroundColor:"transparent",color:"white",left:"215px",zIndex:"1",width:"22%",borderRadius:"7px",}}/>
+              style={{position: "absolute",top:"8%",backgroundColor:"transparent",color:"white",left:"215px",zIndex:"1",width:"22%",borderRadius:"7px",}}
+              value={this.state.BookingDetailFormData.booking.booking_Id}
+               onChange={(e) => {
+                   let BookingDetailFormDatas = this.state.BookingDetailFormData
+                   BookingDetailFormDatas.booking.booking_Id = e.target.value
+                   this.setState({ BookingDetailFormDatas })
+               }}
+               validators={['required']} 
+              />
 
         <Autocomplete
             size="small" sx={{ width: '40ch'}}
@@ -312,7 +422,19 @@ class Home extends Component {
               options={car}
               // sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Car No" />}
-              style={{position: "absolute",top:"8%",borderRadius:"7px",backgroundColor:"transparent",color:"white",left:"340px",zIndex:"1",width:"22%"}}/>
+              style={{position: "absolute",top:"8%",borderRadius:"7px",backgroundColor:"transparent",color:"white",left:"340px",zIndex:"1",width:"22%"}}
+              value={this.state.BookingDetailFormData.car.register_No}
+               onChange={(e) => {
+                   let BookingDetailFormDatas = this.state.BookingDetailFormData
+                   BookingDetailFormDatas.car.register_No = e.target.value
+                   this.setState({ BookingDetailFormDatas })
+               }}
+               validators={['required']}
+              />
+
+</ValidatorForm>
+
+
 
     <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitPaymentData} >
 

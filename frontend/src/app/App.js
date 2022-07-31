@@ -11,14 +11,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    //  <HomePage />
-    // <SignInPage />
+    //  <HomePage /><SignInPage />
+    
     // <SignUpPage />
     // <CustomerRegisterPage />
-    <DriverShedulePage/>
-    // <Routes>
-    //     <Route exact path="/" element={<DashBoardPage />}/>
-    // </Routes>
+    // <DriverShedulePage/>
+    <Routes>
+        <Route exact index element={<HomePage />}/>
+    </Routes>
     // <AdminDashBoardPages />
     // <BookingPage />
   );

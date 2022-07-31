@@ -9,17 +9,20 @@
     height: 65px;
     width: 100%;
     background-color: rgb(128, 128, 128);
+
 }
 
 #loginSection{
     position: relative;
     text-align: center;
     margin: auto;
+    
 }
 
 #loginSection h1{
     top: 40px;
     position: relative;
+    
 }
 
 #loginSection p{
@@ -27,5 +30,4 @@
     position: relative;
     font-weight: 100;
     color: rgb(73, 73, 73);
-
 }
