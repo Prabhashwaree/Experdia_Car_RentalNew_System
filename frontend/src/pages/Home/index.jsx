@@ -90,6 +90,7 @@ import Input from '@mui/material/Input';
 import Autocomplete from '@mui/material/Autocomplete';
 // import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
 
 
 
@@ -165,7 +166,7 @@ export default function HomePage(){
         open={isMenuOpen}
         onClose={handleMenuClose}
         >
-        <MenuItem onClick={handleMenuClose}>Sign in</MenuItem>
+        <MenuItem onClick={handleMenuClose}><Link to = "/SignInPage"> Sign in </Link></MenuItem>
         <MenuItem onClick={handleMenuClose}>My Profile</MenuItem>
         </Menu>
     );

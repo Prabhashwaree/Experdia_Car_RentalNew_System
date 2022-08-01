@@ -11,6 +11,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 import signInService from '../../service/signIn';
+import { Link } from 'react-router-dom';
 
 
 
@@ -82,7 +83,7 @@ class SignInPage extends Component{
             <div id="navivar"></div>
 
             <img src={carLogo} style={{position: "absolute",left:"80px",top:"1.9%",zIndex:"1",width:"40px",height:"40px"}} />
-            // <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>Back</h1>
+          {/* <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>Back</h1> */}
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{position: "absolute",left:"130px",top:"2.5%",zIndex:"1",color:"white"}}>
             <b>EXPERDIA Car Rental</b>
             </Typography>
@@ -123,7 +124,7 @@ class SignInPage extends Component{
                   validators={['required']} 
                     style={{position: "relative",top:"38px",zIndex:"1",width:"380px"}}
                     /><br/>
-                <Button label={this.state.btnLabelSave} type="submit" variant="Continue with account" style={{position: "relative",top:"50px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Continue with account</Button><br/>
+                <Button label={this.state.btnLabelSave} type="submit" variant="Continue with account" style={{position: "relative",top:"50px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}><Link to = "/AdminDashBoardPages">Continue with account</Link></Button><br/>
                 <div style={{position: "relative",top:"80px",zIndex:"1",width:"98.5px",height:"1px",left:"485px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{color:"black",position: "relative",top:"70px"}}>or use one of these options</p>
                 <div style={{position: "relative",top:"64px",zIndex:"1",width:"98.5px",height:"1px",left:"770px",backgroundColor:"rgb(212, 212, 212)"}}></div>
@@ -131,11 +132,11 @@ class SignInPage extends Component{
                 <img src={facebook} style={{position: "relative",top:"65px",zIndex:"1",width:"98.5px",height:"1px",left:"-10px",zIndex:"1",width:"50px",height:"50px",cursor:"pointer"}}/>
                 <img src={googel} style={{position: "relative",top:"75px",zIndex:"1",width:"98.5px",height:"1px",left:"2px",zIndex:"1",width:"100px",height:"70px",cursor:"pointer"}}/>
                 <img src={linkPhone} style={{position: "relative",top:"65px",zIndex:"1",width:"98.5px",height:"1px",left:"9px",zIndex:"1",width:"50px",height:"48px",cursor:"pointer"}}/>
-                <p style={{color:"rgb(25, 60, 173)",top:"70px",cursor:"pointer"}}><Button variant="Continue with account" style={{backgroundColor:"transparent"}}><b>Create a New Account</b></Button></p>
+                <p style={{color:"rgb(25, 60, 173)",top:"70px",cursor:"pointer"}}><Button variant="Continue with account" style={{backgroundColor:"transparent"}}><b><Link to = "/CustomerRegisterPage">Create a New Account</Link></b></Button></p>
                 <div style={{position: "relative",top:"73px",zIndex:"1",width:"380px",height:"1px",left:"485px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{position: "relative",fontSize:"14px",top:"80px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
                 <div style={{position: "relative",top:"89px",zIndex:"1",width:"380px",height:"1px",left:"485px",backgroundColor:"rgb(212, 212, 212)"}}></div>
-                <p style={{position: "relative",fontSize:"14px",top:"98px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
+                <p style={{position: "relative",fontSize:"14px",top:"100px"}}>All rights reserved.<br/>Copyright (2022 - 2023) - Booking.com™</p>
             </div>
 
         </section>

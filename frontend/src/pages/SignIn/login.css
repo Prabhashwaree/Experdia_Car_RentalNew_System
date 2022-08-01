@@ -5,6 +5,12 @@
 
 } */
 
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
 #navivar{
     height: 65px;
     width: 100%;

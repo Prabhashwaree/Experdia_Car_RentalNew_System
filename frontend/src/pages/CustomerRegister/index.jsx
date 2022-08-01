@@ -18,6 +18,7 @@ import PhotoCamera from '@mui/icons-material/PhotoCamera';
 
 import customerService from '../../service/customer';
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
+import { Link } from 'react-router-dom';
 
 const ariaLabel = { 'aria-label': 'description' };
 
@@ -203,7 +204,7 @@ const top100Films = [
                 
                 
                 
-                <Button label={this.state.btnLabelCustomerSave} type="submit" variant="Create account" style={{position: "relative",top:"-135px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}>Create  Account</Button><br/>
+                <Button label={this.state.btnLabelCustomerSave} type="submit" variant="Create account" style={{position: "relative",top:"-135px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}><Link to = "/BookingPage">Create  Account</Link></Button><br/>
                 
             
                 <div style={{position: "relative",top:"-120px",zIndex:"1",width:"380px",height:"1px",left:"480px",backgroundColor:"rgb(212, 212, 212)"}}></div>
