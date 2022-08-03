@@ -25,6 +25,7 @@ import Tooltip from '@mui/material/Tooltip';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -67,6 +68,8 @@ class DriverShedulePage extends Component {
     this.state = {
       DriverScheduleFormData: {
         status: '',
+        date:'',
+        time:'',
 
         booking: {
           booking_Id: '',
@@ -225,12 +228,12 @@ class DriverShedulePage extends Component {
             <div id="navivar"></div>
 
             <img src={carLogo} style={{ position: "absolute", left: "80px", top: "1.9%", zIndex: "1", width: "40px", height: "40px" }} />
-            <h1 style={{ position: "absolute", left: "1360px", top: "2.8%", zIndex: "1", width: "40px", height: "40px", fontSize: "20px", fontWeight: "100", color: "white" }}>Back</h1>
+            <Button variant="Create account" style={{position: "relative",backgroundColor:"gray",color:"rgb(177, 104, 21)",top:"-50px",left:"350px",backgroundColor:"transparent",boxShadow:"none",zIndex:"1",width:"120px"}}><Link to = "/">Log Out</Link></Button>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{ position: "absolute", left: "130px", top: "2.5%", zIndex: "1", color: "white" }}>
               <b>EXPERDIA Car Rental</b>
             </Typography>
-            <Input placeholder="Search" inputProps={ariaLabel} style={{ position: "absolute", left: "886px", top: "10px", width: "30%", zIndex: "2" }} />
-            <img src={Search} style={{ position: "absolute", left: "1295px", top: "10px", width: "2%" }} />
+            <Input placeholder="Search" inputProps={ariaLabel} style={{ position: "absolute", left: "886px", top: "20px", width: "30%", zIndex: "2" }} />
+            <img src={Search} style={{ position: "absolute", left: "1210px", top: "22px", width: "2%" }} />
             
             {/* <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitDriverSchedule} >
             

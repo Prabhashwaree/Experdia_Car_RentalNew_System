@@ -1,6 +1,7 @@
 package lk.ijse.experdia_car_rental_system.service.serviceImpl;
 
 import lk.ijse.experdia_car_rental_system.dto.DriverDTO;
+import lk.ijse.experdia_car_rental_system.dto.UserLoginDTO;
 import lk.ijse.experdia_car_rental_system.entity.Driver;
 import lk.ijse.experdia_car_rental_system.repo.DriverRepo;
 import lk.ijse.experdia_car_rental_system.service.DriverService;
@@ -62,5 +63,17 @@ public class DriverServiceImpl implements DriverService {
         }else {
             throw new RuntimeException("No Driver For "+id+" ..!");
         }
+    }
+
+    @Override
+    public DriverDTO getUserForLogin(UserLoginDTO userDTO) {
+        List<Driver> all = driverRepo.findAll();
+        for (Driver driver: all) {
+            if(driver.getDriver_NIC().equals(userDTO.getUser_Id()) & driver.getContact_No().equals(userDTO.getPassword())){
+                return new DriverDTO(driver.getDriver_NIC(),driver.getLicen(),
+                        driver.getName(),driver.getAddress(),driver.getContact_No(),driver.getSalary());
+            }
+        }
+        return null;
     }
 }

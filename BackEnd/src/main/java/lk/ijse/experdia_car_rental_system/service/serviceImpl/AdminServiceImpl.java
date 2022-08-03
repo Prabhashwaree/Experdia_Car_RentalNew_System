@@ -1,6 +1,7 @@
 package lk.ijse.experdia_car_rental_system.service.serviceImpl;
 
 import lk.ijse.experdia_car_rental_system.dto.AdminDTO;
+import lk.ijse.experdia_car_rental_system.dto.UserLoginDTO;
 import lk.ijse.experdia_car_rental_system.entity.Admin;
 import lk.ijse.experdia_car_rental_system.repo.AdminRepo;
 import lk.ijse.experdia_car_rental_system.service.AdminService;
@@ -35,6 +36,17 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public List<AdminDTO> getAllAdmin() {
         return modelMapper.map(adminRepo.findAll(),new TypeToken<List<AdminDTO>>(){}.getType());
+    }
+
+    @Override
+    public AdminDTO getUserForLogin(UserLoginDTO userDTO) {
+        List<Admin> all = adminRepo.findAll();
+        for (Admin admin:all) {
+            if(admin.getAdmin_Id().equals(userDTO.getUser_Id()) & admin.getPassword().equals(userDTO.getPassword())){
+                return new AdminDTO(admin.getAdmin_Id(),admin.getType(),admin.getUserName(),admin.getPassword());
+            }
+        }
+        return null;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package lk.ijse.experdia_car_rental_system.service.serviceImpl;
 
 import lk.ijse.experdia_car_rental_system.dto.CustomerDTO;
+import lk.ijse.experdia_car_rental_system.dto.UserLoginDTO;
 import lk.ijse.experdia_car_rental_system.entity.Customer;
 import lk.ijse.experdia_car_rental_system.repo.CustomerRepo;
 import lk.ijse.experdia_car_rental_system.service.CustomerService;
@@ -62,5 +63,18 @@ public class CustomerServiceImpl implements CustomerService {
         }else {
             throw new RuntimeException("No Booking For "+id+" ..!");
         }
+    }
+
+    @Override
+    public CustomerDTO getUserForLogin(UserLoginDTO userDTO) {
+        List<Customer> all = customerRepo.findAll();
+        for (Customer customer :all){
+            if(customer.getNic_Number().equals(userDTO.getUser_Id()) & customer.getPassword().equals(userDTO.getPassword())){
+                return  new CustomerDTO(customer.getNic_Number(),customer.getLicense_Id(),customer.getCus_Name(),
+                        customer.getAddress(),customer.getContact_No(),customer.getEmail(),customer.getUserName(),
+                        customer.getPassword(),customer.getNicImg(),customer.getLicenseImg());
+            }
+        }
+        return null;
     }
 }

@@ -29,6 +29,6 @@ public class BookingDetails {
     private Booking booking;
 
     @ManyToOne
-    @JoinColumn(name = "registerNo",referencedColumnName = "register_No ",insertable = false,updatable = false)
+    @JoinColumn(name = "register_No",referencedColumnName = "register_No ",insertable = false,updatable = false)
     private Car car;
 }

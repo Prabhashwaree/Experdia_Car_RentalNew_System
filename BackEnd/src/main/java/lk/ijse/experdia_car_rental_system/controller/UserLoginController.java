@@ -1,6 +1,12 @@
 package lk.ijse.experdia_car_rental_system.controller;
 
+import lk.ijse.experdia_car_rental_system.dto.AdminDTO;
+import lk.ijse.experdia_car_rental_system.dto.CustomerDTO;
+import lk.ijse.experdia_car_rental_system.dto.DriverDTO;
 import lk.ijse.experdia_car_rental_system.dto.UserLoginDTO;
+import lk.ijse.experdia_car_rental_system.service.AdminService;
+import lk.ijse.experdia_car_rental_system.service.CustomerService;
+import lk.ijse.experdia_car_rental_system.service.DriverService;
 import lk.ijse.experdia_car_rental_system.service.UserLoginService;
 import lk.ijse.experdia_car_rental_system.util.ResponceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +21,12 @@ import org.springframework.web.bind.annotation.*;
 public class UserLoginController {
     @Autowired
     UserLoginService userLoginService;
+    @Autowired
+    AdminService adminService;
+    @Autowired
+    DriverService driverService;
+    @Autowired
+    CustomerService customerService;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -37,12 +49,29 @@ public class UserLoginController {
         return new ResponceUtil(200,"deleted",null);
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
-    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponceUtil updateUserLogin(@RequestBody UserLoginDTO userLoginDTO){
-        userLoginService.updateUserLogin(userLoginDTO);
-        return new ResponceUtil(200,"updated",null);
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponceUtil checkLoging(@RequestBody UserLoginDTO userDTO){
+        System.out.println(userDTO.toString());
+        CustomerDTO customerDTO = customerService.getUserForLogin(userDTO);
+        if(customerDTO==null){
+            DriverDTO driverForLoging = driverService.getUserForLogin(userDTO);
+            if(driverForLoging==null){
+                AdminDTO adminForLoging = adminService.getUserForLogin(userDTO);
+                if (!(adminForLoging==null)){
+                    return new ResponceUtil(200,"Admin",adminForLoging);
+                }else {
+                    return new ResponceUtil(200,"Incorrect user name and password",null);
+                }
+            }else {
+                return new ResponceUtil(200,"Driver",driverForLoging);
+            }
+        }else {
+            return new ResponceUtil(200,"Customer",customerDTO);
+        }
+
     }
+
+
 
     @GetMapping(path = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponceUtil searchUserLogin(@PathVariable String id){

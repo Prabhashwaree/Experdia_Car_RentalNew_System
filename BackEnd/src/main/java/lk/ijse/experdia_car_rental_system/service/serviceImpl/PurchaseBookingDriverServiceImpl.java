@@ -96,4 +96,9 @@ public class PurchaseBookingDriverServiceImpl implements PurchaseBookingDriverSe
     public BookingDTO searchPurchaseBooking(String id) {
         return null;
     }
+
+    @Override
+    public String getBookigLastID() {
+        return bookingRepo.getBookingsByID();
+    }
 }

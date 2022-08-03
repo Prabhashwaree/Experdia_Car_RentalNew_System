@@ -21,8 +21,7 @@ public class BookingDTO {
     private String drop_Date;
     private String picUp_Time;
     private String drop_Time;
-    private String bookingStatus;
-    private String driverStatus;
+    private String status;
     private String picUpLocation;
     private double lossDamagePrice;
     private String rent_Duration;

@@ -30,6 +30,7 @@ function App() {
       <Route exact path="/SignInPage" element={<SignInPage />} />
       <Route exact path="/CustomerRegisterPage" element={<CustomerRegisterPage />} />
       <Route exact path="/BookingPage" element={<BookingPage />} />
+      <Route exact path="/DriverShedulePage" element={<DriverShedulePage />} />
 
 
       <Route exact path="/AdminDashBoardPages" element={<AdminDashBoardPages />}>

@@ -42,4 +42,13 @@ public class PurchaseBookingDriverController {
         purchaseBookingDriverService.deletePurchaseBooking(bid);
         return new ResponceUtil(200, "Deleted booking...", null);
     }
+
+
+    @GetMapping(path = "bookingID")
+    public ResponceUtil getIDS(){
+        String bookigLastID = purchaseBookingDriverService.getBookigLastID();
+        return new ResponceUtil(200, "ok", bookigLastID);
+    }
+
+
 }

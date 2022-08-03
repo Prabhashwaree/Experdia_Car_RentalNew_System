@@ -12,7 +12,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @ToString
-
 public class Admin {
     @Id
     private String admin_Id;

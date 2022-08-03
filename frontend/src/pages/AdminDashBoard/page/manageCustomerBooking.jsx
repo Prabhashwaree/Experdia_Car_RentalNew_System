@@ -300,7 +300,7 @@ deleteBookingDetail = async (id) => {
         <section>
           <div>
 
-            <div style={{ position: "absolute", left: "9250px", top: "-500px", zIndex: "2", color: "black" }}>
+            <div style={{ position: "absolute", left: "9250px", top: "-100px", zIndex: "2", color: "black" }}>
               <Typography variant="h5" noWrap component="div" style={{ position: "relative", left: "2px", top: "5px", zIndex: "5" }}>
                 Booking Details
               </Typography>

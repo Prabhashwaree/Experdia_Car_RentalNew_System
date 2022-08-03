@@ -16,5 +16,6 @@ public interface PurchaseBookingDriverService {
 
     BookingDTO searchPurchaseBooking(String id);
 
+    String getBookigLastID();
 
 }
