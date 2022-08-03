@@ -74,7 +74,7 @@ class BookingPage extends Component {
       currentTime: time,
 
       BookingFormData: {
-        booking_Id: '',
+        booking_Id: 'B001',
         picUp_Date: '',
         drop_Date: '',
         picUp_Time: '',
@@ -87,7 +87,7 @@ class BookingPage extends Component {
         car_Count: '',
 
         CustomerFormData: {
-          nic_Number: '986578548V',
+          nic_Number: '995642816V',
           license_Id: '',
           cus_Name: '',
           address: '',
@@ -99,7 +99,7 @@ class BookingPage extends Component {
           licenseImg: '',
         },
         PaymentFormData: {
-          payment_Id: 'P0001',
+          payment_Id: 'P001',
           currently_Run_KM: '',
           ride_A_KM: '',
           total_KM: '',
@@ -108,16 +108,16 @@ class BookingPage extends Component {
         },
         BookingDetailFormData: [
           {
-            booking_Id: 'B0056',
-            register_No: 'WP4587',
+            booking_Id: 'B001',
+            register_No: 'R001',
             date: date,
             time: time
           }
         ],
         DriverScheduleFormData: [
           {
-            booking_Id: 'B0056',
-            driver_NIC: '988975815V',
+            booking_Id: 'B001',
+            driver_NIC: '995642815V',
             status: '',
             date: date,
             time: time

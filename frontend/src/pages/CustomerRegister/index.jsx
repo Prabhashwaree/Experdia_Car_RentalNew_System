@@ -114,7 +114,7 @@ const top100Films = [
             <div id="navivar"></div>
 
             <img src={carLogo} style={{position: "absolute",left:"80px",top:"1.9%",zIndex:"1",width:"40px",height:"40px"}} />
-            <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>My Profile</h1>
+            {/* <h1 style={{position: "absolute",left:"1360px",top:"2.8%",zIndex:"1",width:"40px",height:"40px",fontSize:"20px",fontWeight:"100",color:"white"}}>My Profile</h1> */}
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{position: "absolute",left:"130px",top:"2.5%",zIndex:"1",color:"white"}}>
             <b>EXPERDIA Car Rental</b>
             </Typography>
@@ -241,7 +241,8 @@ const top100Films = [
                 
                 <Button label={this.state.btnLabelCustomerSave} type="submit" variant="Create account" style={{position: "relative",top:"-135px",backgroundColor:"lightBlue" ,zIndex:"1",width:"380px"}}><Link to = "/BookingPage">Create  Account</Link></Button><br/>
                 
-            
+                {/* <Link to = "/BookingPage">Create  Account</Link> */}
+
                 <div style={{position: "relative",top:"-120px",zIndex:"1",width:"380px",height:"1px",left:"480px",backgroundColor:"rgb(212, 212, 212)"}}></div>
                 <p style={{position: "relative",fontSize:"14px",top:"-100px"}}>By signing in or creating an account, you agree with our <b style={{color:"rgb(58, 87, 255)",cursor:"pointer"}}>Terms &<br/> conditions and Privacy statement</b></p>
                 <div style={{position: "relative",top:"-80px",zIndex:"1",width:"380px",height:"1px",left:"480px",backgroundColor:"rgb(212, 212, 212)"}}></div>
