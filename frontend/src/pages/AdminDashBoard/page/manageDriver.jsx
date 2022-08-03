@@ -86,6 +86,37 @@ class ManageDriver extends Component{
            }
          }; 
 
+
+
+
+      //    searchDriver = async (id) => {
+      //     let params = {
+      //       driver_NIC: id
+      //     }
+
+      //     let res = await driverService.searchDriver(params);
+      //     console.log(res)
+      //     if (res.status === 200) {
+      //         // console.log(res.data.formData.cid)
+      //         if (id === this.state.driverData.id) {
+      //             this.setState({
+      //               // alert: true,
+      //                 data: res.data.data
+      //                 // severity: 'success'
+      //             })
+      //         }
+      //          this.loadData();
+      //     }else {
+      //       this.setState({
+      //           alert: true,
+      //           data: res.data.data,
+      //           severity: 'error'
+      //       });
+      //    }
+      // }
+  
+
+
         exampleForMap = () =>{
           this.state.data.map((value,index) =>{
             console.log(value.index)
@@ -110,6 +141,10 @@ class ManageDriver extends Component{
          componentDidMount() { 
           this.loadData();
        }
+
+
+
+
 
 
         

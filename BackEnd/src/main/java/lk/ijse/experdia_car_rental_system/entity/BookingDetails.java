@@ -19,6 +19,9 @@ public class BookingDetails {
     private String booking_Id;
     @Id
     private String register_No;
+    private String date;
+    private String time;
+
 
 
     @ManyToOne

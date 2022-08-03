@@ -20,6 +20,9 @@ public class DriverSchedule {
     @Id
     private String driver_NIC;
     private String status;
+    private String date;
+    private String time;
+
 
     @ManyToOne
     @JoinColumn(name = "booking_Id",referencedColumnName = "booking_Id",insertable = false,updatable = false)

@@ -27,7 +27,7 @@ public class Booking {
     private double lossDamagePrice;
     private String rent_Duration;
     private String car_Count;
-
+    
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
     @JoinColumn(name = "nic_Number",referencedColumnName = "nic_Number",nullable = false)
     private Customer customer;

@@ -23,6 +23,8 @@ public class Customer {
     private String email;
     private String userName;
     private String password;
+    private String nicImg;
+    private String licenseImg;
 	
 
 

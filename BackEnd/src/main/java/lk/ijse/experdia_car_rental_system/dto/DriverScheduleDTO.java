@@ -14,4 +14,7 @@ public class DriverScheduleDTO {
     private String booking_Id;
     private String driver_NIC;
     private String status;
+    private String date;
+    private String time;
+
 }

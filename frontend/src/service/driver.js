@@ -44,6 +44,34 @@ class driver{
             return await promise;
        };
 
+       searchDriver = async (params) => {
+        const promise = new Promise((resolve, reject) => {
+            axios.get('Driver',{params:params})
+                .then((res) => {
+                    return resolve(res)
+                })
+                .catch((err) => {
+                    return resolve(err)
+                })
+        })
+
+        return await promise;
+    }
+
+
+    putDriver  = async (data) => {
+            const promise = new Promise((resolve, reject) => {
+               axios.put('Driver', data)
+               .then((res) => {
+                   return resolve(res)
+               })
+               .catch((err) => {
+                   return resolve(err)
+               })
+            })
+            return await promise;
+       };
+
 
 
 }

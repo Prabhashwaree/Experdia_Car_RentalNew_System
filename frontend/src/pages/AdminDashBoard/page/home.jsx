@@ -23,11 +23,14 @@ const top100Films = [
   ];
 
   const car = [
-    { label: 'R0001' },
-    { label: 'R0002' },
-    { label: 'R0003' },
-    { label: 'R0004' },
+    // { label: 'WTWSE' },
+    // { label: 'R0002' },
+    // { label: 'R0003' },
+    // { label: 'R0004' },
     ];
+
+
+    
 
 class Home extends Component {
     constructor(props){
@@ -78,7 +81,7 @@ class Home extends Component {
           lossDamagePrice:'',
 
                 rentalRate:{
-                  r_Id:'',
+                  r_Id:'WTWSE',
                   brand:'',
                   type:'',
                   daily_Rate:'',
@@ -144,6 +147,8 @@ class Home extends Component {
       }
   
     }
+
+  
 
 
 
@@ -259,6 +264,7 @@ class Home extends Component {
             alert: true,
             message: rest.data.message,
             severity: "success"
+           
         });
         this.clearRentalRateTextFeild();
     } else {
@@ -308,7 +314,7 @@ class Home extends Component {
     } else {
         this.setState({
             alert: true,
-            message: resCar.response.data.message,
+            // message: resCar.response.data.message,
             severity: "error"
         });
     }
@@ -533,10 +539,10 @@ class Home extends Component {
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Rate ID" size="small"
               name = "RateID"
-              value={this.state.CarFormData.rate_Id}
+              value={this.state.CarFormData.rentalRate.r_Id}
               onChange={(e) => {
                   let CarFormDatas = this.state.CarFormData
-                  CarFormDatas.rate_Id = e.target.value
+                  CarFormDatas.rentalRate.r_Id = e.target.value
                   this.setState({ CarFormDatas })
               }}
               validators={['required']} 

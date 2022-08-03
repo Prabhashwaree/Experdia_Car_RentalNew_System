@@ -281,7 +281,7 @@ class Managemant extends Component {
               </Typography>
             </div>
 
-            <TableContainer component={Paper} style={{ width: "40%", left: "650px", position: "relative", top: "73px" }}>
+            <TableContainer component={Paper} style={{ width: "40%", left: "650px", position: "relative", top: "-10px" }}>
               <Table sx={{ minWidth: 100 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>

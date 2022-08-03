@@ -389,7 +389,7 @@ export default function HomePage(){
                             <h6>Suzuki Alto - Premium</h6>
                             <h4>Manual</h4>
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"580px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"580px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"530px",left:"420px"}}/>
@@ -431,7 +431,7 @@ export default function HomePage(){
                             <h6>Suzuki Alto K10</h6>
                             <h4>Auto</h4> 
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"580px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"580px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          
                          <span  class="pepoleImg"> 
@@ -472,7 +472,7 @@ export default function HomePage(){
                             <h6>Suzuki Celerio - Premium</h6>
                             <h4>Auto</h4> 
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"560px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"560px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          
                          <span  class="pepoleImg"> 
@@ -514,7 +514,7 @@ export default function HomePage(){
                             <h6>Perodua (Daihatsu) Axia</h6>
                             <h4>Auto</h4> 
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"550px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"550px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"500px",left:"420px"}}/>
@@ -554,7 +554,7 @@ export default function HomePage(){
                             <h6>Toyota Prius Aqua</h6>
                             <h4>Auto</h4> 
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"540px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"540px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link>g</Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"500px",left:"420px"}}/>
@@ -594,7 +594,7 @@ export default function HomePage(){
                             <h6>Toyota Corolla Axio</h6>
                             <h4>Manual</h4>  
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"500px",left:"420px"}}/>
@@ -634,7 +634,7 @@ export default function HomePage(){
                             <h6>Perodua Bezza Prime</h6>
                             <h4>Auto</h4>    
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"530px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"500px",left:"420px"}}/>
@@ -675,7 +675,7 @@ export default function HomePage(){
                             <h6>Toyota Allion NZT</h6>
                             <h4>Manual</h4>   
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"520px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"520px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"470px",left:"420px"}}/>
@@ -716,7 +716,7 @@ export default function HomePage(){
                             <h6>Toyota Axio NKR</h6>
                             <h4>Manual</h4>   
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"501px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"501px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"470px",left:"420px"}}/>
@@ -758,7 +758,7 @@ export default function HomePage(){
                             <h6>Toyota Premio</h6>
                             <h4>Manual</h4>  
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"490px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"490px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"440px",left:"420px"}}/>
@@ -797,7 +797,7 @@ export default function HomePage(){
                             <h6>Mercedes BMW i8</h6>
                             <h4>Manual</h4>  
                          </div> 
-                         <Button variant="contained" style={{position: "relative",top:"480px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}>Booking</Button> 
+                         <Button variant="contained" style={{position: "relative",top:"480px",width:"6%",left:"239px",zIndex:"1",backgroundColor:"#08a042"}}><Link to = "BookingPage">Booking</Link></Button> 
                          
                          <span  class="pepoleImg"> 
                             <img src={user} style={{position: "relative",top:"440px",left:"420px"}}/>

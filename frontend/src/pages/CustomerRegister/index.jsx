@@ -44,7 +44,9 @@ const top100Films = [
             contact_No:'',
             email:'',
             userName:'',
-            password:'',  
+            password:'',
+            nicImg:'',
+            licenseImg:'',
           },
           alert: false,
           message: "",
@@ -121,7 +123,19 @@ const top100Films = [
                 <h1>Create Account</h1>
 
                 {/* <p style={{textAlign:"left",margin:"auto",left:"570px",position: "relative"}}>Use a minimum of 10 characters, including uppercase letters,<br/> lowercase letters and numbers.</p> */}
-                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"-1%",top:"102px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"-9%",top:"70px",width:"225px"}}> <input 
+                 type="file" 
+                 name="file"
+                 onChange={(e) => {
+                    let CustomerFormDatas = this.state.CustomerFormDatas
+                    CustomerFormDatas.nicImg = e.target.value
+                    this.setState({ CustomerFormDatas })
+                     this.setState({
+                        nicImg: e.target.value
+                  })
+                  }
+                }
+                 /> <PhotoCamera /> </IconButton>
                 <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="NIC Number" variant="outlined" style={{position: "relative",left:"-17%",top:"65px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.nic_Number}
                 onChange={(e) => {
@@ -131,7 +145,28 @@ const top100Films = [
                 }}
                 validators={['required']}  
                 />
-                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"33%",top:"26px",width:"45px"}}> <input hidden accept="image/*" type="file" /> <PhotoCamera /> </IconButton>
+               
+                <IconButton color="primary" aria-label="upload picture" component="label" style={{position: "relative",left:"25%",top:"-10px",width:"225px"}}> <input
+                type="file" 
+                name="file"
+                // onChange={(event) => {
+                //     let CustomerFormDatas = this.state.CustomerFormData
+                //     CustomerFormDatas.licenseImg = event.target.value
+                //     this.setState({CustomerFormDatas})
+                //     this.setState({
+                //         licenseImg:event.target.value
+                //     })
+                // }}
+                onChange={(e) => {
+                    let CustomerFormDatas = this.state.CustomerFormDatas
+                    CustomerFormDatas.licenseImg = e.target.value
+                    this.setState({ CustomerFormDatas })
+                     this.setState({
+                        licenseImg: e.target.value
+                  })
+                  }
+                }
+                /> <PhotoCamera /> </IconButton>
                 <TextValidator size="small" sx={{ width: '40ch'}} id="outlined-basic" label="License Number" variant="outlined" style={{position: "relative",left:"17%",top:"-16px",zIndex:"1",width:"380px"}}
                 value={this.state.CustomerFormData.license_Id}
                 onChange={(e) => {

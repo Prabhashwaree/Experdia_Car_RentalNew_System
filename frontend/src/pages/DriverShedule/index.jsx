@@ -105,6 +105,8 @@ class DriverShedulePage extends Component {
     this.setState({
       DriverScheduleFormData: {
         status: '',
+        date: '',
+        time: '',
 
         booking: {
           booking_Id: '',
@@ -230,7 +232,7 @@ class DriverShedulePage extends Component {
             <Input placeholder="Search" inputProps={ariaLabel} style={{ position: "absolute", left: "886px", top: "10px", width: "30%", zIndex: "2" }} />
             <img src={Search} style={{ position: "absolute", left: "1295px", top: "10px", width: "2%" }} />
             
-            <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitDriverSchedule} >
+            {/* <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitDriverSchedule} >
             
             <section>
               <div id="driverSection">
@@ -308,14 +310,13 @@ class DriverShedulePage extends Component {
                   this.setState({ DriverScheduleFormDatas })
                 }}
                 validators={['required']}
-                />
+                /> */}
                 {/* <Button variant="contained" color="success"style={{position: "relative",top:"-25px",backgroundColor:"red",left:"48px",width:"10%"}}>Delete</Button> */}
 
-
-              </div>
+              {/* </div>
             </section>
 
-        </ValidatorForm>
+        </ValidatorForm> */}
 
         {/* -------table--------- */}
         <section>
@@ -332,9 +333,9 @@ class DriverShedulePage extends Component {
                   <TableRow>
                     <StyledTableCell>BookingId</StyledTableCell>
                     <StyledTableCell align="right">DriverNIC</StyledTableCell>
+                    <StyledTableCell align="right">Status</StyledTableCell>
                     <StyledTableCell align="right">Date</StyledTableCell>
                     <StyledTableCell align="right">Time</StyledTableCell>
-                    <StyledTableCell align="right">Status</StyledTableCell>
                     <StyledTableCell align="right">Action</StyledTableCell>
 
                   </TableRow>
@@ -346,6 +347,8 @@ class DriverShedulePage extends Component {
                     <TableCell>{row.booking_Id}</TableCell>
                     <StyledTableCell align="right">{row.driver_NIC}</StyledTableCell>
                     <StyledTableCell align="right">{row.status}</StyledTableCell>
+                    <StyledTableCell align="right">{row.date}</StyledTableCell>
+                    <StyledTableCell align="right">{row.time}</StyledTableCell>
 
                     
                      <StyledTableCell align="right">

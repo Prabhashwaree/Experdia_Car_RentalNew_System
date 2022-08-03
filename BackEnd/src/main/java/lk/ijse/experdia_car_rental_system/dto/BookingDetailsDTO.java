@@ -14,5 +14,8 @@ import lombok.ToString;
 public class BookingDetailsDTO {
     private String booking_Id;
     private String register_No;
+    private String date;
+    private String time;
+
 
 }
