@@ -103,12 +103,12 @@ class BookingPage extends Component {
           currently_Run_KM: '',
           ride_A_KM: '',
           total_KM: '',
-          status: '',
+          status: 'yes',
           total_Price: ''
         },
         BookingDetailFormData: [
           {
-            booking_Id: '',
+            booking_Id: 'B001',
             register_No: 'R001',
             date: date,
             time: time
@@ -116,7 +116,7 @@ class BookingPage extends Component {
         ],
         DriverScheduleFormData: [
           {
-            booking_Id: '',
+            booking_Id: 'B001',
             driver_NIC: '995642815V',
             status: '',
             date: date,
