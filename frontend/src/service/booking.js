@@ -4,7 +4,7 @@ class booking{
     postBooking = async (data) => {
         //   console.log(data);
         const promise = new Promise((resolve, reject) => {
-            axios.post('Booking', data)    // 20s
+            axios.post('PurchaseBookingDriver', data)    // 20s
                 .then((res) => {
                     return resolve(res)
                 })
@@ -20,7 +20,7 @@ class booking{
 
         GetBooking = async () => {
             const promise = new Promise((resolve, reject) => {
-                axios.get('Booking')
+                axios.get('PurchaseBookingDriver')
                     .then((res) => {
                         return resolve(res)
                     })
