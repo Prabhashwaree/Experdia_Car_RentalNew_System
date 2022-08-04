@@ -68,42 +68,57 @@ class ManageCustomerBooking extends Component {
 
 
 
-      BookingDetailFormData: {
+      BookingFormData: {
+        booking_Id: '',
+        picUp_Date: '',
+        drop_Date: '',
+        picUp_Time: '',
+        drop_Time: '',
         status: '',
-
-        booking: {
-          booking_Id: '',
-          picUp_Date: '',
-          drop_Date: '',
-          picUp_Time: '',
-          drop_Time: '',
-          bookingStatus: '',
-          driverStatus: '',
-          picUpLocation: '',
-          lossDamagePrice: '',
-          rent_Duration: '',
-          car_Count: ''
+        picUpLocation: '',
+        lossDamagePrice: '',
+        rent_Duration: '',
+        car_Count: '',
+        customer: {
+          nic_Number: '',
+          license_Id: '',
+          cus_Name: '',
+          address: '',
+          contact_No: '',
+          email: '',
+          userName: '',
+          password: '',
+          nicImg: '',
+          licenseImg: '',
         },
+        payment: {
+          payment_Id: '',
+          currently_Run_KM: '',
+          ride_A_KM: '',
+          total_KM: '',
+          status: '',
+          total_Price: ''
+        },
+        bookingDetailsDTOS: [
+          {
+            booking_Id: '',
+            register_No: '',
+            date: '',
+            time: ''
+          }
+        ],
+        driverScheduleDTOS: [
+          {
+            booking_Id: '',
+            driver_NIC: '',
+            status: '',
+            date: '',
+            time: ''
+          }
+        ]
 
-        car: {
-          register_No: '',
-          brand: '',
-          type: '',
-          no_Passenger: '',
-          transmission_Type: '',
-          fuel: '',
-          colour: '',
-          lossDamagePrice: '',
-
-        }
       },
-      alert: false,
-      message: "",
-      severity: "",
       data: []
-
-
-
     }
   }
 
@@ -134,11 +149,7 @@ class ManageCustomerBooking extends Component {
 
 
 
-  exampleForMap = () => {
-    this.state.data.map((value, index) => {
-      console.log(value.index)
-    });
-  }
+  
 
   loadData = async () => {
     console.log("load method Calling")
@@ -152,19 +163,16 @@ class ManageCustomerBooking extends Component {
     }
     console.log(this.state.data);
 
-    this.exampleForMap();
+  
   }
 
-  componentDidMount() {
-    this.loadData();
-  }
 
 
 
 
   // -------------------booking Details----------------
 
-deleteBookingDetail = async (id) => {
+  deleteBookingDetail = async (id) => {
     let params = {
       booking_Id: id
     }
@@ -187,32 +195,30 @@ deleteBookingDetail = async (id) => {
   };
 
 
-
-
-  exampleForMap = () => {
-    this.state.data.map((value, index) => {
-      console.log(value.index)
-    });
-  }
+ 
 
   loadDataBookingDetail = async () => {
     console.log("load method Calling")
     let res = await bookingDetailService.GetBookingDetail();
-    console.log("rental data " + res.data.data);
 
     if (res.status === 200) {
       this.setState({
         data: res.data.data
       });
     }
-    console.log(this.state.data);
+    console.log(this.state.data)
 
-    this.exampleForMap();
+   
   }
 
   componentDidMount() {
     this.loadDataBookingDetail();
+    this.loadData();
   }
+
+
+
+
 
 
 
@@ -312,36 +318,30 @@ deleteBookingDetail = async (id) => {
                   <TableRow>
                     <StyledTableCell>BookingId</StyledTableCell>
                     <StyledTableCell align="right">RegisterNo</StyledTableCell>
-                    {/* <StyledTableCell align="right">Date</StyledTableCell>
-                    <StyledTableCell align="right">Time</StyledTableCell> */}
+                    <StyledTableCell align="right">Date</StyledTableCell>
+                    <StyledTableCell align="right">Time</StyledTableCell>
                     <StyledTableCell align="right">Action</StyledTableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
 
 
-                {
+                  {
                     this.state.data.map((row) => (
                       <TableRow>
                         <TableCell>{row.booking_Id}</TableCell>
                         <StyledTableCell align="right">{row.register_No}</StyledTableCell>
-                        {/* <StyledTableCell align="right">{row.cus_Name}</StyledTableCell> */}
-{/* 
-                        <StyledTableCell align="right">{row.address}</StyledTableCell>
-                        <StyledTableCell align="right">{row.contact_No}</StyledTableCell>
-                        <StyledTableCell align="right">{row.email}</StyledTableCell> */}
+                        <StyledTableCell align="right">{row.register_No}</StyledTableCell>
+                        <StyledTableCell align="right">{row.register_No}</StyledTableCell>
 
 
                         <StyledTableCell align="right">
-
                           <Tooltip title="Delete"><IconButton
                             onClick={() => {
                               this.deleteCustomer(row.booking_Id)
                             }}
                           ><DeleteIcon color="error" /></IconButton>
                           </Tooltip>
-
-
                         </StyledTableCell>
                       </TableRow>
                     ))

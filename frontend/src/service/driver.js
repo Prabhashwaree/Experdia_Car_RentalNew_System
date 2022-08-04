@@ -72,6 +72,18 @@ class driver{
             return await promise;
        };
 
+       PutDriver  = async (data) => {
+        const promise = new Promise((resolve, reject) => {
+           axios.put('Driver', data)
+           .then((res) => {
+               return resolve(res)
+           })
+           .catch((err) => {
+               return resolve(err)
+           })
+        })
+        return await promise;
+   };
 
 
 }

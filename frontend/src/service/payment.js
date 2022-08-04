@@ -46,5 +46,19 @@ class payment{
             return await promise;
        };
 
+         PutPayment  = async (data) => {
+        const promise = new Promise((resolve, reject) => {
+           axios.put('Payment', data)
+           .then((res) => {
+               return resolve(res)
+           })
+           .catch((err) => {
+               return resolve(err)
+           })
+        })
+        return await promise;
+   };
+
+
 }
 export default  new payment();

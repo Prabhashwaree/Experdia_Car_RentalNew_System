@@ -112,7 +112,7 @@ class Managemant extends Component {
   loadData = async () => {
     console.log("load method Calling")
     let res = await adminService.GetAdmin();
-    console.log("admin data " + res.data.data);
+    // console.log("admin data " + res.data.data);
 
     if (res.status === 200) {
       this.setState({

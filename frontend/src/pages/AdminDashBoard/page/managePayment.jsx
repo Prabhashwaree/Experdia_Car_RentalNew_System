@@ -98,7 +98,7 @@ class ManagePayment extends Component{
         loadData = async () =>{
           console.log("load method Calling")
           let res =await paymentService.GetPayment();
-          console.log("rental data " + res.data.data);
+          // console.log("rental data " + res.data.data);
         
           if(res.status === 200){
              this.setState({

@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import * as React from 'react';
+import axios from 'axios';
 import Autocomplete from '@mui/material/Autocomplete';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -40,6 +41,11 @@ const driver = [
   { label: 'Empty' },
 ];
 
+const top100Films = [
+  { label: 'Yes' },
+  { label: 'No' }
+
+];
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -88,7 +94,7 @@ class BookingPage extends Component {
         car_Count: '',
 
         customer: {
-          nic_Number: '',
+          nic_Number: '995642816V ',
           license_Id: '',
           cus_Name: '',
           address: '',
@@ -100,7 +106,7 @@ class BookingPage extends Component {
           licenseImg: '',
         },
         payment: {
-          payment_Id: '',
+          payment_Id: 'P001',
           currently_Run_KM: '',
           ride_A_KM: '',
           total_KM: '',
@@ -109,7 +115,7 @@ class BookingPage extends Component {
         },
         bookingDetails: [
           {
-            booking_Id: '',
+            booking_Id: 'B002',
             register_No: 'R001',
             date: date,
             time: time
@@ -117,9 +123,9 @@ class BookingPage extends Component {
         ],
         driverSchedule: [
           {
-            booking_Id: '',
+            booking_Id: 'B002',
             driver_NIC: '995642815V',
-            status: 'yes',
+            status: '',
             date: date,
             time: time
           }
@@ -138,7 +144,7 @@ class BookingPage extends Component {
   clearBookingTextFeild = (e) => {
     this.setState({
       BookingFormData: {
-        booking_Id: '',
+        booking_Id: null,
         picUp_Date: '',
         drop_Date: '',
         picUp_Time: '',
@@ -149,11 +155,53 @@ class BookingPage extends Component {
         lossDamagePrice: '',
         rent_Duration: '',
         car_Count: '',
-
+        customer: {
+          nic_Number: '995642816V',
+          license_Id: '',
+          cus_Name: '',
+          address: '',
+          contact_No: '',
+          email: '',
+          userName: '',
+          password: '',
+          nicImg: '',
+          licenseImg: '',
+        },
+        payment: {
+          payment_Id: 'P001',
+          currently_Run_KM: '',
+          ride_A_KM: '',
+          total_KM: '',
+          status: '',
+          total_Price: ''
+        }
       }
 
     })
   }
+
+  GenerateBookingId = async () => {
+    const promise = new Promise((resolve, reject) => {
+      axios.get('http://localhost:8080/BackEnd_war_exploded/PurchaseBookingDriver/bookingID')
+        .then((res) => {
+          console.log(res.data)
+          this.state.newBookingID = res.data.data;
+          console.log(this.state.newBookingID)
+          return resolve(res)
+        })
+        .catch((err) => {
+          return resolve(err)
+        })
+    })
+    return await promise;
+  }
+
+
+  componentDidMount() {
+    this.GenerateBookingId();
+  }
+
+
 
 
 
@@ -161,23 +209,34 @@ class BookingPage extends Component {
     console.log("load method Calling")
     let BookingFormData = this.state.BookingFormData;
     console.log("form data : " + JSON.stringify(BookingFormData))
-    let restBook = await bookingService.postBooking(BookingFormData);
+    if (top100Films === "Yes") {
+      this.state.BookingFormData.driverScheduleDTOS=[{
+        booking_Id: 'B001',
+        driver_NIC: '982112344V',
+        status: 'yes',
+        date: this.state.currentDate,
+        time: this.state.currentTime
+      }]
+      let restBook = await bookingService.postBooking(BookingFormData);
+  }else{
+    let restBook = await bookingService.postBooking(BookingFormData)
+  }
     // console.log(restBook);
-    if (restBook.status === 201) {
-      this.setState({
-        alert: true,
-        message: restBook.data.message,
-        severity: "success"
+    // if (restBook.status === 201) {
+    //   this.setState({
+    //     alert: true,
+    //     message: restBook.data.message,
+    //     severity: "success"
 
-      });
-      this.clearBookingTextFeild();
-    } else {
-      this.setState({
-        alert: true,
-        // message: restBook.response.data.message,
-        severity: "error"
-      });
-    }
+    //   });
+    //   this.clearBookingTextFeild();
+    // } else {
+    //   this.setState({
+    //     alert: true,
+    //     // message: restBook.response.data.message,
+    //     severity: "error"
+    //   });
+    // }
   }
 
 
@@ -193,14 +252,14 @@ class BookingPage extends Component {
         <section>
 
           <div id="navivar"></div>
-          <Button variant="contained" color="success" style={{ position: "absolute", boxShadow: "none",backgroundColor:"transparent",left: "80px", top: "1.9%", zIndex: "5", width: "40px", height: "40px" }} ><Link to="/DriverShedulePage"><img src={carLogo} style={{ zIndex: "1", width: "40px", height: "40px" }} /></Link></Button><br />
-          
+          <Button variant="contained" color="success" style={{ position: "absolute", boxShadow: "none", backgroundColor: "transparent", left: "80px", top: "1.9%", zIndex: "5", width: "40px", height: "40px" }} ><Link to="/"><img src={carLogo} style={{ zIndex: "1", width: "40px", height: "40px" }} /></Link></Button><br />
+
           {/* <Button variant="contained" color="success" style={{ position: "absolute", left: "1340px", top: "2%", zIndex: "1", width: "130px", height: "40px", fontSize: "13px", fontWeight: "100", color: "white", backgroundColor: "gray" }}>My Profile</Button> */}
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{ position: "absolute", left: "140px", top: "2.5%", zIndex: "1", color: "white" }}>
             <b>EXPERDIA Car Rental</b>
           </Typography>
-          
+
 
 
 
@@ -213,10 +272,10 @@ class BookingPage extends Component {
             <ValidatorForm ref="form" className="pt-2" onSubmit={this.submitBookingData} >
               <div id="bookingTextSection">
 
-                <p style={{ position: "absolute", zIndex: "5", color: "white", left: "890px", top: "-95px" }}><b>{this.state.currentDate}</b></p>
-                <p style={{ position: "absolute", zIndex: "5", color: "white", left: "1000px", top: "-95px" }}><b>{this.state.currentTime}</b></p>
+                <p style={{ position: "absolute", zIndex: "5", color: "white", left: "890px", top: "-40px" }}><b>{this.state.currentDate}</b></p>
+                <p style={{ position: "absolute", zIndex: "5", color: "white", left: "1000px", top: "-40px" }}><b>{this.state.currentTime}</b></p>
 
-                <TextValidator size="small" sx={{ width: '40ch' }} id="outlined-helperText" variant="filled" label="Booking ID" defaultValue="B-" style={{ position: "relative", top: "-10px", backgroundColor: "white", color: "white", left: "810px", zIndex: "1", borderRadius: "7px", width: "8%" }}
+                <TextValidator size="small" sx={{ width: '40ch' }} id="outlined-helperText" variant="filled" label="Booking ID" defaultValue="B-" style={{ position: "relative", top: "35px", backgroundColor: "white", color: "white", left: "810px", zIndex: "1", borderRadius: "7px", width: "8%" }}
                   value={this.state.BookingFormData.booking_Id}
                   onChange={(e) => {
                     let BookingFormDatas = this.state.BookingFormData
@@ -225,13 +284,13 @@ class BookingPage extends Component {
                   }}
                   validators={['required']}
                 />
-                <Typography variant="h4" noWrap component="div" style={{ position: "absolute", left: "30px", top: "-18px", zIndex: "5", color: "white" }}>
+                <Typography variant="h4" noWrap component="div" style={{ position: "absolute", left: "30px", top: "40px", zIndex: "5", color: "white" }}>
                   Booking Now
                 </Typography>
 
 
 
-                <TextField size="small" sx={{ width: '40ch' }} id="outlined-disabled" variant="filled" label="Customer NIC" defaultValue="" style={{ position: "relative", top: "-60px", backgroundColor: "white", color: "white", left: "925px", zIndex: "1", width: "13%", borderRadius: "7px" }}
+                {/* <TextField size="small" sx={{ width: '40ch' }} id="outlined-disabled" variant="filled" label="Customer NIC" defaultValue="" style={{ position: "relative", top: "-60px", backgroundColor: "white", color: "white", left: "925px", zIndex: "1", width: "13%", borderRadius: "7px" }}
                   value={this.state.BookingFormData.customer.nic_Number}
                   onChange={(e) => {
                     let BookingFormDatas = this.state.BookingFormData
@@ -239,10 +298,10 @@ class BookingPage extends Component {
                     this.setState({ BookingFormDatas })
                   }}
                   validators={['required']}
-                />
+                /> */}
 
 
-                {/* <Autocomplete
+                <Autocomplete
                 size="small" sx={{ width: '40ch'}} 
                 disablePortal
                 id="combo-box-demo"
@@ -251,16 +310,13 @@ class BookingPage extends Component {
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} variant="filled" label="Customer NIC" />}
                 style={{ position: "relative", top: "-15px", backgroundColor: "white", color: "white", left: "1105px", zIndex: "1", width: "13%", borderRadius: "7px" }} 
-                value={this.state.BookingFormData.customer.nic_Number}
-                onChange={(e) => {
-                    let BookingFormDatas = this.state.BookingFormData
-                    BookingFormDatas.customer.nic_Number = e.target.value
-                    this.setState({ BookingFormDatas })
-                }}
-                validators={['required']}
-                /> */}
+                
+               
+                />
 
-                {/* <Autocomplete
+
+
+                <Autocomplete
                 size="small" sx={{ width: '40ch'}} 
                 disablePortal
                 id="combo-box-demo"
@@ -269,17 +325,12 @@ class BookingPage extends Component {
                 renderInput={(params) => <TextField {...params} variant="filled" label="Payment ID" />}
                 style={{ position: "relative", borderRadius: "7px", top: "-62px", backgroundColor: "white", color: "white", left: "928px", zIndex: "1", width: "13%" }} 
                 value={this.state.BookingFormData.payment.payment_Id}
-                onChange={(e) => {
-                    let BookingFormDatas = this.state.BookingFormData
-                    BookingFormDatas.payment.payment_Id = e.target.value
-                    this.setState({ BookingFormDatas })
-                }}
-                validators={['required']} */}
-                {/* /> */}
+                 />
+                
 
 
 
-                <TextField  size="small" sx={{ width: '40ch' }} id="outlined-disabled" variant="filled" label="Payment ID" defaultValue="" style={{ position: "relative", borderRadius: "7px", top: "-62px", backgroundColor: "white", color: "white", left: "928px", zIndex: "1", width: "13%" }}
+                {/* <TextField size="small" sx={{ width: '40ch' }} id="outlined-disabled" variant="filled" label="Payment ID" defaultValue="" style={{ position: "relative", borderRadius: "7px", top: "-62px", backgroundColor: "white", color: "white", left: "928px", zIndex: "1", width: "13%" }}
                   value={this.state.BookingFormData.payment.payment_Id}
                   onChange={(e) => {
                     let BookingFormDatas = this.state.BookingFormData
@@ -287,7 +338,7 @@ class BookingPage extends Component {
                     this.setState({ BookingFormDatas })
                   }}
                   validators={['required']}
-                />
+                /> */}
                 {/* disabled */}
 
                 <TextValidator
@@ -373,7 +424,7 @@ class BookingPage extends Component {
                   }}
                   validators={['required']}
                 />
-               
+
                 <Button variant="contained" color="success" style={{ position: "relative", top: "-428px", color: "black", backgroundColor: "rgb(128, 128, 128)", left: "1150px", width: "1%", zIndex: "5", boxShadow: "none" }}><img src={cart} style={{ width: "30px" }} /></Button><br />
                 <TextValidator size="small" sx={{ width: '40ch' }} id="outlined-basic" label="Booking Status" variant="filled" style={{ position: "relative", top: "-200px", backgroundColor: "white", color: "white", left: "20px", borderRadius: "7px", zIndex: "1", width: "25%" }}
                   value={this.state.BookingFormData.bookingStatus}
@@ -384,15 +435,37 @@ class BookingPage extends Component {
                   }}
                   validators={['required']}
                 />
-                <TextValidator size="small" sx={{ width: '40ch' }} id="outlined-basic" label="Do you want a Driver?" variant="filled" style={{ position: "relative", top: "-248px", backgroundColor: "white", color: "white", left: "370px", borderRadius: "7px", zIndex: "1", width: "25%" }}
-                  value={this.state.BookingFormData.status}
-                  onChange={(e) => {
-                    let BookingFormDatas = this.state.BookingFormData
-                    BookingFormDatas.status = e.target.value
-                    this.setState({ BookingFormDatas })
-                  }}
-                  validators={['required']}
+
+
+
+
+              <Autocomplete
+                size="small" sx={{ width: '40ch'}} 
+                disablePortal
+                id="combo-box-demo"
+                options={top100Films}
+                sx={{ width: '40ch' }}
+                renderInput={(params) => <TextField {...params} variant="filled" label="Do you want a Driver" />}
+                style={{ position: "relative", height: '48px', top: "-248px", backgroundColor: "white", color: "white", left: "370px", borderRadius: "7px", zIndex: "1", width: "25%" }}
+                // value={this.state.BookingFormData.payment.payment_Id}
+                // onChange={(e) => {
+                //     let BookingFormDatas = this.state.BookingFormData
+                //     BookingFormDatas.payment.payment_Id = e.target.value
+                //     this.setState({ BookingFormDatas })
+                // }}
+                // validators={['required']} 
                 />
+
+                {/* <Autocomplete
+                  id="combo-box-demo"
+                  variant="filled" 
+                  options={top100Films}
+                  style={{ position: "relative", height: '48px', top: "-248px", backgroundColor: "white", color: "white", left: "370px", borderRadius: "7px", zIndex: "1", width: "25%" }}
+                  sx={{ width: '40ch' }}
+                  renderInput={(params) => <TextField
+                    {...params} label="Do you want a Driver?" />}
+                /> */}
+               
                 <Button variant="contained" color="success" style={{ position: "relative", top: "-565px", color: "black", backgroundColor: "rgb(128, 128, 128)", left: "1198px", width: "1%", zIndex: "5", boxShadow: "none" }}><img src={update} style={{ width: "30px" }} /></Button><br />
 
                 <TextValidator size="small" sx={{ width: '40ch' }} id="outlined-basic" label="PicUp Location" variant="filled" style={{ position: "relative", top: "-285px", backgroundColor: "white", color: "white", left: "20px", borderRadius: "7px", zIndex: "1", width: "25%" }}
@@ -463,7 +536,7 @@ class BookingPage extends Component {
           <section>
             <div className="BookingTable">
 
-              <TableContainer component={Paper} style={{ width: "94%", left: "30px", position: "relative", top: "-780px" }}>
+              <TableContainer component={Paper} style={{ width: "94%", left: "30px", position: "relative", top: "-830px" }}>
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
                   <TableHead>
                     <TableRow>

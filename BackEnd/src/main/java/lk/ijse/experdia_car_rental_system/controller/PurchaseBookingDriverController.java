@@ -50,5 +50,4 @@ public class PurchaseBookingDriverController {
         return new ResponceUtil(200, "ok", bookigLastID);
     }
 
-
 }
