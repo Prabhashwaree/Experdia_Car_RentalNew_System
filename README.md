@@ -7,4 +7,4 @@ POS Final Spring Project
 
 <h2>Experdia Car Rental Website Sliders</h2>
 
-
+![Capture](https://user-images.githubusercontent.com/90233777/189040297-39d416d3-7afb-455e-ae52-bd4702552608.PNG)
